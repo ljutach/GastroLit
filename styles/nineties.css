@@ -7,206 +7,251 @@
 
 /* Fonts */
 @font-face {
-    font-family: 'Comic Sans MS';
-    src: url('../fonts/ComicSansMS/ComicSansMS.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Comic Sans MS';
+  src: url('../fonts/ComicSansMS/ComicSansMS.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Impact';
+  src: url('../fonts/Impact/Impact.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Courier New';
+  src: url('../fonts/CourierNew/CourierNew.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Root Variables */
+:root {
+  --primary-color: #ff69b4; /* Vibrant pink */
+  --secondary-color: #1e90ff; /* Bold blue */
+  --background-pattern: url('../img/90s-pattern.png');
+  --font-main: 'Comic Sans MS', sans-serif;
+  --font-bold: 'Impact', sans-serif;
+  --font-mono: 'Courier New', monospace;
+  --header-height: 10vh;
+}
+
+/* Reset and General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background: var(--background-pattern) no-repeat center center fixed;
+  background-size: cover;
+  color: #000;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+/* Navbar Styles */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--primary-color);
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+nav .navbar-nav {
+  display: flex;
+  gap: 1rem;
+}
+
+nav .navbar-nav li {
+  position: relative;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-family: var(--font-main);
+  font-size: 1rem;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  color: #f0e68c; /* Highlight yellow */
+}
+
+/* Dropdown Menu Styles */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--secondary-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown:hover > .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu > li > a {
+  color: #333;
+  padding: 0.5rem 1rem;
+  display: block;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.dropdown-menu > li > a:hover {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+
+/* Multi-Level Dropdown Menu */
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu > .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+
+.dropdown-submenu:hover > .dropdown-menu {
+  display: block;
+}
+
+.dropdown-submenu > a:after {
+  content: ">";
+  float: right;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+
+/* Main Layout */
+main {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+}
+
+main > section {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 1.5rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Typography */
+h1, h2, h3 {
+  font-family: var(--font-bold);
+  text-transform: uppercase;
+  color: var(--secondary-color);
+}
+
+h1 {
+  font-size: 3rem;
+  text-shadow: 2px 2px #ff69b4; /* Neon shadow */
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-family: var(--font-main);
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+p.mono {
+  font-family: var(--font-mono);
+  background: rgba(0, 0, 0, 0.05);
+  padding: 0.5rem;
+  border-left: 4px solid var(--primary-color);
+}
+
+/* Buttons */
+button {
+  background-color: var(--primary-color);
+  border: none;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-family: var(--font-bold);
+  text-transform: uppercase;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--secondary-color);
+  color: #fff;
+  font-family: var(--font-main);
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Animations */
+@keyframes pop {
+  0%, 100% {
+    transform: scale(1);
   }
-  
-  @font-face {
-    font-family: 'Impact';
-    src: url('../fonts/Impact/Impact.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
+  50% {
+    transform: scale(1.2);
   }
-  
-  @font-face {
-    font-family: 'Courier New';
-    src: url('../fonts/CourierNew/CourierNew.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
-  
-  /* Root Variables */
-  :root {
-    --primary-color: #ff69b4; /* Vibrant pink */
-    --secondary-color: #1e90ff; /* Bold blue */
-    --background-pattern: url('../img/90s-pattern.png');
-    --font-main: 'Comic Sans MS', sans-serif;
-    --font-bold: 'Impact', sans-serif;
-    --font-mono: 'Courier New', monospace;
-    --header-height: 10vh;
-  }
-  
-  /* Reset and General Styles */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: var(--font-main);
-    background: var(--background-pattern) no-repeat center center fixed;
-    background-size: cover;
-    color: #000;
-    line-height: 1.5;
-    overflow-x: hidden;
-  }
-  
-  /* Headers */
+}
+
+.animated {
+  animation: pop 1s infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   header {
-    height: var(--header-height);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 2rem;
-    background-color: var(--primary-color);
-    color: #fff;
-    font-family: var(--font-bold);
-    text-transform: uppercase;
-    font-size: 2rem;
-    letter-spacing: 0.1em;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  }
-  
-  header:hover {
-    background-color: var(--secondary-color);
-    transition: background-color 0.3s ease-in-out;
-  }
-  
-  nav {
-    display: flex;
-    gap: 1rem;
-  }
-  
-  nav a {
-    color: #fff;
-    text-decoration: none;
-    font-family: var(--font-main);
-    font-size: 1rem;
-  }
-  
-  nav a:hover {
-    text-decoration: underline;
-    color: #f0e68c; /* Highlight yellow */
-  }
-  
-  /* Main Layout */
-  main {
-    padding: 2rem;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 2rem;
-  }
-  
-  main > section {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 1.5rem;
-    border: 2px solid var(--primary-color);
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Typography */
-  h1, h2, h3 {
-    font-family: var(--font-bold);
-    text-transform: uppercase;
-    color: var(--secondary-color);
-  }
-  
-  h1 {
-    font-size: 3rem;
-    text-shadow: 2px 2px #ff69b4; /* Neon shadow */
-  }
-  
-  h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-  
-  h3 {
     font-size: 1.5rem;
   }
-  
-  p {
-    font-family: var(--font-main);
-    font-size: 1.2rem;
-    color: #333;
-    margin-bottom: 1.5rem;
-    text-align: justify;
+
+  nav {
+    flex-direction: column;
+    gap: 0.5rem;
   }
-  
-  p.mono {
-    font-family: var(--font-mono);
-    background: rgba(0, 0, 0, 0.05);
-    padding: 0.5rem;
-    border-left: 4px solid var(--primary-color);
+
+  main {
+    grid-template-columns: 1fr;
   }
-  
-  /* Buttons */
-  button {
-    background-color: var(--primary-color);
-    border: none;
-    color: #fff;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    font-family: var(--font-bold);
-    text-transform: uppercase;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+
+  h1 {
+    font-size: 2rem;
   }
-  
-  button:hover {
-    background-color: var(--secondary-color);
-    transform: scale(1.1);
-    transition: all 0.3s ease-in-out;
-  }
-  
-  /* Footer */
-  footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: var(--secondary-color);
-    color: #fff;
-    font-family: var(--font-main);
-    position: relative;
-    bottom: 0;
-    width: 100%;
-  }
-  
-  /* Animations */
-  @keyframes pop {
-    0%, 100% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.2);
-    }
-  }
-  
-  .animated {
-    animation: pop 1s infinite;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    header {
-      font-size: 1.5rem;
-    }
-  
-    nav {
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-  
-    main {
-      grid-template-columns: 1fr;
-    }
-  
-    h1 {
-      font-size: 2rem;
-    }
-  }
-  
+}
