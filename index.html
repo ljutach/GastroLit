@@ -5,14 +5,26 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="styles/nineties.css">
+  <link id="theme-stylesheet" rel="stylesheet" href="styles/nineties.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
   <script>
-    // Function to load author content dynamically
+    // Keep track of the current theme
+    let currentTheme = 'styles/nineties.css'; // Default theme
+
+    // Function to switch themes dynamically
+    function switchTheme(themePath) {
+      currentTheme = themePath; // Update the current theme
+      document.getElementById('theme-stylesheet').setAttribute('href', themePath);
+    }
+
+    // Function to load author content dynamically and reapply the current theme
     function loadAuthorContent(authorPath) {
-      $("#author-content").load(authorPath); // Dynamically loads HTML file based on the provided path
+      $("#author-content").load(authorPath, function () {
+        // Ensure the current theme is reapplied after loading new content
+        document.getElementById('theme-stylesheet').setAttribute('href', currentTheme);
+      });
     }
   </script>
 </head>
@@ -65,6 +77,15 @@
   </div>
 </nav>
 
+<!-- Theme Selector -->
+<div class="container">
+  <h3>Choose a Theme</h3>
+  <select id="theme-selector" onchange="switchTheme(this.value)">
+    <option value="styles/nineties.css">Nineties Theme</option>
+    <option value="styles/middleage.css">Middle Age Theme</option>
+  </select>
+</div>
+
 <!-- Content -->
 <div class="container">
   <h1>GastroLit</h1>
@@ -73,7 +94,7 @@
 
 <div class="container">
   <h2>The Project</h2>
-  <p>GastroLit is a magazine that explores the relationship between food and culture in Italian literature by focusing on two regions: Tuscany and Sicily. For each region, we delve into the works of three authors, presenting curated collections of texts which include some iconic gastronomic references. Explore Tuscany through the writings of Dante, Boccaccio, and Sacchetti, and journey to Sicily with selections from Camilleri, Tomasi di Lampedusa, and Torregrossa. Customize your experience with our four typographic and layout themes, inspired by different stylistic traditions. Navigate the literary and cultural landscapes through our interactive Map, which geolocates each significant place mentioned in the texts, offering a rich exploration of the geographical roots of these narratives. This project is realised for the exam of <i>Web Technology and Information Modeling</i> of the master course in <i>Digital Humanities and Digital Knowledge</i> at <b><i>Alma Mater Studiorum</i>- Universit&agrave; di Bologna</b>.</p>
+  <p>GastroLit is a magazine that explores the relationship between food and culture in Italian literature by focusing on two regions: Tuscany and Sicily. For each region, we delve into the works of three authors, presenting curated collections of texts which include some iconic gastronomic references. Explore Tuscany through the writings of Dante, Boccaccio, and Sacchetti, and journey to Sicily with selections from Camilleri, Tomasi di Lampedusa, and Torregrossa. Customize your experience with our four typographic and layout themes, inspired by different stylistic traditions. Navigate the literary and cultural landscapes through our interactive Map, which geolocates each significant place mentioned in the texts, offering a rich exploration of the geographical roots of these narratives. This project is realised for the exam of <i>Web Technology and Information Modeling</i> of the master course in <i>Digital Humanities and Digital Knowledge</i> at <b><i>Alma Mater Studiorum</i>- Università di Bologna</b>.</p>
 </div>
 
 <!-- Placeholder for Dynamic Content -->
