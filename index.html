@@ -5,13 +5,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <link id="theme-stylesheet" rel="stylesheet" href="styles/nineties.css">
+  <link id="theme-stylesheet" rel="stylesheet" href="styles/middleage.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
   <script>
     // Keep track of the current theme
-    let currentTheme = 'styles/nineties.css'; // Default theme
+    let currentTheme = 'styles/middleage.css'; // Default theme
 
     // Function to switch themes dynamically
     function switchTheme(themePath) {
@@ -21,11 +21,15 @@
 
     // Function to load author content dynamically and reapply the current theme
     function loadAuthorContent(authorPath) {
-      $("#author-content").load(authorPath, function () {
-        // Ensure the current theme is reapplied after loading new content
+    $("#author-content").load(authorPath, function () {
+        // Reapply the current theme to the dynamically loaded content
+        const currentTheme = document.getElementById('theme-stylesheet').getAttribute('href');
         document.getElementById('theme-stylesheet').setAttribute('href', currentTheme);
-      });
-    }
+    });
+}
+
+
+
   </script>
 </head>
 <body>
@@ -81,7 +85,7 @@
 <div class="container">
   <h3>Choose a Theme</h3>
   <select id="theme-selector" onchange="switchTheme(this.value)">
-    <option value="styles/nineties.css">Nineties Theme</option>
+    <option value="styles/cyberpunk.css">Cyber Punk</option>
     <option value="styles/middleage.css">Middle Age Theme</option>
   </select>
 </div>

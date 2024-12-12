@@ -4,25 +4,6 @@
 */
 
 /* General Styles */
-
-
-#author-content {
-    display: block;
-    position: relative;
-    z-index: 1;
-    padding: 1rem;
-    font-family: 'Essays-1743', serif;
-    font-size: 1.2rem;
-    line-height: 1.5;
-    color: #3a302a;
-    background-color: rgba(255, 251, 235, 0.9);
-    border: 1px solid #8b5e3c;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-
-
-
 body {
     background-color: #fae4be;
     background-image: url("../img/textured-paper.png");
@@ -32,46 +13,100 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.8;
-  }
-  
-  /* Navbar */
-  nav {
+}
+
+#author-content {
+    display: block;
+    position: relative;
+    visibility: visible;
+    z-index: 1;
+    padding: 1rem;
+    background-color: rgba(255, 251, 235, 0.9);
+    color: #3a302a;
+}
+
+/* Navbar */
+nav {
     background-color: #8b5e3c;
     padding: 1rem;
+    position: relative; /* Ensure proper stacking of dropdowns */
+    z-index: 1000;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  }
-  
-  nav .navbar-nav {
+}
+
+nav .navbar-nav {
     display: flex;
     gap: 1rem;
-  }
-  
-  nav a {
+}
+
+nav a {
     color: #fff;
     text-decoration: none;
     font-family: 'Essays-1743', serif;
-  }
-  
-  nav a:hover {
+}
+
+nav a:hover {
     text-decoration: underline;
     color: #9e752e;
-  }
-  
-  /* Dropdown Menu */
-  .dropdown-menu {
-    display: none;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    display: none; /* Default hidden */
     position: absolute;
     background-color: rgba(255, 251, 235, 0.9);
     border: 1px solid #763626;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  }
-  
-  .dropdown:hover > .dropdown-menu {
+    z-index: 1100; /* Ensure dropdown is above other elements */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown:hover > .dropdown-menu,
+.dropdown:focus > .dropdown-menu,
+.dropdown:active > .dropdown-menu {
+    display: block; /* Show dropdown on hover, focus, or active */
+}
+
+.dropdown-menu > li > a {
+    color: #3a302a;
+    padding: 0.5rem 1rem;
     display: block;
-  }
-  
-  /* Main Layout */
-  .container {
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.dropdown-menu > li > a:hover {
+    background-color: #9e752e;
+    color: #fff;
+}
+
+/* Multi-Level Dropdown */
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu > .dropdown-menu {
+    display: none; /* Default hidden */
+    position: absolute;
+    top: 0;
+    left: 100%; /* Align submenu to the right */
+    margin-top: -6px;
+    margin-left: -1px;
+    background-color: rgba(255, 251, 235, 0.9);
+    border: 1px solid #763626;
+    z-index: 1100; /* Ensure submenus are above */
+}
+
+.dropdown-submenu:hover > .dropdown-menu,
+.dropdown-submenu:focus > .dropdown-menu,
+.dropdown-submenu:active > .dropdown-menu {
+    display: block; /* Show submenu on hover */
+}
+
+/* Main Layout */
+.container {
     max-width: 800px;
     margin: 2rem auto;
     padding: 2rem;
@@ -79,47 +114,75 @@ body {
     border: 3px solid #8b5e3c;
     border-radius: 15px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
-  }
-  
-  /* Typography */
-  h1, h2, h3 {
+}
+
+pre {
+    font-family: 'Essays-1743', serif;
+    font-size: 1rem;
+    color: #3a302a;
+    background: rgba(255, 251, 235, 0.8);
+    padding: 1rem;
+    overflow: auto;
+    border: 1px solid #8b5e3c;
+    border-radius: 5px;
+}
+
+/* Typography */
+h1, h2, h3 {
     font-family: 'MediaevalItalique', serif;
     color: #763626;
     text-align: center;
-  }
-  
-  h1 {
+}
+
+h1 {
     font-size: 3.5rem;
     border-bottom: 4px solid #9e752e;
-  }
-  
-  h2 {
+}
+
+h2 {
     font-size: 2.5rem;
-  }
-  
-  h3 {
+}
+
+h3 {
     font-size: 1.8rem;
-  }
-  
-  p {
+}
+
+p {
     font-family: 'Essays-1743', serif;
     font-size: 1.2rem;
     text-align: justify;
     margin-bottom: 1.5rem;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
+}
+
+/* Buttons */
+button {
+    background-color: #8b5e3c;
+    border: none;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    font-family: 'Essays-1743', serif;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #763626;
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
     .container {
-      padding: 1rem;
+        padding: 1rem;
     }
-  
+
     h1 {
-      font-size: 2.5rem;
+        font-size: 2.5rem;
     }
-  
+
     h2 {
-      font-size: 1.8rem;
+        font-size: 1.8rem;
     }
-  }
-  
+}

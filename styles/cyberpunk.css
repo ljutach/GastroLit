@@ -1,0 +1,180 @@
+/* Cyberpunk Theme */
+/* Futuristic, neon-inspired design influenced by cyberpunk aesthetics. */
+
+/* Root Variables */
+:root {
+  --primary-color: #00ffcc; /* Neon teal */
+  --secondary-color: #ff0080; /* Hot pink */
+  --accent-color: #ffbf00; /* Vibrant yellow */
+  --background-color: #0d0d0d; /* Near-black */
+  --font-main: 'Orbitron', sans-serif;
+  --font-accent: 'Share Tech Mono', monospace;
+}
+
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  line-height: 1.5;
+}
+
+/* Navbar */
+nav {
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+}
+
+nav .navbar-nav {
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  color: var(--background-color);
+  text-decoration: none;
+  font-family: var(--font-accent);
+  text-transform: uppercase;
+}
+
+nav a:hover {
+  color: var(--accent-color);
+  text-shadow: 0 0 10px var(--accent-color);
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: rgba(20, 20, 20, 0.9);
+  border: 1px solid var(--secondary-color);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 1100;
+}
+
+.dropdown:hover > .dropdown-menu,
+.dropdown:focus > .dropdown-menu,
+.dropdown:active > .dropdown-menu {
+  display: block;
+}
+
+/* Multi-Level Dropdown */
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu > .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  background-color: rgba(20, 20, 20, 0.9);
+  border: 1px solid var(--accent-color);
+  z-index: 1100;
+}
+
+.dropdown-submenu:hover > .dropdown-menu,
+.dropdown-submenu:focus > .dropdown-menu,
+.dropdown-submenu:active > .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu > li > a {
+  padding: 0.5rem 1rem;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-family: var(--font-accent);
+  display: block;
+}
+
+.dropdown-menu > li > a:hover {
+  background-color: var(--secondary-color);
+  color: var(--background-color);
+  text-shadow: 0 0 5px var(--primary-color);
+}
+
+/* Main Layout */
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: rgba(20, 20, 20, 0.9);
+  border: 2px solid var(--primary-color);
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.6);
+}
+
+/* Typography */
+h1, h2, h3 {
+  font-family: var(--font-main);
+  color: var(--secondary-color);
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  text-shadow: 0 0 20px var(--secondary-color);
+}
+
+h2 {
+  font-size: 2rem;
+  text-shadow: 0 0 10px var(--accent-color);
+}
+
+h3 {
+  font-size: 1.5rem;
+  text-shadow: 0 0 5px var(--primary-color);
+}
+
+p {
+  font-family: var(--font-accent);
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+/* Buttons */
+button {
+  background-color: var(--secondary-color);
+  border: none;
+  color: var(--background-color);
+  padding: 0.5rem 1rem;
+  font-family: var(--font-main);
+  text-transform: uppercase;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+}
+
+button:hover {
+  background-color: var(--accent-color);
+  color: var(--background-color);
+  text-shadow: 0 0 10px var(--primary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+}
