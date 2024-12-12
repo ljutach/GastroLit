@@ -11,7 +11,7 @@
 
   <script>
     // Keep track of the current theme
-    let currentTheme = 'styles/middleage.css'; // Default theme
+    let currentTheme = 'styles/middleage.css';  // Default theme -->
 
     // Function to switch themes dynamically
     function switchTheme(themePath) {
@@ -26,7 +26,12 @@
         const currentTheme = document.getElementById('theme-stylesheet').getAttribute('href');
         document.getElementById('theme-stylesheet').setAttribute('href', currentTheme);
     });
-}
+    }
+
+    function resetAuthorContent() {
+    document.getElementById('author-content').innerHTML = '<h3>Click on an author to read their work</h3>';
+    }
+
 
 
 
@@ -43,7 +48,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#">GastroLit</a>
+      <a class="navbar-brand" href="index.html" onclick="resetAuthorContent()">GastroLit</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
@@ -85,8 +90,8 @@
 <div class="container">
   <h3>Choose a Theme</h3>
   <select id="theme-selector" onchange="switchTheme(this.value)">
-    <option value="styles/cyberpunk.css">Cyber Punk</option>
     <option value="styles/middleage.css">Middle Age Theme</option>
+    <option value="styles/cyberpunk.css">Cyber Punk</option>
   </select>
 </div>
 

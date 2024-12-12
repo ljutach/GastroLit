@@ -9,6 +9,7 @@
   --background-color: #0d0d0d; /* Near-black */
   --font-main: 'Orbitron', sans-serif;
   --font-accent: 'Share Tech Mono', monospace;
+  --navbar-text-color: #2711ee; /* Bright white for better contrast */
 }
 
 /* General Styles */
@@ -30,15 +31,30 @@ nav {
   background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
   padding: 1rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  position: relative;
+}
+
+nav .navbar-brand {
+  margin-bottom: 1rem; /* Add space between "GASTROLIT" and the nav items */
+  color: var(--navbar-text-color) !important;
+  font-size: 4.5rem;
+  text-decoration: none;
+  font-family: var(--font-main);
+  text-align: center; /* Center text inside its container */
 }
 
 nav .navbar-nav {
   display: flex;
-  gap: 1rem;
+  gap: 2rem; /* Increase gap for symmetry */
+  justify-content: center; /* Center nav items */
+  width: 100%; /* Ensure items are evenly distributed */
 }
 
 nav a {
-  color: var(--background-color);
+  color: var(--navbar-text-color); /* Improved contrast for navbar links */
   text-decoration: none;
   font-family: var(--font-accent);
   text-transform: uppercase;
