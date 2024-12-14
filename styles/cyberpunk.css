@@ -1,5 +1,7 @@
-/* Cyberpunk Theme */
-/* Futuristic, neon-inspired design influenced by cyberpunk aesthetics. */
+/*
+* Cyberpunk Theme
+* Futuristic, neon-inspired design inspired by cyberpunk aesthetics.
+*/
 
 /* Root Variables */
 :root {
@@ -23,57 +25,115 @@ body {
   font-family: var(--font-main);
   background-color: var(--background-color);
   color: var(--primary-color);
-  line-height: 1.5;
+  line-height: 1.8; /* Increased for readability */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+#author-content {
+  display: block;
+  position: relative;
+  visibility: visible;
+  z-index: 1;
+  padding: 1rem;
+  background-color: rgba(13, 13, 13, 0.9); /* Dark background for a futuristic look */
+  color: var(--primary-color); /* Neon teal for text color */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  word-wrap: break-word; /* Wrap long words */
+  overflow-wrap: break-word; /* Additional support for word wrapping */
+  border: 2px solid var(--secondary-color); /* Add a neon pink border */
+  border-radius: 10px; /* Smooth edges for a modern feel */
+  box-shadow: 0 0 20px rgba(255, 0, 128, 0.8); /* Add a neon glow */
+}
+
+.author-image {
+  display: block;
+  margin: 1rem auto; /* Center the image with some spacing */
+  max-width: 50%; /* Reduce the size to 50% of its container */
+  height: auto; /* Maintain the aspect ratio */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 0 15px rgba(0, 255, 204, 0.8); /* Neon teal glow */
+  border: 2px solid var(--accent-color); /* Vibrant yellow border */
+}
+
+.author-caption {
+  display: block;
+  text-align: center; /* Center-align the caption text */
+  margin: 0.5rem auto; /* Add spacing between the image and the caption */
+  max-width: 50%; /* Align with the image's width */
+  font-family: var(--font-accent); /* Cyberpunk-inspired font */
+  font-size: 1.5rem; /* Set a readable caption size */
+  color: var(--accent-color); /* Vibrant yellow for text */
+  line-height: 1.8; /* Ensure proper readability */
+  background-color: rgba(20, 20, 20, 0.8); /* Subtle dark background */
+  padding: 0.5rem; /* Add padding around the caption */
+  border-radius: 5px; /* Rounded corners */
+  border: 1px solid var(--primary-color); /* Neon teal border */
+  box-shadow: 0 0 10px rgba(255, 255, 0, 0.8); /* Subtle neon glow */
 }
 
 /* Navbar */
 nav {
   background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-  padding: 1rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+  padding: 1rem 2rem; /* Add extra horizontal padding */
   display: flex;
-  flex-direction: column; /* Stack items vertically */
-  align-items: center; /* Center items horizontally */
+  justify-content: space-between; /* Space between brand and links */
+  align-items: center; /* Vertically align items */
   position: relative;
+  z-index: 1000;
 }
 
 nav .navbar-brand {
-  margin-bottom: 1rem; /* Add space between "GASTROLIT" and the nav items */
   color: var(--navbar-text-color) !important;
-  font-size: 4.5rem;
+  font-size: 3rem; /* Slightly smaller to align with links */
   text-decoration: none;
   font-family: var(--font-main);
-  text-align: center; /* Center text inside its container */
-  text-shadow: 0 0 20px var(--navbar-text-color); /* Add glowing effect */
+  text-align: center;
+  text-shadow: 0 0 20px var(--navbar-text-color); /* Glowing effect */
+  margin: 0; /* Remove default margins */
 }
 
 nav .navbar-nav {
   display: flex;
-  gap: 2rem; /* Increase gap for symmetry */
-  justify-content: center; /* Center nav items */
-  width: 100%; /* Ensure items are evenly distributed */
+  gap: 2rem; /* Add spacing between links */
+  align-items: center; /* Ensure links are vertically aligned with the brand */
 }
 
-/* Unified Navbar Links */
-nav .navbar-nav > li > a {
-  color: var(--navbar-text-color); /* Bright white for better visibility */
+nav a {
+  color: var(--navbar-text-color);
   text-decoration: none;
   font-family: var(--font-accent);
   text-transform: uppercase;
-  font-size: 1.5rem; /* Increase font size for better visibility */
-  font-weight: bold; /* Add bold styling */
+  font-size: 1.5rem;
+  font-weight: bold;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Subtle glow effect */
+  padding: 0.5rem 1rem; /* Add padding for consistent spacing */
 }
 
-/* Hover Effect for Navbar Links */
-nav .navbar-nav > li > a:hover {
-  color: var(--accent-color); /* Neon accent color on hover */
-  text-shadow: 0 0 15px var(--accent-color); /* Stronger glow on hover */
+nav a:hover {
+  color: var(--accent-color);
+  text-shadow: 0 0 15px var(--accent-color); /* Stronger glow */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center-align all items */
+  }
+
+  nav .navbar-brand {
+    margin-bottom: 1rem; /* Add spacing between stacked sections */
+  }
+
+  nav .navbar-nav {
+    flex-direction: column; /* Stack links vertically */
+    gap: 1rem;
+  }
 }
 
 /* Dropdown Menu */
 .dropdown-menu {
-  display: none;
+  display: none; /* Default hidden */
   position: absolute;
   background-color: rgba(20, 20, 20, 0.9);
   border: 1px solid var(--secondary-color);
@@ -81,13 +141,15 @@ nav .navbar-nav > li > a:hover {
   list-style: none;
   padding: 0;
   margin: 0;
-  z-index: 1100;
+  z-index: 1100; /* Ensure dropdown is above other elements */
 }
 
 .dropdown:hover > .dropdown-menu,
 .dropdown:focus > .dropdown-menu,
 .dropdown:active > .dropdown-menu {
   display: block;
+  visibility: visible;
+  opacity: 1;
 }
 
 .dropdown-menu > li > a {
@@ -96,6 +158,7 @@ nav .navbar-nav > li > a:hover {
   text-decoration: none;
   font-family: var(--font-accent);
   display: block;
+  white-space: nowrap; /* Prevent breaking of single long words */
 }
 
 .dropdown-menu > li > a:hover {
@@ -104,15 +167,56 @@ nav .navbar-nav > li > a:hover {
   text-shadow: 0 0 5px var(--primary-color);
 }
 
+/* Multi-Level Dropdown */
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu > .dropdown-menu {
+  display: none; /* Default hidden */
+  position: absolute;
+  top: 0;
+  left: 100%; /* Align submenu to the right */
+  margin-top: -6px;
+  margin-left: -1px;
+  background-color: rgba(20, 20, 20, 0.9);
+  border: 1px solid var(--accent-color);
+  z-index: 1060; /* Ensure submenus are above */
+}
+
+.dropdown-submenu:hover > .dropdown-menu,
+.dropdown-submenu:focus > .dropdown-menu,
+.dropdown-submenu:active > .dropdown-menu {
+  display: block; /* Show submenu on hover */
+}
+
 /* Main Layout */
 .container {
-  max-width: 800px;
+  max-width: 100%; /* Use full width */
   margin: 2rem auto;
   padding: 2rem;
   background-color: rgba(20, 20, 20, 0.9);
   border: 2px solid var(--primary-color);
   border-radius: 15px;
   box-shadow: 0 0 20px rgba(0, 255, 204, 0.6);
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  word-wrap: break-word; /* Ensure long words wrap */
+  overflow-wrap: break-word; /* Additional support for word wrapping */
+}
+
+/* Preformatted Text */
+pre {
+  font-family: var(--font-accent);
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  background: rgba(20, 20, 20, 0.8);
+  padding: 1rem;
+  white-space: pre-line; /* Wrap preformatted text */
+  word-break: normal;
+  overflow-wrap: normal; /* Prevent horizontal scrolling */
+  line-height: 2;
+  border: 1px solid var(--secondary-color);
+  border-radius: 5px;
 }
 
 /* Typography */
@@ -123,25 +227,28 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   text-shadow: 0 0 20px var(--secondary-color);
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   text-shadow: 0 0 10px var(--accent-color);
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   text-shadow: 0 0 5px var(--primary-color);
 }
 
 p {
   font-family: var(--font-accent);
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: var(--primary-color);
   margin-bottom: 1.5rem;
+  text-align: justify;
+  word-wrap: break-word; /* Wrap text properly */
+  overflow-wrap: break-word;
 }
 
 /* Buttons */
@@ -165,6 +272,12 @@ button:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem; /* Add spacing between stacked elements */
+  }
+
   .container {
     padding: 1rem;
   }
