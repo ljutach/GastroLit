@@ -9,7 +9,7 @@
   --background-color: #0d0d0d; /* Near-black */
   --font-main: 'Orbitron', sans-serif;
   --font-accent: 'Share Tech Mono', monospace;
-  --navbar-text-color: #2711ee; /* Bright white for better contrast */
+  --navbar-text-color: #FFFFFF; /* Bright white for better contrast */
 }
 
 /* General Styles */
@@ -44,6 +44,7 @@ nav .navbar-brand {
   text-decoration: none;
   font-family: var(--font-main);
   text-align: center; /* Center text inside its container */
+  text-shadow: 0 0 20px var(--navbar-text-color); /* Add glowing effect */
 }
 
 nav .navbar-nav {
@@ -53,16 +54,21 @@ nav .navbar-nav {
   width: 100%; /* Ensure items are evenly distributed */
 }
 
-nav a {
-  color: var(--navbar-text-color); /* Improved contrast for navbar links */
+/* Unified Navbar Links */
+nav .navbar-nav > li > a {
+  color: var(--navbar-text-color); /* Bright white for better visibility */
   text-decoration: none;
   font-family: var(--font-accent);
   text-transform: uppercase;
+  font-size: 1.5rem; /* Increase font size for better visibility */
+  font-weight: bold; /* Add bold styling */
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Subtle glow effect */
 }
 
-nav a:hover {
-  color: var(--accent-color);
-  text-shadow: 0 0 10px var(--accent-color);
+/* Hover Effect for Navbar Links */
+nav .navbar-nav > li > a:hover {
+  color: var(--accent-color); /* Neon accent color on hover */
+  text-shadow: 0 0 15px var(--accent-color); /* Stronger glow on hover */
 }
 
 /* Dropdown Menu */
@@ -81,29 +87,6 @@ nav a:hover {
 .dropdown:hover > .dropdown-menu,
 .dropdown:focus > .dropdown-menu,
 .dropdown:active > .dropdown-menu {
-  display: block;
-}
-
-/* Multi-Level Dropdown */
-.dropdown-submenu {
-  position: relative;
-}
-
-.dropdown-submenu > .dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 100%;
-  margin-top: -6px;
-  margin-left: -1px;
-  background-color: rgba(20, 20, 20, 0.9);
-  border: 1px solid var(--accent-color);
-  z-index: 1100;
-}
-
-.dropdown-submenu:hover > .dropdown-menu,
-.dropdown-submenu:focus > .dropdown-menu,
-.dropdown-submenu:active > .dropdown-menu {
   display: block;
 }
 
