@@ -90,16 +90,22 @@
 <!-- Theme Selector -->
 <div class="container">
   <h3>Choose a Theme</h3>
-  <select id="theme-selector" onchange="switchTheme(this.value)">
+  <select id="theme-selector" class="theme-dropdown" onchange="switchTheme(this.value)">
     <option value="styles/middleage.css">Middle Age Theme</option>
     <option value="styles/cyberpunk.css">Cyber Punk</option>
   </select>
 </div>
 
+<!-- HomePage image -->
+<div class="container">
+  <img src="index_images/logo.jpeg" alt="Descriptive Alt Text" class="img-responsive" style="margin: 20px auto; display: block;">
+</div>
+
+
 <!-- Content -->
 <div class="container">
   <h1>GastroLit</h1>
-  <p>Gastronomic Culture in Italian Literature</p>
+  <h2>Gastronomic Culture In Italian Literature</h2>
 </div>
 
 <div class="container">
@@ -109,7 +115,7 @@
 
 <!-- Placeholder for Dynamic Content -->
 <div class="container" id="author-content">
-  <h3>Click on an author to read their work</h3>
+  <h3>Select an issue and start exploring!</h3>
 </div>
 
 </body>

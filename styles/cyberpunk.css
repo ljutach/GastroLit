@@ -219,6 +219,13 @@ pre {
   border-radius: 5px;
 }
 
+/* Theme Selector */
+#theme-selector {
+  margin: 20px auto;
+  display: block; /* Ensures the dropdown is treated as a block-level element for centering */
+  width: auto; /* Adjust width as needed */
+}
+
 /* Typography */
 h1, h2, h3 {
   font-family: var(--font-main);
@@ -237,7 +244,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.8rem;
+  font-size: 3.8rem;
   text-shadow: 0 0 5px var(--primary-color);
 }
 

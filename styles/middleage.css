@@ -75,9 +75,10 @@ nav {
     width: 100%;
 }
 
+
 .navbar-brand {
-    font-size: 2.5rem;
-    color: #fff;
+    font-size: 4.5rem;
+    color: #5c3d06 !important;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
     font-family: 'MediaevalItalique', serif;
     padding: 0.5rem 1rem;
@@ -88,7 +89,12 @@ nav {
     text-align: center;
     line-height: 1; /* Ensure alignment with links */
     margin: 0; /* Remove default margins */
+    position: absolute; /* Position it absolutely */
+    left: 20px; /* Shift to the left */
+    transform: translateX(0); /* Ensure it’s properly aligned */
 }
+
+
 
 .navbar-nav {
     display: flex;
@@ -97,9 +103,9 @@ nav {
 }
 
 .navbar-nav a {
-    color: #fff;
+    color: #5c3d06 !important ;
     font-family: 'Essays-1743', serif;
-    font-size: 1.6rem;
+    font-size: 2.6rem;
     padding: 0.5rem 1rem;
     border-radius: 8px;
     background-color: rgba(255, 251, 235, 0.1);
@@ -119,6 +125,9 @@ nav {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+
+
+
 @media (max-width: 768px) {
     .navbar-container {
         flex-direction: column; /* Stack brand and links */
@@ -135,6 +144,28 @@ nav {
         margin-bottom: 1rem;
     }
 }
+
+
+/* Style the dropdown */
+.theme-dropdown {
+    font-size: 2rem; /* Adjust font size for the dropdown */
+    padding: 0.5rem 1rem; /* Add padding for better spacing */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    border: 2px solid #9e752e; /* Optional: Styled border */
+    background-color: rgba(255, 251, 235, 0.8); /* Optional: Match theme background */
+    color: #3a302a; /* Font color */
+    font-family: 'Essays-1743', serif; /* Match theme font */
+}
+
+/* Style the options within the dropdown */
+.theme-dropdown option {
+    font-size: 1.6rem; /* Increase font size for options */
+    padding: 0.5rem; /* Optional: Add padding for better readability */
+    background-color: rgba(255, 251, 235, 1); /* Optional: Parchment-like background */
+    color: #3a302a; /* Font color for options */
+    font-family: 'Essays-1743', serif; /* Match theme font */
+}
+
 
 
 
@@ -216,7 +247,7 @@ nav {
 
 pre {
     font-family: 'Essays-1743', serif;
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #3a302a;
     background: rgba(255, 251, 235, 0.8);
     padding: 1rem;
@@ -228,6 +259,13 @@ pre {
     border-radius: 5px;
 }
 
+/* Theme Selector */
+#theme-selector {
+    margin: 20px auto;
+    display: block; /* Ensures the dropdown is treated as a block-level element for centering */
+    width: auto; /* Adjust width as needed */
+  }
+
 /* Typography */
 h1, h2, h3 {
     font-family: 'MediaevalItalique', serif;
@@ -236,21 +274,21 @@ h1, h2, h3 {
 }
 
 h1 {
-    font-size: 3.5rem;
+    font-size: 7.5rem;
     border-bottom: 4px solid #9e752e;
 }
 
 h2 {
-    font-size: 2.5rem;
+    font-size: 4rem;
 }
 
 h3 {
-    font-size: 1.8rem;
+    font-size: 3.8rem;
 }
 
 p {
     font-family: 'Essays-1743', serif;
-    font-size: 2rem;
+    font-size: 2.5rem;
     text-align: justify;
     margin-bottom: 1.5rem;
     overflow-wrap: break-word; /* Wrap long lines inside paragraphs */
