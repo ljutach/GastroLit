@@ -10,6 +10,24 @@
 
     <section class="container">
         <div id="map" style="width: 100%; height: 500px; margin: 20px 0;"></div>
+
+
+        <div id="entity-table-container">
+            <h2>Entities</h2>
+            <table id="entity-table" border="1" style="width: 100%; text-align: left; border-collapse: collapse;">
+                <thead>
+                    <tr>
+                        <th>Dishes</th>
+                        <th>Places</th>
+                        <th>Characters</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Content will be populated by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+
         <h1>Dante Alighieri</h1>
         <figure class="author-figure">
             <img src="issues/tuscany/authors/dante/images/Dante.jpg" alt="Dante Alighieri" class="author-image">
@@ -71,7 +89,7 @@ di l&agrave; da lui pi&ugrave; che l&rsquo;altre trapunta         21
                 <pre>
 ebbe la Santa Chiesa in le sue braccia: 
 dal Torso fu, e purga per digiuno l' 
-<span class="tag dish anguille" id="anguille" data-name="anguille" data-wiki="https://en.wikipedia.org/wiki/European_eel">anguille</span> di <span class="tag place city lago_di_bolsena" id="lago_di_bolsena" data-coord="42.6000,11.9333">Bolsena</span> e la <span class="tag dish vernaccia" id="vernaccia" data-name="Vernaccia" data-wiki="https://nl.wikipedia.org/wiki/Vernaccia">vernaccia</span>&raquo;.          24
+<span class="tag dish anguille" id="anguille" data-name="anguille" data-wiki="https://en.wikipedia.org/wiki/European_eel">anguille</span> di <span class="tag place city lago_di_bolsena" id="lago_di_bolsena" data-coord="42.6000,11.9333" data-name="Lago di Bolsena">Bolsena</span> e la <span class="tag dish vernaccia" id="vernaccia" data-name="Vernaccia" data-wiki="https://nl.wikipedia.org/wiki/Vernaccia">vernaccia</span>&raquo;.          24
                 </pre> 
             </div> 
             <div class="terzina">
@@ -91,7 +109,7 @@ che pastur&ograve; col rocco molte genti.            30
             <div class="terzina">
                 <pre>
 Vidi messer <span class="tag character marchese_degli_argugliosi" id="marchese_degli_argugliosi" data-name="Marchese degli Argugliosi" data-wiki="https://it.wikipedia.org/wiki/Marchese_degli_Argugliosi">Marchese</span>, ch&rsquo;ebbe spazio 
-gi&agrave; di bere a <span class="tag place city forli" id="forli" data-coord="44.2244,12.0407">Forl&igrave;</span> con men secchezza, 
+gi&agrave; di bere a <span class="tag place city forli" id="forli" data-coord="44.2244,12.0407" data-name="Forlì">Forl&igrave;</span> con men secchezza, 
 e s&igrave; fu tal, che non si sent&iacute; sazio.          33
                 </pre> 
             </div>       
@@ -103,7 +121,7 @@ e s&igrave; fu tal, che non si sent&iacute; sazio.          33
                 <pre>
 Qual si part&igrave;o <span class="tag character hippolytus_of_athens" id="hippolytus_of_athens" data-name="Hippolytus of Athens" data-wiki="https://en.wikipedia.org/wiki/Hippolytus_of_Athens">Ipolito d&rsquo;Atene</span>  
 per la spietata e perfida <span class="tag character phaedra" id="phaedra" data-name="Phaedra" data-wiki="https://en.wikipedia.org/wiki/Phaedra_(mythology)">noverca</span>, 
-tal di <span class="tag place city firenze" id="firenze" data-coord="43.769562,11.255814">Fiorenza</span> partir ti convene.          48
+tal di <span class="tag place city firenze" id="firenze" data-coord="43.769562,11.255814" data-name="Firenze">Fiorenza</span> partir ti convene.          48
                 </pre>
             </div>
             <div class="terzina">
@@ -154,15 +172,15 @@ ella, non tu, n&rsquo;avr&agrave; rossa la tempia.          67
             <h2 class="work-title">Divina Commedia, Paradiso, canto XXI</h2>
             <div class="terzina">
                 <pre>
-&laquo;Tra &lsquo; due liti d&rsquo;Italia surgon <span class="tag place mountain appennino_umbro_marchigiano" id="appennino_umbro_marchigiano" data-coord="43.1167,12.8000">sassi</span>, 
+&laquo;Tra &lsquo; due liti d&rsquo;Italia surgon <span class="tag place mountain appennino_umbro_marchigiano" id="appennino_umbro_marchigiano" data-coord="43.1167,12.8000" data-name="Appennino umbro-marchigiano">sassi</span>, 
 e non molto distanti a la tua patria, 
 tanto che &lsquo; troni assai suonan pi&ugrave; bassi,          108
                 </pre>
             </div>
             <div class="terzina">
                 <pre>
-e fanno un gibbo che si chiama <span class="tag place mountain catria" id="monte_catria" data-coord="43.4619,12.7045">Catria</span>, 
-di sotto al quale &egrave; consecrato un <span class="tag place fonte_avellana_monastery" id="fonte_avellana_monastery" data-coord="43.4714,12.7265">ermo</span>, 
+e fanno un gibbo che si chiama <span class="tag place mountain catria" id="monte_catria" data-coord="43.4619,12.7045" data-name="Monte Catria">Catria</span>, 
+di sotto al quale &egrave; consecrato un <span class="tag place fonte_avellana_monastery" id="fonte_avellana_monastery" data-coord="43.4714,12.7265" data-name="Fonte Avellana's Monastery">ermo</span>, 
 che suole esser disposto a sola latria&raquo;.          111
                 </pre>
             </div>
@@ -189,36 +207,7 @@ s&igrave; che tosto convien che si riveli.          120
             </div>
         </div>
     </section>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            // Initialize the map
-            const map = L.map("map").setView([43.7696, 11.2558], 6); // Centered on Florence, Italy
     
-            // Add a tile layer to the map (OpenStreetMap)
-            L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            }).addTo(map);
-    
-            // Add markers for places tagged with class="tag place"
-            const placeElements = document.querySelectorAll('.tag.place');
-            placeElements.forEach(el => {
-                const coord = el.dataset.coord; // Get coordinates from data attribute
-                const name = el.dataset.name; // Get the place name
-    
-                if (coord) {
-                    const [lat, lng] = coord.split(',').map(Number);
-                    L.marker([lat, lng])
-                        .addTo(map)
-                        .bindPopup(`<strong>${name}</strong><br>${el.innerText}`);
-                }
-            });
-        });
-    </script>
-    
-
-
-
 
 </body>
 </html>

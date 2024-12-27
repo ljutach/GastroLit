@@ -8,6 +8,10 @@
   <link id="theme-stylesheet" rel="stylesheet" href="styles/middleage.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
 
   <script>
     // Keep track of the current theme
@@ -21,12 +25,128 @@
 
     // Function to load author content dynamically and reapply the current theme
     function loadAuthorContent(authorPath) {
-      $("#author-content").load(authorPath, function () {
+    $("#author-content").load(authorPath, function () {
         // Reapply the current theme to the dynamically loaded content
         const currentTheme = document.getElementById('theme-stylesheet').getAttribute('href');
         document.getElementById('theme-stylesheet').setAttribute('href', currentTheme);
-      });
+
+        // Initialize the map after loading the content
+        const mapElement = document.getElementById("map");
+        if (mapElement) {
+            const map = L.map("map").setView([43.7696, 11.2558], 6); // Centered on Florence, Italy
+
+            // Add a tile layer to the map
+            L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+            // Add markers for places tagged with class="tag place"
+            const placeElements = document.querySelectorAll(".tag.place");
+            placeElements.forEach(el => {
+                const coord = el.dataset.coord; // Get coordinates from data attribute
+                const name = el.dataset.name || el.innerText.trim(); // Get name or fallback to inner text
+
+                if (coord) {
+                    const [lat, lng] = coord.split(',').map(Number);
+                    L.marker([lat, lng])
+                        .addTo(map)
+                        .bindPopup(`<strong>${name}</strong><br>${el.innerText}`);
+                }
+            });
+        }
+
+        // Populate the entity table and add scroll functionality
+        populateEntityTable();
+    });
+}
+
+// Function to populate the entity table
+function populateEntityTable() {
+    const dishes = Array.from(document.querySelectorAll(".tag.dish"));
+    const places = Array.from(document.querySelectorAll(".tag.place"));
+    const characters = Array.from(document.querySelectorAll(".tag.character"));
+
+    const tbody = document.querySelector("#entity-table tbody");
+
+    // Clear the table before populating
+    tbody.innerHTML = "";
+
+    // Remove underline and highlight classes from all elements to avoid duplicates
+    document.querySelectorAll(".tag").forEach(tag => {
+        tag.classList.remove("underline-highlight", "temporary-highlight");
+    });
+
+    const maxRows = Math.max(dishes.length, places.length, characters.length);
+
+    for (let i = 0; i < maxRows; i++) {
+        const dish = dishes[i] ? dishes[i].innerText : "";
+        const place = places[i] ? places[i].innerText : "";
+        const character = characters[i] ? characters[i].innerText : "";
+
+        const row = document.createElement("tr");
+
+        // Create table cells
+        const dishCell = document.createElement("td");
+        const placeCell = document.createElement("td");
+        const characterCell = document.createElement("td");
+
+        // Add links to scroll to corresponding elements in the text
+        if (dishes[i]) {
+            dishCell.innerHTML = `<a href="#" data-id="${dishes[i].id}" class="scroll-to">${dish}</a>`;
+            // Add underline to corresponding element
+            dishes[i].classList.add("underline-highlight");
+        } else {
+            dishCell.textContent = "";
+        }
+
+        if (places[i]) {
+            placeCell.innerHTML = `<a href="#" data-id="${places[i].id}" class="scroll-to">${place}</a>`;
+            // Add underline to corresponding element
+            places[i].classList.add("underline-highlight");
+        } else {
+            placeCell.textContent = "";
+        }
+
+        if (characters[i]) {
+            characterCell.innerHTML = `<a href="#" data-id="${characters[i].id}" class="scroll-to">${character}</a>`;
+            // Add underline to corresponding element
+            characters[i].classList.add("underline-highlight");
+        } else {
+            characterCell.textContent = "";
+        }
+
+        // Append cells to the row
+        row.appendChild(dishCell);
+        row.appendChild(placeCell);
+        row.appendChild(characterCell);
+
+        // Append row to the table body
+        tbody.appendChild(row);
     }
+
+    // Add click listeners to scroll to the respective elements in the text
+    document.querySelectorAll(".scroll-to").forEach(link => {
+        link.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("data-id");
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                // Scroll to the element
+                targetElement.scrollIntoView({ behavior: "smooth", block: "center" });
+
+                // Highlight the element
+                targetElement.classList.add("temporary-highlight");
+
+                // Remove highlight after a timeout
+                setTimeout(() => targetElement.classList.remove("temporary-highlight"), 4000);
+            }
+        });
+    });
+}
+
+
+
 
     function resetAuthorContent() {
       document.getElementById('author-content').innerHTML = '<h3>Click on an author to read their work</h3>';
@@ -117,6 +237,44 @@
 <div class="container" id="author-content">
   <h3>Select an issue and start exploring!</h3>
 </div>
+
+
+<!-- Scroll to Top Button -->
+<button id="scrollToTopBtn" style="
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  background-color: #8b5e3c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Essays-1743', serif;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+">⬆ Back to Nav Bar</button>
+
+<script>
+  // Scroll to Top Button functionality
+  const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+  // Show the button when user scrolls down
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 300) {
+      scrollToTopBtn.style.display = 'block';
+    } else {
+      scrollToTopBtn.style.display = 'none';
+    }
+  });
+
+  // Scroll to the top when the button is clicked
+  scrollToTopBtn.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+
 
 </body>
 </html>

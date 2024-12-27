@@ -326,3 +326,25 @@ button:hover {
         font-size: 1.8rem;
     }
 }
+
+
+#author-content .leaflet-popup-content {
+    font-size: 1.8rem; /* Larger font size */
+    font-weight: bold; /* Optional */
+    line-height: 1.6; /* Adjust spacing */
+    color: #3a302a; /* Match theme */
+    font-family: 'Essays-1743', serif; /* Match theme typography */
+}
+
+/* Underline effect for default state */
+.underline-highlight {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: #8b5e3c; /* Matches your theme color */
+}
+
+/* Highlight effect when an element is clicked */
+.temporary-highlight {
+    background-color: yellow;
+    transition: background-color 0.5s ease;
+}
