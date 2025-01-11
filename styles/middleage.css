@@ -348,3 +348,137 @@ button:hover {
     background-color: yellow;
     transition: background-color 0.5s ease;
 }
+
+.popup-window {
+    max-width: 700px; /* Increased width */
+    border-radius: 12px;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
+    padding: 25px; /* More spacing inside */
+    background: white;
+    border: 2px solid #8b5e3c;
+    font-family: 'Essays-1743', serif;
+    line-height: 1.8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Adjust text wrapping for larger popup */
+.popup-content {
+    display: block;
+    text-align: justify;
+    max-width: 100%;
+}
+
+/* Larger image for better clarity */
+.popup-image {
+    width: 220px; /* Increased size */
+    height: auto;
+    float: left;
+    margin: 5px 20px 10px 0;
+    border-radius: 8px;
+    border: 2px solid #9e752e;
+}
+
+/* Text block takes more space */
+.popup-text {
+    font-size: 17px; /* Slightly larger for readability */
+    text-align: justify;
+    color: #3a302a;
+    overflow-wrap: break-word;
+}
+
+/* Wider button to match new width */
+.close-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: #8b5e3c;
+    color: white;
+    border: none;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 15px;
+    border-radius: 6px;
+    clear: both;
+}
+
+.close-btn:hover {
+    background: #763626;
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+    .popup-window {
+        max-width: 95%;
+    }
+
+    .popup-image {
+        float: none;
+        display: block;
+        margin: 0 auto 12px auto;
+    }
+
+    .popup-text {
+        text-align: left;
+    }
+}
+
+
+
+/* Entity Table Styling */
+#entity-table-container {
+    margin: 20px 0;
+    padding: 20px;
+    background: rgba(255, 251, 235, 0.95); /* Slight parchment effect */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#entity-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 2rem; /* Increase text size */
+}
+
+#entity-table thead {
+    background: #8b5e3c; /* Dark brown header */
+    color: white;
+    font-size: 2.4rem;
+    text-align: center;
+}
+
+#entity-table th, #entity-table td {
+    padding: 15px;
+    border: 2px solid #8b5e3c; /* Match theme color */
+    text-align: center;
+}
+
+#entity-table tbody tr:nth-child(even) {
+    background: rgba(255, 251, 235, 0.8); /* Alternating row color */
+}
+
+#entity-table tbody tr:hover {
+    background: rgba(206, 172, 119, 0.3); /* Subtle hover effect */
+    transition: 0.3s ease-in-out;
+}
+
+#entity-table a {
+    text-decoration: none;
+    color: #763626; /* Dark brown text */
+    font-weight: bold;
+}
+
+#entity-table a:hover {
+    text-decoration: underline;
+    color: #5c3d06; /* Slightly darker hover */
+}
+
+
+
+
+
+.tag {
+    cursor: pointer; /* Changes the cursor to a hand for all elements with the "tag" class */
+}

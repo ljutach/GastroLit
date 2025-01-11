@@ -11,204 +11,62 @@
   
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
-
-  <script>
-    // Keep track of the current theme
-    let currentTheme = 'styles/middleage.css';  // Default theme -->
-
-    // Function to switch themes dynamically
-    function switchTheme(themePath) {
-      currentTheme = themePath; // Update the current theme
-      document.getElementById('theme-stylesheet').setAttribute('href', themePath);
-    }
-
-    // Function to load author content dynamically and reapply the current theme
-    function loadAuthorContent(authorPath) {
-    $("#author-content").load(authorPath, function () {
-        // Reapply the current theme to the dynamically loaded content
-        const currentTheme = document.getElementById('theme-stylesheet').getAttribute('href');
-        document.getElementById('theme-stylesheet').setAttribute('href', currentTheme);
-
-        // Initialize the map after loading the content
-        const mapElement = document.getElementById("map");
-        if (mapElement) {
-            const map = L.map("map").setView([43.7696, 11.2558], 6); // Centered on Florence, Italy
-
-            // Add a tile layer to the map
-            L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            }).addTo(map);
-
-            // Add markers for places tagged with class="tag place"
-            const placeElements = document.querySelectorAll(".tag.place");
-            placeElements.forEach(el => {
-                const coord = el.dataset.coord; // Get coordinates from data attribute
-                const name = el.dataset.name || el.innerText.trim(); // Get name or fallback to inner text
-
-                if (coord) {
-                    const [lat, lng] = coord.split(',').map(Number);
-                    L.marker([lat, lng])
-                        .addTo(map)
-                        .bindPopup(`<strong>${name}</strong><br>${el.innerText}`);
-                }
-            });
-        }
-
-        // Populate the entity table and add scroll functionality
-        populateEntityTable();
-    });
-}
-
-// Function to populate the entity table
-function populateEntityTable() {
-    const dishes = Array.from(document.querySelectorAll(".tag.dish"));
-    const places = Array.from(document.querySelectorAll(".tag.place"));
-    const characters = Array.from(document.querySelectorAll(".tag.character"));
-
-    const tbody = document.querySelector("#entity-table tbody");
-
-    // Clear the table before populating
-    tbody.innerHTML = "";
-
-    // Remove underline and highlight classes from all elements to avoid duplicates
-    document.querySelectorAll(".tag").forEach(tag => {
-        tag.classList.remove("underline-highlight", "temporary-highlight");
-    });
-
-    const maxRows = Math.max(dishes.length, places.length, characters.length);
-
-    for (let i = 0; i < maxRows; i++) {
-        const dish = dishes[i] ? dishes[i].innerText : "";
-        const place = places[i] ? places[i].innerText : "";
-        const character = characters[i] ? characters[i].innerText : "";
-
-        const row = document.createElement("tr");
-
-        // Create table cells
-        const dishCell = document.createElement("td");
-        const placeCell = document.createElement("td");
-        const characterCell = document.createElement("td");
-
-        // Add links to scroll to corresponding elements in the text
-        if (dishes[i]) {
-            dishCell.innerHTML = `<a href="#" data-id="${dishes[i].id}" class="scroll-to">${dish}</a>`;
-            // Add underline to corresponding element
-            dishes[i].classList.add("underline-highlight");
-        } else {
-            dishCell.textContent = "";
-        }
-
-        if (places[i]) {
-            placeCell.innerHTML = `<a href="#" data-id="${places[i].id}" class="scroll-to">${place}</a>`;
-            // Add underline to corresponding element
-            places[i].classList.add("underline-highlight");
-        } else {
-            placeCell.textContent = "";
-        }
-
-        if (characters[i]) {
-            characterCell.innerHTML = `<a href="#" data-id="${characters[i].id}" class="scroll-to">${character}</a>`;
-            // Add underline to corresponding element
-            characters[i].classList.add("underline-highlight");
-        } else {
-            characterCell.textContent = "";
-        }
-
-        // Append cells to the row
-        row.appendChild(dishCell);
-        row.appendChild(placeCell);
-        row.appendChild(characterCell);
-
-        // Append row to the table body
-        tbody.appendChild(row);
-    }
-
-    // Add click listeners to scroll to the respective elements in the text
-    document.querySelectorAll(".scroll-to").forEach(link => {
-        link.addEventListener("click", function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute("data-id");
-            const targetElement = document.getElementById(targetId);
-
-            if (targetElement) {
-                // Scroll to the element
-                targetElement.scrollIntoView({ behavior: "smooth", block: "center" });
-
-                // Highlight the element
-                targetElement.classList.add("temporary-highlight");
-
-                // Remove highlight after a timeout
-                setTimeout(() => targetElement.classList.remove("temporary-highlight"), 4000);
-            }
-        });
-    });
-}
-
-
-
-
-    function resetAuthorContent() {
-      document.getElementById('author-content').innerHTML = '<h3>Click on an author to read their work</h3>';
-    }
-  </script>
 </head>
 <body>
 
-<!-- Navbar -->
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-container">
-      <!-- Brand Logo -->
-      <a class="navbar-brand" href="index.html" onclick="resetAuthorContent()">GastroLit</a>
+  <!-- Navbar -->
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-container">
+        <!-- Brand Logo -->
+        <a class="navbar-brand" href="index.html">GastroLit</a>
 
-      <!-- Navbar Toggle for Mobile -->
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
+        <!-- Navbar Toggle for Mobile -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
 
-      <!-- Navigation Links -->
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav navbar-right">
-          <!-- Issues Dropdown -->
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Issues <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <!-- Tuscany Dropdown -->
-              <li class="dropdown-submenu">
-                <a href="#">Tuscany</a>
-                <ul class="dropdown-menu">
-                  <li><a href="#" onclick="loadAuthorContent('issues/tuscany/authors/dante/text_comp.html')">Dante</a></li>
-                  <li><a href="#" onclick="loadAuthorContent('issues/tuscany/authors/boccaccio/text_comp.html')">Boccaccio</a></li>
-                  <li><a href="#" onclick="loadAuthorContent('issues/tuscany/authors/sacchetti/text_comp.html')">Sacchetti</a></li>
-                </ul>
-              </li>
-              <!-- Sicily Dropdown -->
-              <li class="dropdown-submenu">
-                <a href="#">Sicily</a>
-                <ul class="dropdown-menu">
-                  <li><a href="#" onclick="loadAuthorContent('issues/sicily/authors/camilleri/text_comp.html')">Camilleri</a></li>
-                  <li><a href="#" onclick="loadAuthorContent('issues/sicily/authors/tomasi/text_comp.html')">Tomasi</a></li>
-                  <li><a href="#" onclick="loadAuthorContent('issues/sicily/authors/torregrossa/text_comp.html')">Torregrossa</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
+        <!-- Navigation Links -->
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <!-- Issues Dropdown -->
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Issues <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <!-- Tuscany Dropdown -->
+                <li class="dropdown-submenu">
+                  <a href="#">Tuscany</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#" onclick="loadAuthorContent('issues/tuscany/authors/dante/text_comp.html', 'dante', 'tuscany')">Dante</a></li>
+                    <li><a href="#" onclick="loadAuthorContent('issues/tuscany/authors/boccaccio/text_comp.html', 'boccaccio', 'tuscany')">Boccaccio</a></li>
+                    <li><a href="#" onclick="loadAuthorContent('issues/tuscany/authors/sacchetti/text_comp.html', 'sacchetti', 'tuscany')">Sacchetti</a></li>
+                  </ul>
+                </li>
 
-          <!-- Documentation -->
-          <li>
-            <a href="#">Documentation</a>
-          </li>
-        </ul>
+                <!-- Sicily Dropdown -->
+                <li class="dropdown-submenu">
+                  <a href="#">Sicily</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#" onclick="loadAuthorContent('issues/sicily/authors/camilleri/text_comp.html', 'camilleri', 'sicily')">Camilleri</a></li>
+                    <li><a href="#" onclick="loadAuthorContent('issues/sicily/authors/tomasi/text_comp.html', 'tomasi', 'sicily')">Tomasi</a></li>
+                    <li><a href="#" onclick="loadAuthorContent('issues/sicily/authors/torregrossa/text_comp.html', 'torregrossa', 'sicily')">Torregrossa</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Documentation -->
+            <li><a href="#">Documentation</a></li>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<!-- Theme Selector -->
-<div class="container">
+  <!-- Theme Selector -->
+<div class="container" id="theme-selector-container">
   <h3>Choose a Theme</h3>
   <select id="theme-selector" class="theme-dropdown" onchange="switchTheme(this.value)">
     <option value="styles/middleage.css">Middle Age Theme</option>
@@ -216,65 +74,43 @@ function populateEntityTable() {
   </select>
 </div>
 
-<!-- HomePage image -->
-<div class="container">
-  <img src="index_images/logo.jpeg" alt="Descriptive Alt Text" class="img-responsive" style="margin: 20px auto; display: block;">
-</div>
 
+  <!-- HomePage image -->
+  <div class="container">
+    <img src="images/logo.jpeg" alt="Descriptive Alt Text" class="img-responsive" style="margin: 20px auto; display: block;">
+  </div>
 
-<!-- Content -->
-<div class="container">
-  <h1>GastroLit</h1>
-  <h2>Gastronomic Culture In Italian Literature</h2>
-</div>
+  <!-- Content -->
+  <div class="container">
+    <h1>GastroLit</h1>
+    <h2>Gastronomic Culture In Italian Literature</h2>
+  </div>
 
-<div class="container">
-  <h2>The Project</h2>
-  <p>GastroLit is a magazine that explores the relationship between food and culture in Italian literature by focusing on two regions: Tuscany and Sicily. For each region, we delve into the works of three authors, presenting curated collections of texts which include some iconic gastronomic references. Explore Tuscany through the writings of Dante, Boccaccio, and Sacchetti, and journey to Sicily with selections from Camilleri, Tomasi di Lampedusa, and Torregrossa. Customize your experience with our four typographic and layout themes, inspired by different stylistic traditions. Navigate the literary and cultural landscapes through our interactive Map, which geolocates each significant place mentioned in the texts, offering a rich exploration of the geographical roots of these narratives. This project is realised for the exam of <i>Web Technology and Information Modeling</i> of the master course in <i>Digital Humanities and Digital Knowledge</i> at <b><i>Alma Mater Studiorum</i>- Università di Bologna</b>.</p>
-</div>
+  <div class="container">
+    <h2>The Project</h2>
+    <p>GastroLit is a magazine that explores the relationship between food and culture in Italian literature by focusing on two regions: Tuscany and Sicily. For each region, we delve into the works of three authors, presenting curated collections of texts which include some iconic gastronomic references. Explore Tuscany through the writings of Dante, Boccaccio, and Sacchetti, and journey to Sicily with selections from Camilleri, Tomasi di Lampedusa, and Torregrossa. Customize your experience with our four typographic and layout themes, inspired by different stylistic traditions. Navigate the literary and cultural landscapes through our interactive Map, which geolocates each significant place mentioned in the texts, offering a rich exploration of the geographical roots of these narratives. This project is realised for the exam of <i>Web Technology and Information Modeling</i> of the master course in <i>Digital Humanities and Digital Knowledge</i> at <b><i>Alma Mater Studiorum</i>- Università di Bologna</b>.</p>
+  </div>
 
-<!-- Placeholder for Dynamic Content -->
-<div class="container" id="author-content">
-  <h3>Select an issue and start exploring!</h3>
-</div>
+  <!-- Placeholder for Dynamic Content -->
+  <div class="container" id="author-content" data-author="" data-region="">
+    <h3>Select an issue and start exploring!</h3>
+  </div>
 
+  <!-- Scroll to Top Button -->
+  <button id="scrollToTopBtn" style="position: fixed; bottom: 20px; right: 20px; display: none;">⬆ Back to Nav Bar</button>
 
-<!-- Scroll to Top Button -->
-<button id="scrollToTopBtn" style="
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  display: none;
-  background-color: #8b5e3c;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-family: 'Essays-1743', serif;
-  font-size: 1.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-">⬆ Back to Nav Bar</button>
+  <script>
+    document.getElementById('scrollToTopBtn').addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
 
-<script>
-  // Scroll to Top Button functionality
-  const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+    window.addEventListener('scroll', function () {
+      document.getElementById('scrollToTopBtn').style.display = window.scrollY > 300 ? "block" : "none";
+    });
+  </script>
 
-  // Show the button when user scrolls down
-  window.addEventListener('scroll', function () {
-    if (window.scrollY > 300) {
-      scrollToTopBtn.style.display = 'block';
-    } else {
-      scrollToTopBtn.style.display = 'none';
-    }
-  });
-
-  // Scroll to the top when the button is clicked
-  scrollToTopBtn.addEventListener('click', function () {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-</script>
-
-
+  <!-- Link to External JavaScript -->
+  <script src="js/script.js"></script>
+  
 </body>
 </html>

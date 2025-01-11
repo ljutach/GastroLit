@@ -1,5 +1,5 @@
 /*
-* Cyberpunk Theme
+* Cyberpunk Theme - Updated with Improved Dropdown Behavior
 * Futuristic, neon-inspired design inspired by cyberpunk aesthetics.
 */
 
@@ -25,8 +25,9 @@ body {
   font-family: var(--font-main);
   background-color: var(--background-color);
   color: var(--primary-color);
-  line-height: 1.8; /* Increased for readability */
-  overflow-x: hidden; /* Prevent horizontal scrolling */
+  line-height: 2;
+  overflow-x: hidden;
+  font-size: 2rem;
 }
 
 #author-content {
@@ -34,266 +35,381 @@ body {
   position: relative;
   visibility: visible;
   z-index: 1;
-  padding: 1rem;
-  background-color: rgba(13, 13, 13, 0.9); /* Dark background for a futuristic look */
-  color: var(--primary-color); /* Neon teal for text color */
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-  word-wrap: break-word; /* Wrap long words */
-  overflow-wrap: break-word; /* Additional support for word wrapping */
-  border: 2px solid var(--secondary-color); /* Add a neon pink border */
-  border-radius: 10px; /* Smooth edges for a modern feel */
-  box-shadow: 0 0 20px rgba(255, 0, 128, 0.8); /* Add a neon glow */
-}
-
-.author-image {
-  display: block;
-  margin: 1rem auto; /* Center the image with some spacing */
-  max-width: 50%; /* Reduce the size to 50% of its container */
-  height: auto; /* Maintain the aspect ratio */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 0 15px rgba(0, 255, 204, 0.8); /* Neon teal glow */
-  border: 2px solid var(--accent-color); /* Vibrant yellow border */
-}
-
-.author-caption {
-  display: block;
-  text-align: center; /* Center-align the caption text */
-  margin: 0.5rem auto; /* Add spacing between the image and the caption */
-  max-width: 50%; /* Align with the image's width */
-  font-family: var(--font-accent); /* Cyberpunk-inspired font */
-  font-size: 1.5rem; /* Set a readable caption size */
-  color: var(--accent-color); /* Vibrant yellow for text */
-  line-height: 1.8; /* Ensure proper readability */
-  background-color: rgba(20, 20, 20, 0.8); /* Subtle dark background */
-  padding: 0.5rem; /* Add padding around the caption */
-  border-radius: 5px; /* Rounded corners */
-  border: 1px solid var(--primary-color); /* Neon teal border */
-  box-shadow: 0 0 10px rgba(255, 255, 0, 0.8); /* Subtle neon glow */
+  padding: 2rem;
+  background-color: rgba(13, 13, 13, 0.95);
+  color: var(--primary-color);
+  overflow-x: hidden;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  border: 3px solid var(--secondary-color);
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(255, 0, 128, 0.8);
+  font-size: 2.2rem;
 }
 
 /* Navbar */
 nav {
   background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-  padding: 1rem 2rem; /* Add extra horizontal padding */
+  padding: 1.5rem 2rem;
   display: flex;
-  justify-content: space-between; /* Space between brand and links */
-  align-items: center; /* Vertically align items */
+  justify-content: space-between;
+  align-items: center;
   position: relative;
   z-index: 1000;
 }
 
-nav .navbar-brand {
+.navbar-brand {
   color: var(--navbar-text-color) !important;
-  font-size: 3rem; /* Slightly smaller to align with links */
+  font-size: 5rem;
   text-decoration: none;
   font-family: var(--font-main);
-  text-align: center;
-  text-shadow: 0 0 20px var(--navbar-text-color); /* Glowing effect */
-  margin: 0; /* Remove default margins */
+  text-shadow: 0 0 25px var(--navbar-text-color);
 }
 
-nav .navbar-nav {
+.navbar-nav {
   display: flex;
-  gap: 2rem; /* Add spacing between links */
-  align-items: center; /* Ensure links are vertically aligned with the brand */
+  gap: 3rem;
+  align-items: center;
 }
 
-nav a {
+.navbar-nav a {
   color: var(--navbar-text-color);
   text-decoration: none;
   font-family: var(--font-accent);
   text-transform: uppercase;
-  font-size: 1.5rem;
+  font-size: 2.2rem;
   font-weight: bold;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Subtle glow effect */
-  padding: 0.5rem 1rem; /* Add padding for consistent spacing */
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+  padding: 1rem 1.5rem;
 }
 
-nav a:hover {
+.navbar-nav a:hover {
   color: var(--accent-color);
-  text-shadow: 0 0 15px var(--accent-color); /* Stronger glow */
+  text-shadow: 0 0 20px var(--accent-color);
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   nav {
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center-align all items */
+    flex-direction: column;
+    align-items: center;
   }
-
-  nav .navbar-brand {
-    margin-bottom: 1rem; /* Add spacing between stacked sections */
-  }
-
-  nav .navbar-nav {
-    flex-direction: column; /* Stack links vertically */
-    gap: 1rem;
+  .navbar-nav {
+    flex-direction: column;
+    gap: 2rem;
   }
 }
 
-/* Dropdown Menu */
-.dropdown-menu {
-  display: none; /* Default hidden */
-  position: absolute;
-  background-color: rgba(20, 20, 20, 0.9);
-  border: 1px solid var(--secondary-color);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  z-index: 1100; /* Ensure dropdown is above other elements */
+/* Titles */
+h1, h2, h3 {
+  font-family: var(--font-main);
+  color: var(--secondary-color);
+  text-align: center;
+  text-shadow: 0 0 25px var(--secondary-color);
 }
 
-.dropdown:hover > .dropdown-menu,
-.dropdown:focus > .dropdown-menu,
-.dropdown:active > .dropdown-menu {
-  display: block;
-  visibility: visible;
-  opacity: 1;
+h1 {
+  font-size: 6rem;
 }
 
-.dropdown-menu > li > a {
-  padding: 0.5rem 1rem;
-  color: var(--primary-color);
-  text-decoration: none;
+h2 {
+  font-size: 4.5rem;
+}
+
+h3 {
+  font-size: 3.8rem;
+}
+
+/* Paragraphs */
+p {
   font-family: var(--font-accent);
+  font-size: 2.2rem;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+  text-align: justify;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+
+pre {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 2.5rem;
+  color: var(--primary-color); /* Neon teal text */
+  background: rgba(13, 13, 13, 0.95); /* Dark cyberpunk background */
+  padding: 1.5rem;
+  white-space: pre-line; /* Ensures proper word wrapping */
+  word-break: normal; /* Prevents breaking words awkwardly */
+  overflow-wrap: normal; /* Natural wrapping */
+  line-height: 2;
+  border: 2px solid var(--accent-color); /* Vibrant yellow border */
+  border-radius: 8px;
+  box-shadow: 0 0 15px var(--secondary-color); /* Hot pink glow */
+  text-shadow: 0 0 10px var(--primary-color); /* Neon glow effect */
+}
+
+
+/* Entity Table Styling */
+#entity-table-container {
+  margin: 30px 0;
+  padding: 30px;
+  background: rgba(20, 20, 20, 0.95);
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(255, 0, 128, 0.8);
+}
+
+#entity-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 2.5rem;
+}
+
+#entity-table thead {
+  background: var(--secondary-color);
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+}
+
+#entity-table th, #entity-table td {
+  padding: 20px;
+  border: 3px solid var(--primary-color);
+  text-align: center;
+}
+
+#entity-table tbody tr:nth-child(even) {
+  background: rgba(20, 20, 20, 0.8);
+}
+
+#entity-table tbody tr:hover {
+  background: rgba(255, 0, 128, 0.3);
+  transition: 0.3s ease-in-out;
+}
+
+#entity-table a {
+  text-decoration: none;
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+#entity-table a:hover {
+  text-decoration: underline;
+  color: var(--primary-color);
+}
+
+/* Cyberpunk Popup Window with Black Background */
+.popup-window {
+  max-width: 700px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px var(--secondary-color); /* Neon glow */
+  padding: 25px;
+  background: rgba(0, 0, 0, 0.95) !important; /* Fully black background */
+  border: 3px solid var(--secondary-color); /* Hot pink neon */
+  font-family: var(--font-accent);
+  line-height: 1.8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--primary-color);
+}
+
+/* Adjust text wrapping for popup */
+.popup-content {
   display: block;
-  white-space: nowrap; /* Prevent breaking of single long words */
+  text-align: justify;
+  max-width: 100%;
 }
 
-.dropdown-menu > li > a:hover {
+/* Cyberpunk-styled Image */
+.popup-image {
+  width: 220px;
+  height: auto;
+  float: left;
+  margin: 5px 20px 10px 0;
+  border-radius: 8px;
+  border: 3px solid var(--accent-color); /* Vibrant neon yellow */
+  box-shadow: 0 0 15px var(--accent-color);
+}
+
+/* Cyberpunk Text with Neon Glow */
+.popup-text {
+  font-size: 17px;
+  text-align: justify;
+  color: var(--primary-color);
+  overflow-wrap: break-word;
+  text-shadow: 0 0 10px var(--primary-color); /* Cyberpunk glow effect */
+}
+
+/* Cyberpunk Close Button */
+.close-btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background: var(--secondary-color); /* Hot pink */
+  color: black;
+  border: none;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 15px;
+  border-radius: 6px;
+  clear: both;
+  box-shadow: 0 0 15px var(--secondary-color);
+  font-size: 1.8rem;
+}
+
+.close-btn:hover {
+  background: var(--accent-color); /* Yellow */
+  color: black;
+  text-shadow: 0 0 10px var(--primary-color);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 600px) {
+  .popup-window {
+      max-width: 95%;
+  }
+
+  .popup-image {
+      float: none;
+      display: block;
+      margin: 0 auto 12px auto;
+  }
+
+  .popup-text {
+      text-align: left;
+  }
+}
+
+
+
+
+
+
+
+
+/* Dropdown Styling */
+.dropdown-menu {
+  background-color: rgba(20, 20, 20, 1);
+  color: var(--primary-color);
+  border: 2px solid var(--secondary-color);
+  font-size: 2rem;
+  text-align: left;
+}
+
+.dropdown-menu li a {
+  color: var(--primary-color) !important;
+  font-size: 2rem;
+  padding: 10px 15px;
+  display: block;
+  text-decoration: none;
+  background: transparent;
+}
+
+.dropdown-menu li a:hover {
   background-color: var(--secondary-color);
-  color: var(--background-color);
-  text-shadow: 0 0 5px var(--primary-color);
+  color: black !important;
 }
 
-/* Multi-Level Dropdown */
+/* Dropdown Hover Fix */
 .dropdown-submenu {
   position: relative;
 }
 
 .dropdown-submenu > .dropdown-menu {
-  display: none; /* Default hidden */
+  display: none;
   position: absolute;
+  left: 100%;
   top: 0;
-  left: 100%; /* Align submenu to the right */
-  margin-top: -6px;
-  margin-left: -1px;
-  background-color: rgba(20, 20, 20, 0.9);
-  border: 1px solid var(--accent-color);
-  z-index: 1060; /* Ensure submenus are above */
+  margin-top: -1px;
+  background-color: rgba(20, 20, 20, 1);
+  border: 2px solid var(--accent-color);
+  box-shadow: 0 0 10px var(--accent-color);
+  z-index: 1100;
 }
 
-.dropdown-submenu:hover > .dropdown-menu,
-.dropdown-submenu:focus > .dropdown-menu,
-.dropdown-submenu:active > .dropdown-menu {
-  display: block; /* Show submenu on hover */
+.dropdown-submenu:hover > .dropdown-menu {
+  display: block;
 }
 
-/* Main Layout */
-.container {
-  max-width: 100%; /* Use full width */
-  margin: 2rem auto;
-  padding: 2rem;
-  background-color: rgba(20, 20, 20, 0.9);
-  border: 2px solid var(--primary-color);
-  border-radius: 15px;
-  box-shadow: 0 0 20px rgba(0, 255, 204, 0.6);
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-  word-wrap: break-word; /* Ensure long words wrap */
-  overflow-wrap: break-word; /* Additional support for word wrapping */
+.dropdown-submenu > a {
+  position: relative;
+  z-index: 1101;
 }
 
-/* Preformatted Text */
-pre {
-  font-family: var(--font-accent);
-  font-size: 1.5rem;
-  color: var(--primary-color);
-  background: rgba(20, 20, 20, 0.8);
-  padding: 1rem;
-  white-space: pre-line; /* Wrap preformatted text */
-  word-break: normal;
-  overflow-wrap: normal; /* Prevent horizontal scrolling */
-  line-height: 2;
-  border: 1px solid var(--secondary-color);
-  border-radius: 5px;
+/* Ensure smooth transition */
+.dropdown-menu, .dropdown-submenu {
+  transition: all 0.3s ease-in-out;
 }
 
-/* Theme Selector */
-#theme-selector {
-  margin: 20px auto;
-  display: block; /* Ensures the dropdown is treated as a block-level element for centering */
-  width: auto; /* Adjust width as needed */
-}
-
-/* Typography */
-h1, h2, h3 {
-  font-family: var(--font-main);
-  color: var(--secondary-color);
+/* Theme Selector Alignment Fix */
+#theme-selector-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px; /* Adjust spacing between title and dropdown */
+  margin-bottom: 20px;
   text-align: center;
+  flex-wrap: wrap; /* Ensures responsiveness */
 }
 
-h1 {
-  font-size: 3.5rem;
-  text-shadow: 0 0 20px var(--secondary-color);
+#theme-selector-container h3 {
+  font-size: 3rem;
+  color: var(--secondary-color);
+  text-shadow: 0 0 10px var(--secondary-color);
+  margin: 0;
+  white-space: nowrap; /* Prevents text from wrapping */
 }
 
-h2 {
-  font-size: 2.5rem;
-  text-shadow: 0 0 10px var(--accent-color);
-}
-
-h3 {
-  font-size: 3.8rem;
-  text-shadow: 0 0 5px var(--primary-color);
-}
-
-p {
-  font-family: var(--font-accent);
-  font-size: 1.5rem;
+#theme-selector {
+  font-size: 2rem;
+  padding: 10px;
+  border: 2px solid var(--accent-color);
+  background-color: rgba(20, 20, 20, 0.9);
   color: var(--primary-color);
-  margin-bottom: 1.5rem;
-  text-align: justify;
-  word-wrap: break-word; /* Wrap text properly */
-  overflow-wrap: break-word;
+  font-family: var(--font-accent);
+  border-radius: 8px;
+  box-shadow: 0 0 10px var(--accent-color);
+  min-width: 200px; /* Ensures consistent width */
 }
 
-/* Buttons */
-button {
-  background-color: var(--secondary-color);
-  border: none;
-  color: var(--background-color);
-  padding: 0.5rem 1rem;
-  font-family: var(--font-main);
-  text-transform: uppercase;
-  border-radius: 5px;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+/* Base styling for all tagged entities */
+.tag {
+  text-decoration: underline; /* Ensures underline for readability */
+  cursor: pointer; /* Hand pointer on hover */
+  font-weight: bold;
+  transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
 }
 
-button:hover {
-  background-color: var(--accent-color);
-  color: var(--background-color);
-  text-shadow: 0 0 10px var(--primary-color);
+/* Default entity colors */
+.tag.character {
+  color: #ff007f; /* Bright Neon Pink */
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem; /* Add spacing between stacked elements */
-  }
+.tag.place {
+  color: #09ff00; /* Neon Cyan */
+}
 
-  .container {
-    padding: 1rem;
-  }
+.tag.dish {
+  color: #ff6600; /* Bright Neon Orange */
+  font-weight: bold;
+  text-shadow: 0 0 5px rgba(255, 102, 0, 0.8); /* Adds a glowing effect */
+}
 
-  h1 {
-    font-size: 2.5rem;
-  }
 
-  h2 {
-    font-size: 1.8rem;
-  }
+
+/* Hover effect for Cyberpunk entities */
+.tag:hover {
+  color: white; /* High contrast hover effect */
+  text-shadow: 0 0 15px var(--primary-color), 0 0 30px var(--secondary-color); /* Neon glow */
+}
+
+.tag {
+  cursor: pointer; /* Changes the cursor to a hand for all elements with the "tag" class */
+}
+
+
+.temporary-highlight {
+  background-color: rgba(255, 255, 0, 0.5); /* Semi-transparent neon yellow */
+  transition: background-color 0.5s ease-in-out;
 }
