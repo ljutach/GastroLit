@@ -61,6 +61,8 @@ function initializeMap() {
     }
 }
 
+
+
 function populateEntityTable() {
     const tbody = document.querySelector("#entity-table tbody");
     tbody.innerHTML = "";
@@ -75,15 +77,22 @@ function populateEntityTable() {
 
     for (let i = 0; i < maxRows; i++) {
         const row = document.createElement("tr");
+
         ["dish", "place", "character"].forEach(type => {
             const cell = document.createElement("td");
+
             if (entities[type][i]) {
                 const entity = entities[type][i];
-                cell.innerHTML = `<a href="#" data-id="${entity.id}" class="scroll-to">${entity.innerText}</a>`;
+                const entityName = entity.getAttribute("data-name") || entity.innerText; // Use data-name if available
+                const entityId = entity.id; // Get the unique ID
+
+                cell.innerHTML = `<a href="#" data-id="${entityId}" class="scroll-to">${entityName}</a>`;
                 entity.classList.add("underline-highlight");
             }
+
             row.appendChild(cell);
         });
+
         tbody.appendChild(row);
     }
 
@@ -99,6 +108,7 @@ function populateEntityTable() {
         });
     });
 }
+
 
 let descriptions = {};
 
@@ -131,12 +141,15 @@ function initializePopups() {
     });
 }
 
+
+
 function createPopup(element) {
     const entityId = element.id;
     console.log("📌 Popup for:", entityId);
     
     const description = descriptions[entityId]?.description || "No description available.";
     const imageSrc = descriptions[entityId]?.image || "default-image.jpg";
+    const wikiLink = element.getAttribute("data-wiki"); // Get the Wikipedia link if available
 
     document.querySelector(".popup-window")?.remove();
 
@@ -147,6 +160,7 @@ function createPopup(element) {
             <img src="${imageSrc}" alt="Popup Image" class="popup-image">
             <p class="popup-text">${description}</p>
         </div>
+        ${wikiLink ? `<a href="${wikiLink}" target="_blank" class="read-more-btn">Read More</a>` : ""}
         <button class="close-btn">CLOSE</button>
     `;
     document.body.appendChild(popup);

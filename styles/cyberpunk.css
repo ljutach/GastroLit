@@ -413,3 +413,29 @@ pre {
   background-color: rgba(255, 255, 0, 0.5); /* Semi-transparent neon yellow */
   transition: background-color 0.5s ease-in-out;
 }
+
+
+.read-more-btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background: var(--accent-color); /* Vibrant yellow */
+  color: black;
+  border: 2px solid var(--primary-color); /* Neon teal border */
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 15px;
+  border-radius: 6px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Orbitron', sans-serif;
+  box-shadow: 0 0 10px var(--accent-color);
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.read-more-btn:hover {
+  background: var(--secondary-color); /* Hot pink on hover */
+  color: white;
+  box-shadow: 0 0 15px var(--secondary-color);
+}

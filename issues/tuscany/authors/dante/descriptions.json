@@ -4,9 +4,32 @@
         "image": "issues/tuscany/authors/dante/images/forese_donati.jpg"
     },
     "dante_alighieri": {
-        "description": "Dante Alighieri was an Italian poet known for The Divine Comedy.",
+        "description": "Dante Alighieri (1265–1321) was an Italian poet, writer, and philosopher, best known for The Divine Comedy, an epic allegory of the soul’s journey through Inferno, Purgatorio, and Paradiso. Written in vernacular Italian, it shaped the modern Italian language and deeply influenced Western literature. A Florentine by birth, Dante was exiled due to political conflicts, spending his later years in Ravenna. His works blend medieval theology, classical philosophy, and personal experience, offering profound reflections on morality, justice, and divine grace. His vision of the afterlife and literary innovations secured his legacy as the 'father of Italian language'.",
         "image": "issues/tuscany/authors/dante/images/dante.jpg"
     },
+
+
+    "piccarda_donati":{
+        "description": "Piccarda Donati (c. 1270–1293) was a noblewoman from Florence and a key figure in Dante Alighieri’s Paradiso in The Divine Comedy. A member of the powerful Donati family, she was forced into marriage by her brother, Corso Donati, despite having taken religious vows as a nun. Dante places her in the lowest sphere of Paradise, the Moon, symbolizing those who could not fulfill their vows due to external constraints. Piccarda’s story reflects themes of divine justice, free will, and spiritual devotion, making her an enduring symbol of faith and resignation in medieval literature.",
+        "image": "issues/tuscany/authors/dante/images/piccarda_donati.png"
+    },
+
+    "bonagiunta_orbicciani":{
+        "description": "Bonagiunta Orbicciani (d. c. 1290) was an Italian poet from Lucca, associated with the Dolce Stil Novo and the earlier Sicilian School. A prominent figure in 13th-century Italian literature, he engaged in poetic exchanges with Dante Alighieri, notably in Purgatorio Canto XXIV of The Divine Comedy. Bonagiunta recognizes Dante’s innovative poetic style, distinguishing it from earlier traditions. His works reflect courtly love themes and transitional elements between medieval and early Renaissance poetry. Though less renowned than Dante, his role in shaping vernacular Italian poetry cements his legacy in literary history.",
+        "image": "issues/tuscany/authors/dante/images/bonagiunta_orbicciani.png"
+    },
+
+    "pope_martin_IV":{
+        "description": "Pope Martin IV (c. 1210–1285), born Simon de Brion, was pope from 1281 to 1285. A French-born pontiff, he was a staunch supporter of Charles of Anjou, backing his rule over Sicily. His papacy was marked by the Sicilian Vespers revolt (1282), which expelled Angevin forces from Sicily, weakening papal influence in the region. Dante places him in Purgatorio Canto XXIV of The Divine Comedy among the Gluttonous, referencing his reputed fondness for eels cooked in Vernaccia wine. Despite political struggles, Martin IV sought to strengthen papal authority, but his policies ultimately failed to unify Italy.",
+        "image": "issues/tuscany/authors/dante/images/pope_martin_IV.png"
+    },
+
+    "anguilla":{
+        "description": "Anguilla, or eel, is a prized delicacy in many culinary traditions, particularly in Italy and France. In medieval and Renaissance cuisine, it was often prepared in elaborate ways, such as being roasted, stewed, or marinated. Pope Martin IV was famously said to have indulged in eels cooked in Vernaccia wine, as mentioned by Dante in Purgatorio Canto XXIV of The Divine Comedy. Eel remains a significant dish in regional Italian cuisine, notably in Emilia-Romagna and Campania, where it is enjoyed grilled or braised, often served during Christmas feasts and other traditional celebrations.",
+        "image": "issues/tuscany/authors/dante/images/anguilla.png"
+    },
+
+
     "bread": {
         "description": "Bread is a staple food made from flour and water.",
         "image": "issues/tuscany/authors/dante/images/bread.jpg"
