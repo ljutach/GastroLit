@@ -1,8 +1,10 @@
-let currentTheme = 'styles/middleage.css'; 
+let currentTheme = localStorage.getItem("selectedTheme") || 'styles/middleage.css'; 
 
+// Function to switch themes and store in localStorage
 function switchTheme(themePath) {
     currentTheme = themePath;
     document.getElementById('theme-stylesheet').setAttribute('href', themePath);
+    localStorage.setItem("selectedTheme", themePath); // Save theme to localStorage
 
     setTimeout(() => {
         restoreDropdownListeners();
@@ -10,6 +12,19 @@ function switchTheme(themePath) {
         console.log("✅ Popups and dropdowns restored after theme switch");
     }, 500);
 }
+
+function reloadWithTheme() {
+    window.location.href = "index.html"; // Reload page
+    setTimeout(() => {
+        document.getElementById('theme-stylesheet').setAttribute('href', localStorage.getItem("selectedTheme"));
+    }, 200);
+}
+
+
+// Apply saved theme on page load
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById('theme-stylesheet').setAttribute('href', currentTheme);
+});
 
 
 function restoreDropdownListeners() {
