@@ -1,13 +1,115 @@
 {
     "marinella": {
         "description": "Marinella is a fictional seaside town created by Andrea Camilleri in his Inspector Montalbano series, closely resembling Punta Secca, a small coastal village in Sicily. Located along the sun-drenched Mediterranean shore, Marinella is known for its golden beaches, clear waters, and the inspector’s iconic beachfront home. The town embodies the charm of Sicily’s southern coast, with fishing boats dotting the horizon and the aroma of local cuisine filling the air. Serving as both a refuge and a backdrop for Montalbano’s reflections, Marinella captures the essence of Sicilian life, blending mystery, tranquility, and rich cultural heritage.",
-        "image": "issues/sicily/authors/camilleri/images/punta_secca.png"
+        "image": "issues/sicily/authors/camilleri/images/marinella.jpg"
+    },
+
+    "adelina": {
+        "description": "Adelina is Inspector Montalbano’s devoted housekeeper in Andrea Camilleri’s Inspector Montalbano series. Fierce and sharp-tongued, she takes care of Montalbano’s home while spoiling him with her exceptional Sicilian cooking. A former thief with a criminal past, she remains deeply protective of the inspector and often offers streetwise insights. Though she rarely appears in person, her presence is felt through her delicious dishes and handwritten notes, reflecting her strong personality and maternal care. Adelina embodies the warmth, loyalty, and culinary traditions of Sicily, adding both humor and authenticity to Montalbano’s daily life.",
+        "image": "/images/adelina.webp"
+    },
+
+    "arancini":{
+        "description": "Arancini are traditional Sicilian rice balls, typically stuffed, breaded, and deep-fried to golden perfection. These crispy delights are made from saffron-infused risotto, often filled with ragù (meat sauce), mozzarella, and peas, though variations include ham, spinach, or pistachios. Their name, meaning “little oranges,” comes from their round shape and golden-brown color. Arancini are a staple of Sicilian street food, enjoyed as a snack or a hearty meal. They hold cultural significance, famously featured in Inspector Montalbano, where they symbolize home, tradition, and irresistible temptation.",
+        "image": "issues/sicily/authors/camilleri/images/arancini.jpg"
+    },
+
+    "carne_glassata":{
+        "description": "'Aggrassato di carne'(Glazed meat) is a traditional Sicilian dish made with slow-braised meat, usually beef or veal, cooked with onions, white wine, and aromatic herbs until tender and flavorful. The name aggrassato comes from the Sicilian term for slow, moist cooking, which results in succulent meat enveloped in a rich, savory sauce. Often served with potatoes or rustic bread, this dish is a staple of Sicilian cuisine, loved for its deep flavors and simple yet hearty ingredients.",
+        "image": "/images/aggrassato.webp"
+    },
+
+    "cipolla":{
+        "description": "The onion (Allium cepa) is a widely used vegetable known for its pungent flavor and aromatic qualities. It comes in various types, such as red, white, and yellow, each offering different taste profiles. Onions can be eaten raw, cooked, caramelized, or pickled, enhancing countless dishes worldwide. Rich in antioxidants and nutrients, they are a staple in many cuisines, adding depth and sweetness when cooked.",
+        "image": "i/images/cipolla.jpg"
+    },
+
+    "pomodoro":{
+        "description": "The tomato (Solanum lycopersicum) is a versatile fruit commonly used as a vegetable in cooking. Native to South America, it comes in various shapes, sizes, and colors, from cherry to beefsteak varieties. Tomatoes are essential in many cuisines, used fresh, cooked, or processed into sauces, soups, and salads. Rich in vitamins, antioxidants, and lycopene, they add sweetness, acidity, and depth to countless dishes worldwide.",
+        "image": "/images/pomodoro.jpg"
+    },
+
+    "sedano": {
+        "description": "Celery (Apium graveolens) is a crunchy, aromatic vegetable used in many cuisines for its fresh, slightly peppery flavor. It consists of long, fibrous stalks with leafy tops, commonly eaten raw in salads or as a snack, and cooked in soups, stews, and sauces. Rich in vitamins, minerals, and antioxidants, celery is valued for its health benefits and low-calorie content. Its distinct taste enhances both raw and cooked dishes, making it a staple in culinary traditions worldwide.",
+        "image": "/images/sedano.jpg"
+    },
+
+    "prezzemolo": {
+        "description": "Parsley (Petroselinum crispum) is a fragrant herb widely used in cooking for its fresh, slightly peppery flavor. It comes in two main varieties: curly and flat-leaf (Italian), the latter being more aromatic. Parsley is commonly used as a garnish, in salads, sauces, soups, and meat dishes, enhancing flavors with its bright, herbal notes. Rich in vitamins and antioxidants, it is both a culinary staple and a nutritious addition to many recipes worldwide.",
+        "image": "/images/prezzemolo.jpg"
+    },
+
+    "basilico": {
+        "description": "Bread is a staple food made from flour and water.",
+        "image": "/images/basilico.jpeg"
+    },
+
+    "risotto": {
+        "description": "Bread is a staple food made from flour and water.",
+        "image": "/images/risotto.jpg"
+    },
+
+    "zafferano": {
+        "description": "Bread is a staple food made from flour and water.",
+        "image": "/images/bread.jpg"
+    },
+
+    "uova": {
+        "description": "Bread is a staple food made from flour and water.",
+        "image": "/images/bread.jpg"
+    },
+
+    "piselli": {
+        "description": "Bread is a staple food made from flour and water.",
+        "image": "/images/bread.jpg"
+    },
+
+    "besciamella": {
+        "description": "Bread is a staple food made from flour and water.",
+        "image": "/images/bread.jpg"
+    },
+
+    "sugo": {
+        "description": "Bread is a staple food made from flour and water.",
+        "image": "/images/bread.jpg"
+    },
+
+    "riso": {
+        "description": "Bread is a staple food made from flour and water.",
+        "image": "/images/bread.jpg"
+    },
+
+    "farina": {
+        "description": "Bread is a staple food made from flour and water.",
+        "image": "/images/farina.jpeg"
+    },
+
+    "pangrattato": {
+        "description": "Bread is a staple food made from flour and water.",
+        "image": "/images/bread.jpg"
+    },
+    "montalbano": {
+        "description": "Bread is a staple food made from flour and water.",
+        "image": "/images/montalbano.png"
+    },
+
+    "sugo_seppie": {
+        "description": "Bread is a staple food made from flour and water.",
+        "image": "/images/seppia.jpg"
+    },
+
+    "origano": {
+        "description": "Bread is a staple food made from flour and water.",
+        "image": "/images/origano.jpg"
+    },
+
+    "caponata": {
+        "description": "Bread is a staple food made from flour and water.",
+        "image": "/images/caponata.jpg"
+    },
+
+    "pane": {
+        "description": "Bread is a staple food made from flour and water.",
+        "image": "/images/pane.jpg"
     }
-
-
-
-
-
-
-}    
-    
+}
