@@ -53,6 +53,16 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
 }
 
+
+.author-caption:hover {
+    background-color: rgba(255, 251, 235, 1); /* Brighten the background slightly */
+    color: #5c3d06; /* Darker earthy tone for text */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Enhance the shadow for depth */
+    transform: scale(1.02); /* Add a gentle zoom effect */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+
 /* Navbar */
 nav {
     background-color: #8b5e3c;

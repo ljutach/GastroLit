@@ -47,6 +47,47 @@ body {
   font-size: 2.2rem;
 }
 
+
+.author-image {
+  display: block;
+  margin: 1rem auto; /* Center the image with some spacing */
+  max-width: 50%; /* Reduce the size to 50% of its container */
+  height: auto; /* Maintain the aspect ratio */
+  border-radius: 10px; /* Add subtle rounded corners */
+  border: 3px solid var(--primary-color); /* Neon teal border */
+  box-shadow: 0 0 15px var(--secondary-color), /* Neon hot pink outer glow */
+              0 0 30px rgba(0, 255, 204, 0.6); /* Subtle teal outer glow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+}
+
+.author-caption {
+  display: block;
+  text-align: center; /* Center-align the caption text */
+  margin: 0.5rem auto; /* Add spacing between the image and the caption */
+  max-width: 100%; /* Ensure it spans the full width of its container */
+  font-family: var(--font-accent); /* Use a font consistent with the cyberpunk theme */
+  font-size: 2rem; /* Slightly larger for readability */
+  color: var(--primary-color); /* Neon teal text */
+  line-height: 1.6; /* Ensure proper readability */
+  background-color: rgba(13, 13, 13, 0.9); /* Dark background for contrast */
+  padding: 0.5rem; /* Add padding around the caption */
+  border-radius: 8px; /* Add smooth rounded corners */
+  border: 2px solid var(--secondary-color); /* Neon pink border */
+  box-shadow: 0 0 15px var(--primary-color), /* Neon teal outer glow */
+              0 0 30px rgba(255, 0, 128, 0.7); /* Neon pink outer glow */
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth hover effects */
+  width: fit-content; /* Center it around the content size */
+  margin-left: auto; /* Align center horizontally */
+  margin-right: auto; /* Align center horizontally */
+}
+
+.author-caption:hover {
+  box-shadow: 0 0 25px var(--primary-color), /* Intensified teal glow */
+              0 0 50px var(--secondary-color); /* Intensified pink glow */
+  transform: scale(1.02); /* Subtle zoom effect on hover */
+}
+
+
 /* Navbar */
 nav {
   background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));

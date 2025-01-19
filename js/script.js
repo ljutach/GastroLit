@@ -13,6 +13,19 @@ function switchTheme(themePath) {
     }, 500);
 }
 
+// Function to update the dropdown based on the current theme
+function updateThemeDropdown() {
+    const themeSelector = document.getElementById("theme-selector");
+    themeSelector.value = currentTheme;
+}
+
+
+// Apply saved theme on page load
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById('theme-stylesheet').setAttribute('href', currentTheme);
+    updateThemeDropdown(); // Update dropdown to reflect the current theme
+});
+
 function reloadWithTheme() {
     window.location.href = "index.html"; // Reload page
     setTimeout(() => {
@@ -27,6 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+// Restore dropdown listeners for hover
 function restoreDropdownListeners() {
     $(".dropdown").hover(function () {
         $(this).find(".dropdown-menu").first().stop(true, true).fadeIn(200);
