@@ -1,0 +1,193 @@
+{
+    "cinghiale": {
+        "description": "The cinghiale (wild boar) holds symbolic and practical significance in Italian literature and culture. In Boccaccio’s Ninfale Fiesolano, the wild boar is emblematic of the untamed wilderness surrounding Fiesole and reflects themes of fertility, vitality, and the primal forces of nature. The boar was also a prized source of food in medieval Tuscany, featured in hearty dishes that celebrated its robust flavor. Representing both danger and sustenance, the cinghiale is deeply rooted in the rural traditions and culinary identity of the region.",
+        "image": "issues/tuscany/authors/boccaccio/images/cinghiale.png"
+    },
+
+   
+    "pane_di_castagne": {
+        "description": "Chestnut bread, was a staple food in medieval Italy, especially in regions like Tuscany and Liguria where chestnuts were abundant. Known as 'poor man's bread,' it sustained rural communities during harsh winters and times of scarcity. In Boccaccio’s works, the rustic simplicity of chestnut bread reflects the earthy life of the countryside, contrasting with the opulence of noble feasts. Its sweet, nutty flavor and dense texture make it a symbol of resilience and connection to the land.",
+        "image": "issues/tuscany/authors/boccaccio/images/pane_di_castagne.png"
+    },
+
+    "acqua_con_mela_cotta_ed_erbe": {
+        "description": "Water with cooked apple and herbs, a medieval drink made with boiled honey and herbs, was valued for its refreshing and medicinal properties. Often consumed in rural settings, it symbolizes the natural remedies and culinary simplicity of the era. In Boccaccio’s works, such as the Ninfale Fiesolano, it reflects the harmony between human life and nature, evoking a pastoral world where nourishment and healing come directly from the land.",
+        "image": "issues/tuscany/authors/boccaccio/images/acqua_con_mela_cotta.png"
+    },
+
+    "filippo_augusto": {
+        "description": "Philip II of France (1165–1223), also known as Philip Augustus, was a powerful medieval king who expanded French territories and centralized governance. Mentioned in Boccaccio’s Decameron, his reign symbolizes the political ambitions and alliances that shaped medieval Europe. Philip’s actions during the Third Crusade and his conflicts with England resonate in the tales, reflecting the complexities of chivalry, morality, and leadership.",
+        "image": "issues/tuscany/authors/boccaccio/images/philip_ii_of_france.png"
+    },
+
+    "marchesa_di_monferrato": {
+        "description": "The Marchioness of Montferrat is a celebrated character in Boccaccio’s Decameron (Day 1, Story 5). Known for her wit and virtue, she cleverly rebuffs King Philip II of France’s advances by serving a meal entirely of hens, symbolizing chastity. Her story exemplifies intelligence and moral strength, key themes in the Decameron’s exploration of human virtues.",
+        "image": null
+    },
+
+    "marchese_di_monferrato": {
+        "description": "The Marquess of Montferrat, a nobleman in northern Italy, is featured in Giovanni Boccaccio's Decameron (Day 1, Tale 5). Known for his chivalry and loyalty, he skillfully rebuffs King Philip II of France's advances toward his wife with a clever banquet of dishes made solely of hens. This act highlights themes of wit, loyalty, and virtue, which resonate throughout Boccaccio's tales.",
+        "image": "issues/tuscany/authors/boccaccio/images/marchese_di_monferrato.png"
+    },
+
+    "gallina": {
+        "description": "The hen features prominently in Day 1, Tale 5 of Giovanni Boccaccio's *Decameron*. The Marquess of Montferrat prepares a banquet consisting solely of hens to subtly rebuff King Philip II of France's advances toward his wife. This clever use of the bird symbolizes fidelity and emphasizes themes of loyalty and wit central to the tale.",
+        "image": "issues/tuscany/authors/boccaccio/images/gallina.png"
+    },
+
+    "genova": {
+        "description": "Genoa, a prominent maritime city in northern Italy, played a vital role in medieval trade and politics. In Giovanni Boccaccio's Decameron, it is occasionally referenced for its mercantile connections and as a backdrop for tales exploring wealth, commerce, and human ambition.",
+        "image": "issues/tuscany/authors/boccaccio/images/genova.png"
+    },
+
+    
+    "alberto_da_bologna": {
+        "description": "Alberto da Bologna, a doctor and herbalist of the 14th century, is a figure referenced in Giovanni Boccaccio's Decameron. Known for his medical expertise, he symbolizes the growing importance of science and healing in the late medieval period. His character reflects themes of wisdom, healing arts, and the intersection of medicine with everyday life, emphasizing the cultural value of knowledge during the time.",
+        "image": null
+    },
+
+    
+    "margherita_de_ghisolieri": {
+        "description": "Margherita de' Ghisolieri, a figure of noble lineage from Bologna, appears in Giovanni Boccaccio's Decameron as a symbol of virtue and resilience. Her story explores themes of loyalty, sacrifice, and the trials of love amidst political and familial strife, reflecting the complexities of 14th-century Italian society.",
+        "image": null
+    },
+
+    "lupini": {
+        "description": "Lupini beans, a traditional legume consumed in Mediterranean cuisine, were often associated with rustic meals and humble living in medieval Italy. In Boccaccio's Decameron, lupini symbolize simplicity and sustenance, reflecting the agrarian roots of Italian culture. Their bitter taste, removed through soaking, parallels themes of transformation in the text.",
+        "image": "issues/tuscany/authors/boccaccio/images/lupini.png"
+    },
+
+    "porri": {
+        "description": "Leeks, a staple in medieval Italian cuisine, were prized for their mild flavor and versatility in soups, stews, and pies. In literary contexts like Boccaccio's Decameron, leeks symbolize rural abundance and practical sustenance, often appearing in dishes that reflect the resourcefulness of peasant life.",
+        "image": "issues/tuscany/authors/boccaccio/images/porri.png"
+    },
+
+    "currado_gianfigliazzi": {
+        "description": "Currado Gianfigliazzi, a Florentine nobleman featured in Boccaccio's Decameron, exemplifies the virtues of generosity and wit. In the Ninth Day, Second Story, he humorously navigates the antics of his servant Chichibio, who misappropriates a crane's leg for personal gain. Currado's character reflects the ideals of magnanimity and restraint, even in the face of deception.",
+        "image": null
+    },
+
+    "firenze": {
+        "description": "Florence, the cradle of the Italian Renaissance, is central to Boccaccio's Decameron. A hub of art, culture, and commerce, it serves as the backdrop for tales of human folly, virtue, and wit. The city's vibrant streets and noble families embody the tensions and aspirations of medieval Italian society.",
+        "image": "issues/tuscany/authors/dante/images/firenze.png"
+    },
+
+    "peretola": {
+        "description": "Peretola, a small village near Florence, is famously referenced in Boccaccio's Decameron. Known for its rural charm and simplicity, it often symbolizes the contrast between rustic life and the sophisticated intrigues of nearby Florence in the medieval period.",
+        "image": "issues/tuscany/authors/boccaccio/images/peretola.png"
+    },
+
+    "chichibio": {
+        "description": "Chichibio, a character in Boccaccio's Decameron (Day VI, Novel 4), is a witty Venetian cook who serves under Currado Gianfigliazzi in Florence. One day, Chichibio is tasked with preparing a crane for a feast, but he gives one of the bird's legs to a woman he fancies. When Currado notices the missing leg, Chichibio cleverly claims cranes only have one leg, pointing to resting cranes standing on one leg as proof. His humor and quick thinking avert his punishment. Chichibio embodies the Decameron's theme of wit and cleverness overcoming hierarchical power, adding charm and humor to the collection.",
+        "image": null
+    },
+
+    "brunetta": {
+        "description": "Brunetta is a central character in one of Boccaccio's tales from 'The Decameron'. Known for her sharp wit and lively personality, she embodies the cunning and resilience of women in Boccaccio's narratives. In her story, Brunetta deftly navigates a challenging situation, outsmarting a man who attempts to deceive her. Her resourcefulness and cleverness highlight the recurring theme of wit triumphing over adversity, a hallmark of *The Decameron*. Through Brunetta, Boccaccio explores gender dynamics, humor, and the power of intelligence in a world shaped by social and moral constraints.",
+        "image": null
+    },
+
+    "maso_del_saggio": {
+        "description": "Maso del Saggio is a sharp-tongued and humorous character from 'The Decameron' by Giovanni Boccaccio. Known for his wit and creativity, Maso crafts intricate lies to amuse himself and others. In one notable tale, he deceives a gullible individual into believing in a mythical land filled with absurd riches and wonders, showcasing his ability to manipulate through humor. His cleverness serves as a satire of human gullibility and societal pretensions, embodying Boccaccio's recurring theme of intellect and humor as tools for navigating life’s complexities.",
+        "image": null
+    },
+
+    "calandrino": {
+        "description": "Calandrino is a recurring character in *The Decameron* by Giovanni Boccaccio, often portrayed as naive, gullible, and easily fooled. A painter from Florence, he is frequently the target of elaborate pranks by his companions Bruno and Buffalmacco, who exploit his credulity for their amusement. In one notable tale, Calandrino is tricked into believing he has discovered a magical stone, the heliotrope, that grants invisibility. His misadventures highlight human folly, the dangers of greed, and the enduring appeal of comedic storytelling. Calandrino’s tales serve as a humorous reflection on the absurdities of human behavior.",
+        "image": null
+    },
+
+    "battistero_di_san_giovanni": {
+        "description": "The Florence Baptistery, also known as the Baptistery of St. John, is one of Florence's oldest buildings, dating back to the 11th century. Renowned for its Romanesque architecture, it features stunning bronze doors, including Ghiberti's famous 'Gates of Paradise.' A key symbol of Florence's religious and cultural heritage.",
+        "image": "issues/tuscany/authors/boccaccio/images/battistero_di_san_giovanni.png"
+    },
+
+    "bengodi": {
+        "description": "Bengodi, a mythical land described in Giovanni Boccaccio's 'The Decameron,' represents an idealized world of abundance and pleasure. It is famed for mountains of grated Parmesan cheese, rivers of wine, and delicious food readily available to all. Bengodi symbolizes indulgence, escapism, and the joy of storytelling.",
+        "image": null
+    },
+
+    "salsicce": {
+        "description": "Salsicce, or sausages, are a traditional Italian delicacy made from seasoned ground meat, often pork. In Giovanni Boccaccio's 'The Decameron,' they symbolize the hearty, rustic cuisine of medieval Italy. Salsicce are frequently associated with the abundance and celebration depicted in the stories, offering a taste of cultural richness and indulgence.",
+        "image": "issues/tuscany/authors/boccaccio/images/salsicce.png"
+    },
+
+    
+    "papero": {
+        "description": "Duck, a symbol of culinary refinement in medieval cuisine, appears in Giovanni Boccaccio's 'The Decameron' as part of the lavish feasts and dining traditions of the era. Prized for its rich, flavorful meat, duck dishes reflect the opulence and attention to gastronomy in the stories, embodying themes of indulgence and celebration.",
+        "image": "issues/tuscany/authors/boccaccio/images/papero.png"
+    },
+
+    "oca": {
+        "description": "Goose, a staple of medieval feasting, is celebrated in Giovanni Boccaccio's 'The Decameron' for its association with abundance and festivity. Renowned for its rich flavor and versatile preparation, goose was often featured in grand banquets, symbolizing prosperity and the pleasures of indulgence within the narratives of the time.",
+        "image": "issues/tuscany/authors/boccaccio/images/oca.png"
+    },
+
+    "parmigiano_reggiano": {
+        "description": "Parmesan, known as Parmigiano Reggiano, is a prized Italian cheese featured in Giovanni Boccaccio's 'The Decameron'. Renowned for its sharp, nutty flavor and granular texture, it embodies culinary excellence. In the tale of Bengodi, it is humorously depicted as an abundant delicacy, shredded over mountains of macaroni, symbolizing indulgence and the richness of Italian gastronomy.",
+        "image": "issues/tuscany/authors/boccaccio/images/parmigiano_reggiano.png"
+    },
+
+    "maccheroni": {
+        "description": "Macaroni, a staple of Italian cuisine, is humorously celebrated in Giovanni Boccaccio's 'The Decameron', specifically in the tale of Bengodi. It is portrayed as an epitome of abundance, with mountains of macaroni covered in Parmesan cheese. This vivid imagery symbolizes indulgence and the luxurious appreciation of food in Italian culture.",
+        "image": "issues/tuscany/authors/boccaccio/images/maccheroni.png"
+    },
+
+    "ravioli": {
+        "description": "Ravioli, a beloved Italian stuffed pasta, appears in Giovanni Boccaccio's 'The Decameron' as a symbol of culinary abundance and indulgence. These delicate parcels, traditionally filled with ricotta, herbs, or meats, encapsulate the Italian devotion to flavorful and artful cooking, representing both comfort and luxury in medieval feasts.",
+        "image": "issues/tuscany/authors/boccaccio/images/ravioli.png"
+    },
+
+    "brodo_di_capponi": {
+        "description": "Capon broth, a luxurious and nourishing dish, is featured in Giovanni Boccaccio's 'The Decameron' as a hallmark of medieval feasting. Made by slow-cooking capons with aromatic herbs and vegetables, this golden broth embodies richness and hospitality, symbolizing abundance and the artistry of traditional Italian cuisine.",
+        "image": "issues/tuscany/authors/boccaccio/images/brodo_di_capponi.png"
+    },
+
+    "vernaccia": {
+        "description": "Vernaccia is a renowned white wine, celebrated since medieval times and mentioned in Giovanni Boccaccio's 'The Decameron'. Originating from Tuscany, particularly San Gimignano, it is prized for its crisp, mineral-rich flavor. Vernaccia epitomizes the sophistication of Italian winemaking and the cultural heritage of its regional gastronomy.",
+        "image": "issues/tuscany/authors/dante/images/vernaccia.png"
+    },
+
+    "bruno": {
+        "description": "Bruno is a character from Giovanni Boccaccio's 'The Decameron', often depicted alongside his companion Buffalmacco. A witty and mischievous painter, Bruno is known for his clever schemes and humorous interactions, embodying the playful satire that defines many of the tales in the collection.",
+        "image": null
+    },
+
+    "buffalmacco": {
+        "description": "Buffalmacco is a lively character in Giovanni Boccaccio's 'The Decameron', often paired with Bruno and Calandrino. As a painter and trickster, Buffalmacco delights in playing practical jokes, showcasing the sharp wit and humor characteristic of Boccaccio's tales. His cleverness and playful antics highlight the folly of human nature.",
+        "image": null
+    },
+
+    "galle_di_gengiovo": {
+        "description": "Ginger biscuits, are a sweet delicacy mentioned in medieval and Renaissance Italian literature, including Giovanni Boccaccio's 'The Decameron'. These spiced cookies, flavored with ginger and often sweetened with honey, were a prized treat during feasts and celebrations. Their rich aroma and warming spices symbolized luxury and indulgence in Italian gastronomy.",
+        "image": "issues/tuscany/authors/boccaccio/images/zenzero.png"
+    }
+
+
+
+
+
+
+
+
+
+    }
+    
+
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+   

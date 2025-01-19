@@ -171,22 +171,25 @@ function initializePopups() {
 }
 
 
-
 function createPopup(element) {
     const entityId = element.id;
     console.log("📌 Popup for:", entityId);
     
     const description = descriptions[entityId]?.description || "No description available.";
-    const imageSrc = descriptions[entityId]?.image || "default-image.jpg";
+    const imageSrc = descriptions[entityId]?.image || null; // Check if an image is available
     const wikiLink = element.getAttribute("data-wiki"); // Get the Wikipedia link if available
 
+    // Remove any existing popup
     document.querySelector(".popup-window")?.remove();
 
+    // Create the popup window
     const popup = document.createElement("div");
     popup.classList.add("popup-window");
+
+    // Add content dynamically, checking for an image
     popup.innerHTML = `
         <div class="popup-content">
-            <img src="${imageSrc}" alt="Popup Image" class="popup-image">
+            ${imageSrc ? `<img src="${imageSrc}" alt="Popup Image" class="popup-image">` : ""}
             <p class="popup-text">${description}</p>
         </div>
         ${wikiLink ? `<a href="${wikiLink}" target="_blank" class="read-more-btn">Read More</a>` : ""}
@@ -194,6 +197,7 @@ function createPopup(element) {
     `;
     document.body.appendChild(popup);
 
+    // Position the popup
     const rect = element.getBoundingClientRect();
     const popupRect = popup.getBoundingClientRect();
 
@@ -207,6 +211,7 @@ function createPopup(element) {
         left = window.innerWidth + window.scrollX - popupRect.width - 10;
     }
 
+    // Style the popup
     popup.style.zIndex = "5000"; // Ensure it's above everything
     popup.style.position = "absolute";
     popup.style.top = `${top}px`;
@@ -214,10 +219,12 @@ function createPopup(element) {
     popup.style.background = "white";
     popup.style.border = "2px solid black";
     popup.style.padding = "15px";
-    popup.style.zIndex = "1000";
 
+    // Add event listener to close button
     popup.querySelector(".close-btn").addEventListener("click", () => popup.remove());
 }
+
+
 
 document.addEventListener("DOMContentLoaded", () => {
     restoreDropdownListeners();
