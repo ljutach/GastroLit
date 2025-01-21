@@ -6,7 +6,7 @@
 
     "adelina": {
         "description": "Adelina is Inspector Montalbano’s devoted housekeeper in Andrea Camilleri’s Inspector Montalbano series. Fierce and sharp-tongued, she takes care of Montalbano’s home while spoiling him with her exceptional Sicilian cooking. A former thief with a criminal past, she remains deeply protective of the inspector and often offers streetwise insights. Though she rarely appears in person, her presence is felt through her delicious dishes and handwritten notes, reflecting her strong personality and maternal care. Adelina embodies the warmth, loyalty, and culinary traditions of Sicily, adding both humor and authenticity to Montalbano’s daily life.",
-        "image": "/images/adelina.webp"
+        "image": "issues/sicily/authors/camilleri/images/adelina.webp"
     },
 
     "arancini":{
@@ -14,102 +14,102 @@
         "image": "issues/sicily/authors/camilleri/images/arancini.jpg"
     },
 
-    "carne_glassata":{
-        "description": "'Aggrassato di carne'(Glazed meat) is a traditional Sicilian dish made with slow-braised meat, usually beef or veal, cooked with onions, white wine, and aromatic herbs until tender and flavorful. The name aggrassato comes from the Sicilian term for slow, moist cooking, which results in succulent meat enveloped in a rich, savory sauce. Often served with potatoes or rustic bread, this dish is a staple of Sicilian cuisine, loved for its deep flavors and simple yet hearty ingredients.",
-        "image": "/images/aggrassato.webp"
+    "carne glassata":{
+        "description": "'Aggrassato di carne' (Glazed meat) is a traditional Sicilian dish made with slow-braised meat, usually beef or veal, cooked with onions, white wine, and aromatic herbs until tender and flavorful. The name aggrassato comes from the Sicilian term for slow, moist cooking, which results in succulent meat enveloped in a rich, savory sauce. Often served with potatoes or rustic bread, this dish is a staple of Sicilian cuisine, loved for its deep flavors and simple yet hearty ingredients.",
+        "image": "issues/sicily/authors/camilleri/images/aggrassato.webp"
     },
 
     "cipolla":{
         "description": "The onion (Allium cepa) is a widely used vegetable known for its pungent flavor and aromatic qualities. It comes in various types, such as red, white, and yellow, each offering different taste profiles. Onions can be eaten raw, cooked, caramelized, or pickled, enhancing countless dishes worldwide. Rich in antioxidants and nutrients, they are a staple in many cuisines, adding depth and sweetness when cooked.",
-        "image": "i/images/cipolla.jpg"
+        "image": "issues/sicily/authors/camilleri/images/cipolla.jpg"
     },
 
     "pomodoro":{
         "description": "The tomato (Solanum lycopersicum) is a versatile fruit commonly used as a vegetable in cooking. Native to South America, it comes in various shapes, sizes, and colors, from cherry to beefsteak varieties. Tomatoes are essential in many cuisines, used fresh, cooked, or processed into sauces, soups, and salads. Rich in vitamins, antioxidants, and lycopene, they add sweetness, acidity, and depth to countless dishes worldwide.",
-        "image": "/images/pomodoro.jpg"
+        "image": "issues/sicily/authors/camilleri/images/pomodoro.jpg"
     },
 
     "sedano": {
         "description": "Celery (Apium graveolens) is a crunchy, aromatic vegetable used in many cuisines for its fresh, slightly peppery flavor. It consists of long, fibrous stalks with leafy tops, commonly eaten raw in salads or as a snack, and cooked in soups, stews, and sauces. Rich in vitamins, minerals, and antioxidants, celery is valued for its health benefits and low-calorie content. Its distinct taste enhances both raw and cooked dishes, making it a staple in culinary traditions worldwide.",
-        "image": "/images/sedano.jpg"
+        "image": "issues/sicily/authors/camilleri/images/sedano.jpg"
     },
 
     "prezzemolo": {
         "description": "Parsley (Petroselinum crispum) is a fragrant herb widely used in cooking for its fresh, slightly peppery flavor. It comes in two main varieties: curly and flat-leaf (Italian), the latter being more aromatic. Parsley is commonly used as a garnish, in salads, sauces, soups, and meat dishes, enhancing flavors with its bright, herbal notes. Rich in vitamins and antioxidants, it is both a culinary staple and a nutritious addition to many recipes worldwide.",
-        "image": "/images/prezzemolo.jpg"
+        "image": "issues/sicily/authors/camilleri/images/prezzemolo.jpg"
     },
 
     "basilico": {
-        "description": "Bread is a staple food made from flour and water.",
-        "image": "/images/basilico.jpeg"
+        "description": "Basil (Ocimum basilicum) is a fragrant herb widely used in cooking, especially in Italian and Mediterranean cuisine. Known for its fresh, slightly sweet, and peppery flavor, it is a key ingredient in dishes like pesto, Caprese salad, and pasta sauces. Basil is best used fresh, as cooking can diminish its aroma. Rich in antioxidants and essential oils, it adds both flavor and health benefits to a variety of dishes.",
+        "image": "issues/sicily/authors/camilleri/images/basilico.jpeg"
     },
 
     "risotto": {
-        "description": "Bread is a staple food made from flour and water.",
-        "image": "/images/risotto.jpg"
+        "description": "Risotto is a creamy Italian rice dish made by slowly cooking short-grain rice in broth while stirring. It can be flavored with ingredients like saffron, mushrooms, seafood, or vegetables. The constant stirring releases starch, giving risotto its rich, velvety texture. Simple yet elegant, it is a staple of Italian cuisine.",
+        "image": "issues/sicily/authors/camilleri/images/risotto.jpg"
     },
 
     "zafferano": {
-        "description": "Bread is a staple food made from flour and water.",
-        "image": "/images/bread.jpg"
+        "description": "Saffron (Crocus sativus) is a prized spice derived from the dried stigmas of the saffron crocus flower. Known for its deep golden color and distinct floral, slightly earthy aroma, it is widely used in Mediterranean, Middle Eastern, and Indian cuisines. Essential in dishes like Risotto alla Milanese and Paella, saffron enhances both flavor and appearance. Due to its labor-intensive harvesting process, it is one of the world's most expensive spices, valued for its unique taste and culinary versatility.",
+        "image": "issues/sicily/authors/camilleri/images/zafferano.jpg"
     },
 
     "uova": {
-        "description": "Bread is a staple food made from flour and water.",
-        "image": "/images/bread.jpg"
+        "description": "Eggs are a versatile and nutritious food, widely used in cooking and baking. They can be prepared in many ways, including boiled, fried, scrambled, or poached, and serve as a key ingredient in sauces, pastries, and batters. Rich in protein, vitamins, and minerals, eggs are essential in many cuisines worldwide, offering both flavor and texture to countless dishes.",
+        "image": "issues/sicily/authors/camilleri/images/uova.jpg"
     },
 
     "piselli": {
-        "description": "Bread is a staple food made from flour and water.",
-        "image": "/images/bread.jpg"
+        "description": "Peas are small, sweet, and nutritious legumes used in many cuisines. They can be eaten fresh, frozen, or canned and are often added to soups, salads, risottos, and side dishes. Rich in protein and fiber, peas enhance meals with their delicate flavor and vibrant color.",
+        "image": "issues/sicily/authors/camilleri/images/piselli.jpg"
     },
 
     "besciamella": {
-        "description": "Bread is a staple food made from flour and water.",
-        "image": "/images/bread.jpg"
+        "description": "Béchamel sauce is a classic white sauce made from butter, flour, and milk, cooked until smooth and creamy. A staple in French and Italian cuisine, it serves as a base for many dishes, including lasagna, gratins, and croquettes. Mild in flavor, it can be enriched with cheese or spices for added depth. Béchamel adds richness and a velvety texture, making it a fundamental component in many comfort foods.",
+        "image": "issues/sicily/authors/camilleri/images/besciamella.webp"
     },
 
     "sugo": {
-        "description": "Bread is a staple food made from flour and water.",
-        "image": "/images/bread.jpg"
+        "description": "Meat sauce is a rich, slow-cooked blend of meat, tomatoes, and aromatic herbs, widely used in cooking. Simmered for hours, it develops a deep, hearty flavor, with ingredients like onions, carrots, celery, and sometimes wine enhancing its taste. The slow cooking process allows the flavors to meld, creating a thick and savory sauce. Depending on the region, it may include different types of meat, such as beef, pork, or veal. This versatile sauce is a staple in many culinary traditions, adding depth and richness to various dishes while embodying the essence of homemade comfort food.",
+        "image": "issues/sicily/authors/camilleri/images/sugo.jpg"
     },
 
     "riso": {
-        "description": "Bread is a staple food made from flour and water.",
-        "image": "/images/bread.jpg"
+        "description": "Rice is a staple grain cultivated worldwide, known for its versatility and nutritional value. It comes in various types, including long, medium, and short-grain varieties, each suited for different culinary uses. Rich in carbohydrates, rice provides energy and serves as a base for countless dishes, from simple side servings to complex recipes. It can be boiled, steamed, fried, or used in soups, risottos, and desserts. Depending on the variety, rice can have different textures, from fluffy to sticky. As a fundamental ingredient in many cuisines, it remains an essential part of diets across cultures.",
+        "image": "issues/sicily/authors/camilleri/images/riso.jpg"
     },
 
     "farina": {
-        "description": "Bread is a staple food made from flour and water.",
-        "image": "/images/farina.jpeg"
+        "description": "Flour is a finely ground powder made from grains, legumes, or nuts, widely used in baking and cooking. The most common type is wheat flour, which contains gluten, giving elasticity to dough. Other varieties, like rice, corn, or almond flour, cater to different dietary needs. Essential for bread, pasta, pastries, and sauces, flour provides structure and texture to many recipes.",
+        "image": "issues/sicily/authors/camilleri/images/farina.jpg"
     },
 
     "pangrattato": {
-        "description": "Bread is a staple food made from flour and water.",
-        "image": "/images/bread.jpg"
+        "description": "Breadcrumbs are finely ground dried bread, used in cooking for coating, thickening, or adding texture. They can be plain or seasoned with herbs and spices, enhancing the flavor of various dishes. Commonly used for breading meats, fish, or vegetables, they create a crispy, golden crust when fried or baked. Breadcrumbs also serve as a binder in meatballs, meatloaf, and fillings, ensuring a firm yet tender consistency. In some recipes, they are sprinkled over gratins or pasta bakes for a crunchy topping. Versatile and essential in many cuisines, breadcrumbs help reduce food waste by repurposing stale bread into a useful ingredient.",
+        "image": "issues/sicily/authors/camilleri/images/pangrattato.jpg"
     },
     "montalbano": {
-        "description": "Bread is a staple food made from flour and water.",
-        "image": "/images/montalbano.png"
+        "description": "Inspector Montalbano is a crime novel series by Andrea Camilleri, set in the fictional Sicilian town of Vigàta. The books follow Inspector Salvo Montalbano, a sharp and intuitive detective who solves complex cases while navigating the island’s bureaucracy and corruption. Blending mystery with social and political commentary, the novels capture the essence of Sicily—its traditions, dialects, and contradictions. Montalbano's love for Sicilian cuisine, his moral dilemmas, and his dry humor add depth to the stories. Rich in atmosphere and character, the series has become a cornerstone of contemporary Italian crime fiction.",
+        "image": "issues/sicily/authors/camilleri/images/montalbano.png"
     },
 
     "sugo_seppie": {
-        "description": "Bread is a staple food made from flour and water.",
-        "image": "/images/seppia.jpg"
+        "description": "'Nero di seppia' (Cuttlefish sauce) is a dark, briny liquid extracted from cuttlefish, used as a natural coloring and flavor enhancer in Mediterranean cuisine. It has a rich umami taste with subtle marine notes, adding depth to dishes like pasta, risotto, and seafood stews. Traditionally used in Italian and Spanish cooking, it gives food a distinctive black color and a savory, slightly sweet flavor. Nero di seppia is valued for its unique taste and ability to elevate seafood dishes with an authentic oceanic essence.",
+        "image": "issues/sicily/authors/camilleri/images/seppia.jpg"
     },
 
     "origano": {
-        "description": "Bread is a staple food made from flour and water.",
-        "image": "/images/origano.jpg"
+        "description": "Oregano (Origanum vulgare) is a fragrant herb widely used in Mediterranean cuisine for its warm, slightly peppery flavor. Common in Italian, Greek, and Mexican dishes, it enhances sauces, meats, vegetables, and pizzas. Available fresh or dried, oregano has a strong aroma and is rich in antioxidants.",
+        "image": "issues/sicily/authors/camilleri/images/origano.jpg"
     },
 
     "caponata": {
-        "description": "Bread is a staple food made from flour and water.",
-        "image": "/images/caponata.jpg"
+        "description": "Caponata is a traditional Sicilian dish made with eggplant, tomatoes, celery, onions, olives, and capers, all cooked in a sweet and sour (agrodolce) sauce. Often served as a side dish or appetizer, it balances rich, tangy, and slightly sweet flavors. Variations exist across Sicily, sometimes including peppers, pine nuts, or raisins. Caponata is best enjoyed at room temperature, allowing the flavors to meld. This iconic dish reflects Sicily’s culinary heritage, influenced by Mediterranean and Arabic traditions.",
+        "image": "issues/sicily/authors/camilleri/images/caponata.avif"
     },
 
     "pane": {
-        "description": "Bread is a staple food made from flour and water.",
-        "image": "/images/pane.jpg"
+        "description": "Bread is a staple food made from flour, water, yeast, and salt, baked to achieve a firm crust and soft interior. It comes in countless varieties worldwide, from crusty loaves to soft flatbreads. A key element in many cuisines, bread is used for sandwiches, dipping, or as a side dish. Rich in carbohydrates, it provides energy and has been a dietary essential for centuries.",
+        "image": "issues/sicily/authors/camilleri/images/pane.jpg"
     }
 }

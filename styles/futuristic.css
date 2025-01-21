@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Unica+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Armata&family=Unica+One&display=swap');
+
+body {
+    background-color: #000611;
+    background-image: radial-gradient(circle, #02101f, #082253, #050a30);
+    font-family: 'Unica One', sans-serif;
+    color: #e0ffff;
+    margin: 0;
+    padding: 0;
+    line-height: 1.8;
+    overflow-x: hidden;
+}
+
+#author-content {
+    background: rgba(0, 15, 30, 0.8);
+    color: #bbf7ff;
+    backdrop-filter: blur(20px);
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.6);
+}
+
+.author-image {
+    max-width: 50%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.8);
+    filter: hue-rotate(180deg) saturate(150%);
+}
+
+.author-caption {
+    font-size: 2rem;
+    color: #ffffff;
+    background: linear-gradient(90deg, rgba(0, 255, 255, 0.3), rgba(255, 0, 255, 0.3));
+    border-radius: 10px;
+    padding: 1rem;
+    text-shadow: 0 0 15px cyan;
+    animation: glowPulse 2s infinite alternate;
+}
+
+@keyframes glowPulse {
+    0% { box-shadow: 0 0 10px cyan; }
+    100% { box-shadow: 0 0 20px magenta; }
+}
+
+
+.navbar {
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.6);
+}
+.navbar .navbar-inverse {
+    background-color: transparent;
+    border-radius: 0;
+}
+nav {
+    background: transparent;
+    display: flex;
+    padding: 10px 20px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid rgba(0, 255, 255, 0.4);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+}
+.navbar-container {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    height: 120px;
+}
+.navbar-brand {
+    font-size: 5rem;
+    color: #9f1882;
+    text-shadow: 0 0 20px rgba(217, 0, 255, 0.6);
+    transition: transform 0.2s ease-in-out;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    margin: 0;
+    left: 100px;
+    line-height: 0.5;
+    margin-bottom: 10px;
+}
+.navbar-brand:hover {
+    transform: scale(1.0);
+    left: 100px;
+}
+.navbar-nav {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+.navbar-nav a {
+    color: #050a30;
+    font-size: 2.5rem;
+    padding: 1rem 1rem;
+    border-radius: 50px;
+    border-style: dashed;
+    background: rgba(16, 4, 31, 0.8);
+    font-weight: bold;
+    left: 100px;
+    line-height: 1;
+    transition: all 0.2s ease-in-out;
+}
+
+.navbar-nav a:hover {
+    color: #ff33ff;
+    text-shadow: 0 0 20px magenta;
+    transform: scale(1.0);
+}
+
+/* Morphing Shapes */
+@keyframes morphing {
+    0% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+    50% { border-radius: 70% 30% 30% 70% / 50% 70% 30% 50%; }
+    100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+}
+.container #theme-selector-container {
+    max-width: 10%;
+    margin: 0;
+    padding: 0;
+}
+.theme-dropdown {
+    font-size: 1.6rem; 
+    padding: 0.5rem 1rem; 
+    border: 2px solid #5f145b; 
+    background-color: transparent; 
+    color: #e0ffff; 
+    font-family: 'Armata', serif; 
+}
+.theme-dropdown option {
+    font-size: 1.6rem; 
+    padding: 0.5rem 1rem; 
+    border: 2px solid #5f145b; 
+    background-color: transparent; 
+    color: #e0ffff; 
+    font-family: 'Armata', serif; 
+}
+.dropdown-menu {
+    display: none; /* Default hidden */
+    position: absolute;
+    background-color: transparent; /* Parchment-like background */
+    border: 2px solid #5f145b; /* Rustic border */
+    border-radius: 0;
+    z-index: 1100; /* Ensure dropdown is above other elements */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.dropdown:hover > .dropdown-menu,
+.dropdown:focus > .dropdown-menu,
+.dropdown:active > .dropdown-menu {
+    display: block; /* Show dropdown on hover, focus, or active */
+}
+.dropdown-menu > li > a {
+    color: #bbf7ff;
+    font-size: 1.6rem;
+    padding: 0.5rem 1rem;
+    display: block;
+    border-radius: 10px;
+    border-style: none;
+    text-decoration: none;
+    font-family: 'Armata', serif; /* Consistent font */
+    white-space: nowrap; /* Prevent breaking of single long words */
+    background-color: transparent;
+}
+.dropdown-menu > li > a:hover {
+    background-color: #5f145b;
+    color: #bbf7ff;
+    border-radius: 0; 
+}
+.dropdown-submenu {
+    position: relative;
+}
+.dropdown-submenu > .dropdown-menu {
+    display: none; /* Default hidden */
+    position: absolute;
+    top: 0;
+    left: 100%; 
+    border-radius: 0;
+    margin-top: 15px;
+    margin-left: 0px;
+    background-color: transparent;
+    z-index: 1100; /* Ensure submenus are above */
+}
+
+.dropdown-submenu:hover > .dropdown-menu,
+.dropdown-submenu:focus > .dropdown-menu,
+.dropdown-submenu:active > .dropdown-menu {
+    display: block; /* Show submenu on hover */
+}
+.container {
+    margin-top: 500px;
+    max-width: 100%;
+    text-align: right;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: transparent;
+    border-radius: 15px;
+    overflow-x: hidden; /* Prevent horizontal scrolling inside the container */
+    word-wrap: break-word; /* Wrap long words inside containers */
+    overflow-wrap: break-word; /* Ensure all text wraps properly */
+}
+.container #logo-image {
+    max-width: 60%;
+    margin-top: -150px;
+    background-color: transparent;
+}
+.holographic-button {
+    background: linear-gradient(90deg, #00eaff, #ff33ff);
+    border: none;
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 1.8rem;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+    transition: transform 0.4s, box-shadow 0.4s, filter 0.4s;
+    perspective: 1000px;
+    position: relative;
+    overflow: hidden;
+}
+
+.holographic-button::before {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+    transition: all 0.5s ease-in-out;
+}
+
+.holographic-button:hover::before {
+    top: 0;
+    left: 0;
+}
+
+.holographic-button:hover {
+    transform: rotateX(15deg) rotateY(15deg) scale(1.1);
+    box-shadow: 0 0 40px rgba(255, 0, 255, 0.8);
+    filter: brightness(1.2) saturate(1.5);
+}
+
+/* Parallax Scrolling Effect */
+.parallax-container {
+    position: relative;
+    height: 500px;
+    background: url('https://source.unsplash.com/random/1920x1080') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+}
+
+.parallax-content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+}
+/* Advanced Text Effects */
+@keyframes glitch {
+    0% { text-shadow: 2px 2px 0px #00eaff, -2px -2px 0px #ff33ff; }
+    50% { text-shadow: -2px -2px 0px #00eaff, 2px 2px 0px #ff33ff; }
+    100% { text-shadow: 2px 2px 0px #00eaff, -2px -2px 0px #ff33ff; }
+}
+
+.glitch-text {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    animation: glitch 0.3s infinite alternate;
+    text-transform: uppercase;
+}
+
+@keyframes colorShift {
+    0% { color: #00eaff; }
+    50% { color: #ff33ff; }
+    100% { color: #00eaff; }
+}
+
+.dynamic-text {
+    font-size: 2rem;
+    font-weight: bold;
+    animation: colorShift 3s infinite alternate;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+}

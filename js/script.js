@@ -1,10 +1,19 @@
-let currentTheme = localStorage.getItem("selectedTheme") || 'styles/middleage.css'; 
-
-// Function to switch themes and store in localStorage
 function switchTheme(themePath) {
     currentTheme = themePath;
     document.getElementById('theme-stylesheet').setAttribute('href', themePath);
     localStorage.setItem("selectedTheme", themePath); // Save theme to localStorage
+
+    // Cambia l'immagine del logo in base al tema selezionato
+    let logoImage = document.getElementById('logo-image');
+    if (logoImage) {
+        if (themePath.includes("middleage")) {
+            logoImage.src = "images/logo.jpeg";
+        } else if (themePath.includes("cyberpunk")) {
+            logoImage.src = "images/logo_cyberpunk.jpeg";
+        } else if (themePath.includes("futuristic")) {
+            logoImage.src = "images/futuristic.png";
+        }
+    }
 
     setTimeout(() => {
         restoreDropdownListeners();
@@ -12,6 +21,7 @@ function switchTheme(themePath) {
         console.log("✅ Popups and dropdowns restored after theme switch");
     }, 500);
 }
+
 
 // Function to update the dropdown based on the current theme
 function updateThemeDropdown() {

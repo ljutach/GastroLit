@@ -255,6 +255,11 @@ nav {
     overflow-wrap: break-word; /* Ensure all text wraps properly */
 }
 
+#logo-image {
+    margin: 20px auto;
+    display: block;
+}
+
 pre {
     font-family: 'Essays-1743', serif;
     font-size: 2.5rem;
