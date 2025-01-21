@@ -4,11 +4,14 @@
 */
 
 /* General Styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Metamorphous&display=swap');
+
 body {
     background-color: #fae4be;
     background-image: url("../img/textured-paper.png");
     background-size: cover;
-    font-family: 'Chapbook', 'Essays-1743', serif;
+    font-family: 'Metamorphous', serif;
     color: #3a302a;
     margin: 0;
     padding: 0;
@@ -72,7 +75,7 @@ nav {
     z-index: 1000;
     border-bottom: 5px double #763626;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-    font-family: 'MediaevalItalique', serif;
+    font-family: 'MediaevalSharp', serif;
     display: flex;
     justify-content: space-between; /* Align items on the left and right */
     align-items: center; /* Vertically align all items */
@@ -85,12 +88,11 @@ nav {
     width: 100%;
 }
 
-
 .navbar-brand {
     font-size: 4.5rem;
     color: #5c3d06 !important;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-    font-family: 'MediaevalItalique', serif;
+    font-family: 'MediaevalSharp', serif;
     padding: 0.5rem 1rem;
     border: 3px double #9e752e;
     border-radius: 12px;
@@ -103,8 +105,6 @@ nav {
     left: 20px; /* Shift to the left */
     transform: translateX(0); /* Ensure it’s properly aligned */
 }
-
-
 
 .navbar-nav {
     display: flex;
@@ -134,9 +134,6 @@ nav {
     text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
-
-
-
 
 @media (max-width: 768px) {
     .navbar-container {
@@ -175,11 +172,6 @@ nav {
     color: #3a302a; /* Font color for options */
     font-family: 'Essays-1743', serif; /* Match theme font */
 }
-
-
-
-
-
 
 
 /* Dropdown Menu */
@@ -242,10 +234,10 @@ nav {
 }
 
 /* Main Layout */
-.container {
-    max-width: 100%; /* Use full width */
-    margin: 2rem auto;
-    padding: 2rem;
+.theme-container {
+    width: 65%; 
+    margin: 100px auto;
+    padding: 0;
     background-color: rgba(255, 251, 235, 0.9);
     border: 3px solid #8b5e3c;
     border-radius: 15px;
@@ -254,14 +246,57 @@ nav {
     word-wrap: break-word; /* Wrap long words inside containers */
     overflow-wrap: break-word; /* Ensure all text wraps properly */
 }
+#theme-selector {
+    margin: 20px auto;
+    display: block; 
+    width: auto; 
+  }
 
 #logo-image {
     margin: 20px auto;
     display: block;
 }
 
+.title {
+    font-family: 'Metamorphous', serif;
+    max-width: 65%; 
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: rgba(255, 251, 235, 0.9);
+    border: 3px solid #8b5e3c;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    overflow-x: hidden; 
+    word-wrap: break-word; 
+    overflow-wrap: break-word; 
+}
+.proj-container {
+    max-width: 65%; 
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: rgba(255, 251, 235, 0.9);
+    border: 3px solid #8b5e3c;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    overflow-x: hidden; 
+    word-wrap: break-word; 
+    overflow-wrap: break-word; 
+}
+.info {
+    max-width: 65%; 
+    margin: 2rem auto;
+    padding: 2rem;
+    align-items: center;
+    background-color: rgba(255, 251, 235, 0.9);
+    border: 3px solid #8b5e3c;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    overflow-x: hidden; 
+    word-wrap: break-word; 
+    overflow-wrap: break-word; 
+}
 pre {
-    font-family: 'Essays-1743', serif;
+    font-family: 'Metamorphous', serif;
     font-size: 2.5rem;
     color: #3a302a;
     background: rgba(255, 251, 235, 0.8);
@@ -274,16 +309,21 @@ pre {
     border-radius: 5px;
 }
 
-/* Theme Selector */
-#theme-selector {
-    margin: 20px auto;
-    display: block; /* Ensures the dropdown is treated as a block-level element for centering */
-    width: auto; /* Adjust width as needed */
-  }
-
+.footer {
+    width: 100%; 
+    margin: 0;
+    padding: 2rem;
+    font-size: 1rem;
+    color: #fae4be;
+    background-color: #5c3d06;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    overflow-x: hidden; 
+    word-wrap: break-word; 
+    overflow-wrap: break-word; 
+}
 /* Typography */
 h1, h2, h3 {
-    font-family: 'MediaevalItalique', serif;
+    font-family: 'MediaevalSharp', serif;
     color: #763626;
     text-align: center;
 }

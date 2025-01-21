@@ -66,7 +66,7 @@
   </nav>
 
   <!-- Theme Selector -->
-<div class="container" id="theme-selector-container">
+<div class="theme-container" id="theme-selector-container">
   <h3>Choose a Theme</h3>
   <select id="theme-selector" class="theme-dropdown" onchange="switchTheme(this.value)">
     <option value="styles/middleage.css">Middle Age Theme</option>
@@ -79,25 +79,27 @@
   </div>
 </div>
 
-
   <!-- Content -->
-  <div class="container">
+  <div class="title">
     <h1>GastroLit</h1>
     <h2>Gastronomic Culture In Italian Literature</h2>
   </div>
 
-  <div class="container">
+  <div class="proj-container">
     <h2>The Project</h2>
     <p>GastroLit is a magazine that explores the relationship between food and culture in Italian literature by focusing on two regions: Tuscany and Sicily. For each region, we delve into the works of three authors, presenting curated collections of texts which include some iconic gastronomic references. Explore Tuscany through the writings of Dante, Boccaccio, and Sacchetti, and journey to Sicily with selections from Camilleri, Tomasi di Lampedusa, and Torregrossa. Customize your experience with our four typographic and layout themes, inspired by different stylistic traditions. Navigate the literary and cultural landscapes through our interactive Map, which geolocates each significant place mentioned in the texts, offering a rich exploration of the geographical roots of these narratives. This project is realised for the exam of <i>Web Technology and Information Modeling</i> of the master course in <a href='https://corsi.unibo.it/2cycle/DigitalHumanitiesKnowledge'><i>Digital Humanities and Digital Knowledge</i></a> at <b><i>Alma Mater Studiorum</i> - Università di Bologna</b>.</p>
   </div>
 
   <!-- Placeholder for Dynamic Content -->
-  <div class="container" id="author-content" data-author="" data-region="">
+  <div class="info" id="author-content" data-author="" data-region="">
     <h3>Select an issue and start exploring!</h3>
   </div>
 
   <!-- Scroll to Top Button -->
   <button id="scrollToTopBtn" style="position: fixed; bottom: 20px; right: 20px; display: none;">⬆ Back to Nav Bar</button>
+<footer class="footer">
+  <p>&copy; 2024 GastroLit. All rights reserved.</p>
+</footer>
 
   <script>
     document.getElementById('scrollToTopBtn').addEventListener("click", function () {

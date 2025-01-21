@@ -120,11 +120,7 @@ nav {
     50% { border-radius: 70% 30% 30% 70% / 50% 70% 30% 50%; }
     100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
 }
-.container #theme-selector-container {
-    max-width: 10%;
-    margin: 0;
-    padding: 0;
-}
+
 .theme-dropdown {
     font-size: 1.6rem; 
     padding: 0.5rem 1rem; 
@@ -192,108 +188,43 @@ nav {
 .dropdown-submenu:hover > .dropdown-menu,
 .dropdown-submenu:focus > .dropdown-menu,
 .dropdown-submenu:active > .dropdown-menu {
-    display: block; /* Show submenu on hover */
+    display: block; 
 }
-.container {
+.container #logo-image{
     margin-top: 500px;
     max-width: 100%;
-    text-align: right;
+    text-align: left;
     margin: 2rem auto;
     padding: 2rem;
     background-color: transparent;
     border-radius: 15px;
-    overflow-x: hidden; /* Prevent horizontal scrolling inside the container */
-    word-wrap: break-word; /* Wrap long words inside containers */
-    overflow-wrap: break-word; /* Ensure all text wraps properly */
+    overflow-x: hidden; 
+    word-wrap: break-word; 
+    overflow-wrap: break-word; 
 }
 .container #logo-image {
     max-width: 60%;
     margin-top: -150px;
+    margin-left: 200px;
     background-color: transparent;
+    animation: floating 3s ease-in-out infinite;
 }
-.holographic-button {
-    background: linear-gradient(90deg, #00eaff, #ff33ff);
-    border: none;
-    color: white;
-    padding: 1rem 2rem;
-    font-size: 1.8rem;
-    border-radius: 12px;
-    cursor: pointer;
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
-    transition: transform 0.4s, box-shadow 0.4s, filter 0.4s;
-    perspective: 1000px;
-    position: relative;
-    overflow: hidden;
+@keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-50px); }
+    100% { transform: translateY(0px); }
 }
 
-.holographic-button::before {
-    content: "";
-    position: absolute;
-    top: -100%;
-    left: -100%;
-    width: 300%;
-    height: 300%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
-    transition: all 0.5s ease-in-out;
-}
-
-.holographic-button:hover::before {
-    top: 0;
-    left: 0;
-}
-
-.holographic-button:hover {
-    transform: rotateX(15deg) rotateY(15deg) scale(1.1);
-    box-shadow: 0 0 40px rgba(255, 0, 255, 0.8);
-    filter: brightness(1.2) saturate(1.5);
-}
-
-/* Parallax Scrolling Effect */
-.parallax-container {
-    position: relative;
-    height: 500px;
-    background: url('https://source.unsplash.com/random/1920x1080') no-repeat center;
-    background-size: cover;
-    background-attachment: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    font-size: 2rem;
-    text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
-}
-
-.parallax-content {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
-}
-/* Advanced Text Effects */
-@keyframes glitch {
-    0% { text-shadow: 2px 2px 0px #00eaff, -2px -2px 0px #ff33ff; }
-    50% { text-shadow: -2px -2px 0px #00eaff, 2px 2px 0px #ff33ff; }
-    100% { text-shadow: 2px 2px 0px #00eaff, -2px -2px 0px #ff33ff; }
-}
-
-.glitch-text {
+pre {
+    font-family: 'Essays-1743', serif;
     font-size: 2.5rem;
-    font-weight: bold;
-    color: #fff;
-    animation: glitch 0.3s infinite alternate;
-    text-transform: uppercase;
-}
-
-@keyframes colorShift {
-    0% { color: #00eaff; }
-    50% { color: #ff33ff; }
-    100% { color: #00eaff; }
-}
-
-.dynamic-text {
-    font-size: 2rem;
-    font-weight: bold;
-    animation: colorShift 3s infinite alternate;
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+    color: red;
+    background: rgba(255, 251, 235, 0.8);
+    padding: 1rem;
+    white-space: pre-line; /* Ensure text wraps without breaking words unnecessarily */
+    word-break: normal; /* Prevent words from breaking mid-word */
+    overflow-wrap: normal; /* Ensure natural wrapping */
+    line-height: 2;
+    border: 1px solid #8b5e3c;
+    border-radius: 5px;
 }
