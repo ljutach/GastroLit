@@ -1,3 +1,6 @@
+let currentTheme = localStorage.getItem("selectedTheme") || 'styles/middleage.css';
+
+
 function switchTheme(themePath) {
     currentTheme = themePath;
     document.getElementById('theme-stylesheet').setAttribute('href', themePath);
@@ -7,11 +10,11 @@ function switchTheme(themePath) {
     let logoImage = document.getElementById('logo-image');
     if (logoImage) {
         if (themePath.includes("middleage")) {
-            logoImage.src = "images/logo.jpeg";
+            logoImage.src = "images/logo_middleage.jpeg";
         } else if (themePath.includes("cyberpunk")) {
-            logoImage.src = "images/logo_cyberpunk.jpeg";
+            logoImage.src = "images/logo_cyberpunk.png";
         } else if (themePath.includes("futuristic")) {
-            logoImage.src = "images/futuristic.png";
+            logoImage.src = "images/logo_futuristic.png";
         }
     }
 
