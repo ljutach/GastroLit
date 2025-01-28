@@ -1,12 +1,22 @@
-let currentTheme = localStorage.getItem("selectedTheme") || 'styles/middleage.css';
+let currentTheme = localStorage.getItem("selectedTheme");
+
+if (!currentTheme) {
+    currentTheme = 'styles/middleage.css'; // Force default theme
+    localStorage.setItem("selectedTheme", currentTheme); // Save default to localStorage
+}
 
 
+// Function to switch themes and store in localStorage
 function switchTheme(themePath) {
     currentTheme = themePath;
     document.getElementById('theme-stylesheet').setAttribute('href', themePath);
-    localStorage.setItem("selectedTheme", themePath); // Save theme to localStorage
+    localStorage.setItem("selectedTheme", themePath);
 
-    // Cambia l'immagine del logo in base al tema selezionato
+    // Update the dropdown
+    const themeSelector = document.getElementById("theme-selector");
+    themeSelector.value = themePath;
+
+    // Change the logo based on the theme
     let logoImage = document.getElementById('logo-image');
     if (logoImage) {
         if (themePath.includes("middleage")) {
@@ -20,37 +30,56 @@ function switchTheme(themePath) {
 
     setTimeout(() => {
         restoreDropdownListeners();
-        initializePopups(); // Ensure popups work with Cyberpunk
+        initializePopups();
         console.log("✅ Popups and dropdowns restored after theme switch");
     }, 500);
 }
 
-
 // Function to update the dropdown based on the current theme
 function updateThemeDropdown() {
     const themeSelector = document.getElementById("theme-selector");
-    themeSelector.value = currentTheme;
+    themeSelector.value = localStorage.getItem("selectedTheme") || 'styles/middleage.css';
 }
 
-
-// Apply saved theme on page load
 document.addEventListener("DOMContentLoaded", () => {
     document.getElementById('theme-stylesheet').setAttribute('href', currentTheme);
-    updateThemeDropdown(); // Update dropdown to reflect the current theme
+    updateThemeDropdown(); // Ensure the dropdown is correct
+
+    // Ensure logo updates correctly on page load
+    let logoImage = document.getElementById('logo-image');
+    if (logoImage) {
+        if (currentTheme.includes("middleage")) {
+            logoImage.src = "images/logo_middleage.jpeg";
+        } else if (currentTheme.includes("cyberpunk")) {
+            logoImage.src = "images/logo_cyberpunk.png";
+        } else if (currentTheme.includes("futuristic")) {
+            logoImage.src = "images/logo_futuristic.png";
+        }
+    }
 });
 
+
+// Reload the page and preserve the theme and logo
 function reloadWithTheme() {
     window.location.href = "index.html"; // Reload page
     setTimeout(() => {
-        document.getElementById('theme-stylesheet').setAttribute('href', localStorage.getItem("selectedTheme"));
+        const savedTheme = localStorage.getItem("selectedTheme") || 'styles/middleage.css';
+        document.getElementById('theme-stylesheet').setAttribute('href', savedTheme);
+
+        // Ensure logo is also updated correctly
+        let logoImage = document.getElementById('logo-image');
+        if (logoImage) {
+            if (savedTheme.includes("middleage")) {
+                logoImage.src = "images/logo_middleage.jpeg";
+            } else if (savedTheme.includes("cyberpunk")) {
+                logoImage.src = "images/logo_cyberpunk.png";
+            } else if (savedTheme.includes("futuristic")) {
+                logoImage.src = "images/logo_futuristic.png";
+            }
+        }
     }, 200);
 }
 
-
-// Apply saved theme on page load
-document.addEventListener("DOMContentLoaded", () => {
-    document.getElementById('theme-stylesheet').setAttribute('href', currentTheme);
-});
 
 
 // Restore dropdown listeners for hover
