@@ -17,18 +17,16 @@
   <!-- Navbar -->
   <nav class="navbar navbar-inverse">
     <div class="container-fluid">
-      <div class="navbar-container">
-        <!-- Brand Logo -->
-        <a class="navbar-brand" href="index.html" onclick="event.preventDefault(); reloadWithTheme();">GastroLit</a>
 
         <!-- Navbar Toggle for Mobile -->
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
 
-        <!-- Navigation Links -->
+        <a class="navbar-brand" href="index.html" onclick="event.preventDefault(); reloadWithTheme();">GastroLit</a>
+
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav navbar-right">
             <!-- Issues Dropdown -->
@@ -44,7 +42,6 @@
                     <li><a href="#" onclick="loadAuthorContent('issues/tuscany/authors/sacchetti/sacchetti.html', 'sacchetti', 'tuscany')">Sacchetti</a></li>
                   </ul>
                 </li>
-
                 <!-- Sicily Dropdown -->
                 <li class="dropdown-submenu">
                   <a href="#">Sicily</a>
@@ -56,14 +53,12 @@
                 </li>
               </ul>
             </li>
-
-            <!-- Documentation -->
+            <!--Documentation-->
             <li><a href="#">Documentation</a></li>
           </ul>
         </div>
       </div>
-    </div>
-  </nav>
+    </nav>
 
   <!-- Theme Selector -->
 <div class="theme-container" id="theme-selector-container">

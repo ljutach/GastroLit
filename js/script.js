@@ -66,9 +66,15 @@ function restoreDropdownListeners() {
     }, function () {
         $(this).find(".dropdown-menu").first().stop(true, true).fadeOut(200);
     });
+
+    // Aggiungi gestione per submenu su click
+    $(".dropdown-submenu a").on("click", function (e) {
+        var submenu = $(this).next(".dropdown-menu");
+        submenu.toggle(); // Mostra/Nasconde il submenu
+        e.stopPropagation(); // Evita la chiusura del menu principale
+        e.preventDefault(); // Previene il comportamento predefinito del link
+    });
 }
-
-
 
 
 function loadAuthorContent(authorPath, author, region) {
