@@ -561,3 +561,63 @@ button:hover {
     color: #fff;
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
+
+
+
+/* Center the container itself */
+#author-content, #global-map-container {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically if needed */
+    flex-direction: column; /* Ensures proper stacking */
+    width: 100%;
+}
+
+/* Map Styling - Middle Age Theme */
+#author-content #map, #global-map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    max-width: 900px;
+    height: 400px; /* Fixed height for consistency */
+    margin: 20px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 4px solid #8B5A2B; /* Dark brown medieval frame */
+    background-color: #F5E1C3; /* Light parchment color */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+    z-index: 10;
+}
+
+/* Leaflet Map inside */
+#author-content #map, #global-map-container {
+    width: 100%;
+    height: 100%;
+}
+
+/* Center the filter dropdown and map */
+#map-filter-container {
+    text-align: center; /* Center the dropdown */
+    margin-bottom: 10px; /* Add space below */
+}
+
+/* Middle Age-styled dropdown label */
+#map-filter-container label {
+    font-weight: bold;
+    margin-right: 8px;
+    font-size: 16px;
+    color: #5A3825; /* Deep brown for parchment contrast */
+}
+
+/* Middle Age-styled dropdown */
+#map-filter-container select {
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 2px solid #8B5A2B;
+    background-color: #F5E1C3; /* Parchment color */
+    color: #5A3825; /* Dark brown */
+    font-family: "Garamond", serif; /* Historical font */
+}
