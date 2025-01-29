@@ -1,0 +1,49 @@
+{
+
+    "giovanni_cascio": {
+        "description": "Giovanni Cascio is a character from Franco Sacchetti’s 'Trecento Novelle', appearing in novella CXXIV. He is depicted as a shrewd and cunning individual, embodying the wit and humor characteristic of Sacchetti’s storytelling. His tale illustrates themes of trickery and social satire, often portraying the clever manipulation of circumstances to outwit others. Like many of Sacchetti’s novellas, this story reflects the sharp observations of Florentine society during the late Middle Ages.",
+        "image": null
+    },
+
+    
+    "noddo": {
+        "description": "Noddo is a character from Franco Sacchetti’s 'Trecento Novelle', specifically in novella CXXIV. He is portrayed as a gullible and foolish individual, often serving as the target of clever tricks and deception. His story highlights themes of wit and social satire, emphasizing the contrast between intelligence and naivety. Sacchetti uses Noddo’s misadventures to provide humorous yet insightful commentary on human nature and Florentine society in the late Middle Ages.",
+        "image": null
+    },
+    
+    
+
+    
+    "maccheroni": {
+        "description": "Maccheroni, a term traditionally used in medieval and Renaissance Italy, referred to various forms of pasta made from durum wheat and water, often shaped into tubes or sheets. Highlighted in numerous literary works, including Franco Sacchetti's 'Trecento Novelle', maccheroni symbolized comfort and abundance. In Sacchetti's time, it was often prepared with rich sauces or broths, emphasizing its importance in Italian cuisine and culture. This humble yet versatile dish became a staple of both the wealthy and the common folk, embodying culinary creativity and resourcefulness.",
+        "image": "issues/tuscany/authors/boccaccio/images/maccheroni.png"
+    },
+    
+    "lombo": {
+            "description": "In Novella CXXIV of Franco Sacchetti’s *Il Trecentonovelle*, 'lombo' appears as a key element in a humorous and satirical context, reflecting the period’s culinary customs and social dynamics. A prized cut of meat, usually pork or beef, the lombo was often roasted or spiced, making it a symbol of indulgence and hospitality in medieval Italian banquets. Sacchetti’s storytelling captures not only the gastronomic importance of this dish but also its role in social interactions, where food could be both a necessity and a source of comedic misunderstandings.",
+            "image": "issues/tuscany/authors/sacchetti/images/lombo.png"
+        },
+
+    "arista": {
+        "description": "In Novella CXXIV of Franco Sacchetti’s *Il Trecentonovelle*, 'arista' is referenced as a dish that embodies the rich culinary traditions of medieval Tuscany. A roasted pork loin seasoned with garlic, rosemary, and spices, arista was a dish of both noble and popular appeal. The term itself is said to have originated from a Byzantine cardinal’s exclamation of 'Arista!' (meaning 'excellent' in Greek) when tasting the dish in Florence. Sacchetti’s narrative humorously integrates food as a symbol of abundance and social interaction, highlighting the significance of roasted meats in festive gatherings.",
+        "image": "issues/tuscany/authors/sacchetti/images/arista.png"
+    },
+    
+    "busecchio": {
+        "description": "In Novella CXXIV of Franco Sacchetti’s 'Il Trecentonovelle', 'busecchio' is referenced as a dish deeply rooted in Florentine culinary tradition. Also referenced as 'trippa', it consists of the stomach lining of cattle, slow-cooked with tomatoes, onions, and aromatic herbs. During the Middle Ages, it was a common food among both the working class and nobility, praised for its rich flavor and affordability. Sacchetti’s use of trippa in his storytelling reflects the everyday life and humor of medieval Florence, where food often served as a backdrop for satire and social commentary.",
+        "image": "issues/tuscany/authors/sacchetti/images/busecchio.png"
+    },
+
+    "cafarnau": {
+        "description": "Cafarnau is a term used by Franco Sacchetti in 'Trecento Novelle' to describe a chaotic, disorderly situation or a crowded, noisy place. It originates from 'Capernaum,' a biblical town often associated with confusion and tumult. Sacchetti employs it to depict scenes of social disorder and excess.",
+        "image": "issues/tuscany/authors/sacchetti/images/cafarnao.png"
+    }
+
+    
+    
+    
+
+
+
+
+}   
