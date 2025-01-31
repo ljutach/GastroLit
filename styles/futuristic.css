@@ -382,7 +382,7 @@ h1, h2, h3 {
     background: rgba(16, 4, 31, 0.8)
 }
 #entity-table tbody tr:hover {
-    background: rgba(206, 172, 119, 0.3); 
+    background: #deebf3b7; 
     transition: 0.3s ease-in-out;
 }
 #entity-table a {
@@ -393,7 +393,7 @@ h1, h2, h3 {
 }
 #entity-table a:hover {
     text-decoration: underline;
-    color: #5c3d06; 
+    color: #240422; 
 }
 #scrollToTopBtn {
     text-transform: uppercase;
@@ -415,6 +415,152 @@ h1, h2, h3 {
               0 0 20px rgba(255, 255, 255, 0.05);
     color: #02101f;
 }
+
+pre {
+    font-family: 'space mono', sans-serif;
+    font-size: 2rem;
+    text-transform: none;
+    color: var(--primary-color); /* Neon teal text */
+    background: rgba(70, 120, 202, 0.409);
+    box-shadow: #02101f;
+    padding: 1.5rem;
+    white-space: pre-line; 
+    word-break: normal; 
+    overflow-wrap: normal;
+    line-height: 2;
+    border-radius: 8px;
+    opacity: 0.8; 
+    border: 3px solid #050a30; 
+    border-radius: 50px;
+    overflow-x: hidden; 
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+    text-shadow: 0 0 5px rgba(57, 134, 134, 0.8);
+    color: rgb(175, 224, 224); 
+  }
+
+  .popup-window {
+    max-width: 700px;
+    border-radius: none;
+    padding: 20px;
+    background:rgb(175, 224, 224) !important; /* Fully black background */
+    border: 3px solid #02101f; /* Hot pink neon */
+    font-family: 'space mono', sans-serif;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #02101f;
+    text-shadow: 0 0 10px #082253;
+  }
+  
+  /* Adjust text wrapping for popup */
+  .popup-content {
+    display: block;
+    text-align: justify;
+    max-width: 100%;
+  }
+  
+  /* Cyberpunk-styled Image */
+  .popup-image {
+    width: 220px;
+    height: auto;
+    float: left;
+    margin: 5px 20px 10px 0;
+    border-radius: 50%;
+    box-shadow: 0 0 15px #082253
+  }
+  
+  /* Cyberpunk Text with Neon Glow */
+  .popup-text {
+    font-size: 17px;
+    text-align: justify;
+    color: #02101f;
+    overflow-wrap: break-word;
+  }
+  
+  /* Cyberpunk Close Button */
+  .close-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    text-decoration: underline;
+    background-color: transparent;
+    color: #050a30;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 15px;
+    border-radius: 6px;
+    clear: both;
+    text-shadow: 0 0 20px #c648c6;
+    font-size: 2.5rem;
+    font-family: 'Unica One', sans-serif;
+  }
+  
+  .close-btn:hover {
+    background: var(--accent-color); /* Yellow */
+    color: black;
+    text-shadow: 0 0 10px var(--primary-color);
+  }
+  
+  /* Mobile Adjustments */
+  @media (max-width: 600px) {
+    .popup-window {
+        max-width: 95%;
+    }
+  
+    .popup-image {
+        float: none;
+        display: block;
+        margin: 0 auto 12px auto;
+    }
+  
+    .popup-text {
+        text-align: left;
+    }
+  }
+  .tag {
+    font-family: 'silkscreen', sans-serif;
+    cursor: pointer; /* Hand pointer on hover */
+    font-weight: bold;
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+  }
+
+  .tag.character {
+    color: #050a30; 
+  }
+  
+  .tag.place {
+    color: #2e0d2e; /* Neon Cyan */
+  }
+  
+  .tag.dish {
+    color: #00ffff;
+  }
+  
+  /* Hover effect for Cyberpunk entities */
+  .tag:hover {
+    color: white;
+  }
+  .read-more-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Unica One', sans-serif;
+    font-size: 3rem;
+    box-shadow: 0 0 10px var(--accent-color);
+  } 
 
 .footer {
     width: 100%; 
