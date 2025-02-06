@@ -20,7 +20,7 @@ function switchTheme(themePath) {
     let logoImage = document.getElementById('logo-image');
     if (logoImage) {
         if (themePath.includes("middleage")) {
-            logoImage.src = "images/logo_middleage.jpeg";
+            logoImage.src = "images/logo_middleage.svg";
         } else if (themePath.includes("futurism")) {
             logoImage.src = "images/logo_futurism.jpg";
         } else if (themePath.includes("cyberpunk")) {
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let logoImage = document.getElementById('logo-image');
     if (logoImage) {
         if (currentTheme.includes("middleage")) {
-            logoImage.src = "images/logo_middleage.jpeg";
+            logoImage.src = "images/logo_middleage.svg";
         } else if (currentTheme.includes("futurism")) {
             logoImage.src = "images/logo_futurism.jpg";
         } else if (currentTheme.includes("cyberpunk")) {
@@ -73,7 +73,7 @@ function reloadWithTheme() {
         let logoImage = document.getElementById('logo-image');
         if (logoImage) {
             if (savedTheme.includes("middleage")) {
-                logoImage.src = "images/logo_middleage.jpeg";
+                logoImage.src = "images/logo_middleage.svg";
             } else if (savedTheme.includes("futurism")) {
                 logoImage.src = "images/logo_futurism.jpg";
             } else if (savedTheme.includes("cyberpunk")) {
