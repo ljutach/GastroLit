@@ -117,8 +117,8 @@ h1, h2, h3 {
 #theme-selector {
     font-family: 'Staatliches', sans-serif;
     rotate: -90deg;
-    top: 390px;
-    left: -10px;
+    top: 450px;
+    left: 15px;
     letter-spacing: 10px;
     text-align: center;
     text-transform: uppercase;
@@ -361,7 +361,7 @@ h1, h2, h3 {
 }
 .container #map {
     width: 100%;
-    max-width: 800px !important;
+    max-width: 1000px !important;
     margin: 20px auto;
     border-radius: none;
     z-index: 10;
@@ -438,12 +438,15 @@ h1, h2, h3 {
     border-style: double;
     border-color: #e7d8b0;
 }
-
+.poetry {
+    width: 30%;
+    margin: 0 auto;
+}
 pre {
     font-size: 2rem;
     text-transform: none;
     background: transparent;
-    padding: 1.5rem;
+    padding: 3rem;
     white-space: pre-line; 
     word-break: normal; 
     overflow-wrap: normal;

@@ -335,13 +335,15 @@ h1, h2, h3 {
 
 .container #author-content {
     display: flex;
-    margin-left: 10%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
     width: 100%;
-    height: 100%;
 }
 .container #map {
-    max-width: 100%!important;
-    max-height: 100%; 
+    width: 100%;
+    max-width: 1000px !important; 
     margin: 20px auto;
     border-radius: none;
     overflow: hidden;
@@ -350,7 +352,9 @@ h1, h2, h3 {
     z-index: 10;
 }
 #entity-table-container {
-    margin: 20px 0;
+    max-width: 800px;
+    width: 100%;
+    margin: 20px auto;
     padding: 20px;
     background: rgba(19, 19, 61, 0.95);
     border-radius: none;
