@@ -1,9 +1,16 @@
 /*
-* Cyberpunk Theme - Updated with Improved Dropdown Behavior
-* Futuristic, neon-inspired design inspired by cyberpunk aesthetics.
+* Cyberpunk Theme 
+* Neon-inspired design inspired by cyberpunk aesthetics.
 */
 
+/*Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Share+Tech+Mono&display=swap');
+
+
 /* Root Variables */
+
 :root {
   --primary-color: #00ffcc; /* Neon teal */
   --secondary-color: #ff0080; /* Hot pink */
@@ -14,7 +21,8 @@
   --navbar-text-color: #FFFFFF; /* Bright white for better contrast */
 }
 
-/* General Styles */
+/* Global Setting */
+
 * {
   margin: 0;
   padding: 0;
@@ -29,6 +37,301 @@ body {
   overflow-x: hidden;
   font-size: 2rem;
 }
+
+
+/* Navbar */
+
+nav {
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 1000;
+}
+
+.navbar-brand {
+  color: var(--navbar-text-color) !important;
+  font-size: 5rem;
+  text-decoration: none;
+  font-family: var(--font-main);
+  text-shadow: 0 0 25px var(--navbar-text-color);
+}
+
+.navbar-nav {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.navbar-nav a {
+  color: var(--navbar-text-color);
+  text-decoration: none;
+  font-family: var(--font-accent);
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+  padding: 1rem 1.5rem;
+}
+
+.navbar-nav a:hover {
+  color: var(--accent-color);
+  text-shadow: 0 0 20px var(--accent-color);
+}
+
+/* Dropdown Styling */
+
+.dropdown-menu {
+  background-color: rgba(20, 20, 20, 1);
+  color: var(--primary-color);
+  border: 2px solid var(--secondary-color);
+  font-size: 2rem;
+  text-align: left;
+}
+
+.dropdown-menu li a {
+  color: var(--primary-color) !important;
+  font-size: 2rem;
+  padding: 10px 15px;
+  display: block;
+  text-decoration: none;
+  background: transparent;
+}
+
+.dropdown-menu li a:hover {
+  background-color: var(--secondary-color);
+  color: black !important;
+}
+
+/* Dropdown Hover Fix */
+
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu > .dropdown-menu {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  margin-top: -1px;
+  background-color: rgba(20, 20, 20, 1);
+  border: 2px solid var(--accent-color);
+  box-shadow: 0 0 10px var(--accent-color);
+  z-index: 1100;
+}
+
+.dropdown-submenu:hover > .dropdown-menu {
+  display: block;
+}
+
+.dropdown-submenu > a {
+  position: relative;
+  z-index: 1101;
+}
+
+.dropdown-menu, .dropdown-submenu {
+  transition: all 0.3s ease-in-out;
+}
+
+
+/* Theme Selector Container */
+
+.theme-container {
+  margin: 0 50px;  
+  margin-top: 130px; 
+  position: relative; 
+  padding: 20px 40px; 
+  z-index: 1; 
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#theme-selector-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px; /* Adjust spacing between title and dropdown */
+  margin-bottom: 20px;
+  text-align: center;
+  flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+#theme-selector-container h3 {
+  font-size: 3rem;
+  color: var(--secondary-color);
+  text-shadow: 0 0 10px var(--secondary-color);
+  margin: 0;
+  white-space: nowrap;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.theme-dropdown {
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  background-color: rgba(13, 13, 13, 0.9); /* Dark cyberpunk background */
+  color: var(--primary-color); /* Neon teal */
+  border: 3px solid var(--accent-color); /* Vibrant neon yellow */
+  text-shadow: 0 0 10px var(--primary-color); /* Neon glow */
+  box-shadow: 0 0 15px var(--accent-color), 0 0 25px var(--secondary-color);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.theme-dropdown option {
+  font-size: 1.6rem;
+  background-color: #000; /* Dark background */
+  color: var(--primary-color);
+  font-family: 'Orbitron', sans-serif;
+  text-shadow: 0 0 5px var(--secondary-color); /* Soft neon glow */
+}
+
+.theme-dropdown:hover {
+  background-color: rgba(20, 20, 20, 0.95);
+  box-shadow: 0 0 20px var(--secondary-color), 0 0 30px var(--accent-color);
+  transform: scale(1.05);
+}
+
+#theme-selector {
+  display: block;
+}
+
+
+
+/* Logo */
+
+#logo-image {
+  width: 100vw; /* Full width of the viewport */
+  height: 100vh; /* Cover the entire viewport height */
+  position: fixed; /* Keep it fixed in the background */
+  top: 0;
+  left: 0;
+  z-index: -10; /* Lower the z-index to keep it behind everything */
+  object-fit: cover; /* Ensure it covers the full background properly */
+  filter: brightness(1.2) contrast(1.3) drop-shadow(0 0 15px #0ff); /* Cyberpunk neon glow */
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+  pointer-events: none; /* Make sure the image does not interfere with user interaction */
+}
+
+#logo-image:hover {
+  transform: scale(1.02); /* Slight zoom effect */
+  filter: brightness(1.4) contrast(1.5) drop-shadow(0 0 25px #ff00ff); /* Intensified glow */
+}
+
+/* Proj-container and title */
+
+.title,
+.proj-container {
+  position: relative;
+  z-index: 1; /* Ensures they appear above the background image */
+  background-color: rgba(0, 0, 0, 0.8); /* Adds some background to ensure readability */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 0, 255, 0.7); /* Adds a glowing effect */
+}
+
+.proj-container:hover, .info:hover {
+  box-shadow: 0 0 20px rgba(255, 0, 255, 1), 0 0 35px rgba(0, 255, 255, 1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+/* map_container */
+
+#map-filter-container {
+  position: relative;
+  z-index: 2; /* Make sure it's above the background */
+  text-align: center;
+  padding: 10px;
+  background-color: rgba(13, 13, 13, 0.85); /* Dark cyberpunk background */
+  border-radius: 10px;
+  border: 2px solid var(--accent-color);
+  box-shadow: 0 0 10px var(--secondary-color);
+}
+
+#map-filter-container label {
+  font-weight: bold;
+  margin-right: 8px;
+  font-size: 16px;
+  color: #0ff;
+  text-shadow: 0 0 5px #0ff;
+}
+
+#map-filter-container select {
+  position: relative;
+  padding: 5px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 2px solid #ff00ff;
+  background-color: #222;
+  color: #0ff;
+  text-shadow: 0 0 5px #0ff;
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.7);
+}
+
+
+
+/* Author-content and map*/
+
+#author-content, #global-map-container {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically if needed */
+  flex-direction: column; /* Ensures proper stacking */
+  width: 100%;
+}
+
+
+#author-content #map, #global-map-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 90%;
+  max-width: 900px;
+  height: 400px; /* Fixed height for consistency */
+  margin: 20px auto;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 3px solid #ff00ff; /* Neon pink cyberpunk border */
+  background-color: #111; /* Dark cyberpunk background */
+  box-shadow: 0 0 15px rgba(255, 0, 255, 0.8); /* Neon glow effect */
+  z-index: 10;
+}
+
+
+#author-content #map, #global-map-container {
+  width: 100%;
+  height: 100%;
+}
+
+
+/*  Info */
+
+.info {
+  max-width: 65%; 
+  margin: 2rem auto;
+  padding: 2rem;
+  align-items: center;
+  background-color: rgba(20, 20, 40, 0.95); /* Dark background */
+  border: 3px solid #ff00ff; /* Neon Pink */
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(255, 0, 255, 0.8), 0 0 30px rgba(0, 255, 255, 0.6);
+  overflow-x: hidden; 
+  word-wrap: break-word; 
+  overflow-wrap: break-word;
+  text-shadow: 0 0 5px rgba(0, 255, 255, 0.8);
+  color: #0ff;
+}
+
+
+/* authors */
 
 #author-content {
   display: block;
@@ -81,6 +384,7 @@ body {
   margin-right: auto; /* Align center horizontally */
 }
 
+
 .author-caption:hover {
   box-shadow: 0 0 25px var(--primary-color), /* Intensified teal glow */
               0 0 50px var(--secondary-color); /* Intensified pink glow */
@@ -88,60 +392,8 @@ body {
 }
 
 
-/* Navbar */
-nav {
-  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-  padding: 1.5rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-  z-index: 1000;
-}
+/* Typography */
 
-.navbar-brand {
-  color: var(--navbar-text-color) !important;
-  font-size: 5rem;
-  text-decoration: none;
-  font-family: var(--font-main);
-  text-shadow: 0 0 25px var(--navbar-text-color);
-}
-
-.navbar-nav {
-  display: flex;
-  gap: 3rem;
-  align-items: center;
-}
-
-.navbar-nav a {
-  color: var(--navbar-text-color);
-  text-decoration: none;
-  font-family: var(--font-accent);
-  text-transform: uppercase;
-  font-size: 2.2rem;
-  font-weight: bold;
-  text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
-  padding: 1rem 1.5rem;
-}
-
-.navbar-nav a:hover {
-  color: var(--accent-color);
-  text-shadow: 0 0 20px var(--accent-color);
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    align-items: center;
-  }
-  .navbar-nav {
-    flex-direction: column;
-    gap: 2rem;
-  }
-}
-
-/* Titles */
 h1, h2, h3 {
   font-family: var(--font-main);
   color: var(--secondary-color);
@@ -161,7 +413,6 @@ h3 {
   font-size: 3.8rem;
 }
 
-/* Paragraphs */
 p {
   font-family: var(--font-accent);
   font-size: 2.2rem;
@@ -172,25 +423,246 @@ p {
   overflow-wrap: break-word;
 }
 
+/* Poetry and Prose */
 
-pre {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 2.5rem;
-  color: var(--primary-color); /* Neon teal text */
-  background: rgba(13, 13, 13, 0.95); /* Dark cyberpunk background */
-  padding: 1.5rem;
-  white-space: pre-line; /* Ensures proper word wrapping */
-  word-break: normal; /* Prevents breaking words awkwardly */
-  overflow-wrap: normal; /* Natural wrapping */
-  line-height: 2;
-  border: 2px solid var(--accent-color); /* Vibrant yellow border */
+.poetry {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 80%; /* Slightly wider for a futuristic feel */
+}
+
+.strophe, .prose {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.strophe-number, .work-title {
+  font-family: 'Orbitron', sans-serif; 
+  font-size: 3rem; /* Slightly larger for emphasis */
+  color: var(--primary-color); /* Neon teal */
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 0.8rem 1.5rem;
+  background: rgba(13, 13, 13, 0.9); /* Dark futuristic background */
+  border: 3px solid var(--accent-color); /* Vibrant neon yellow */
   border-radius: 8px;
-  box-shadow: 0 0 15px var(--secondary-color); /* Hot pink glow */
-  text-shadow: 0 0 10px var(--primary-color); /* Neon glow effect */
+  display: inline-block;
+  box-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--secondary-color); /* Cyberpunk glow */
+  margin-top: 5rem auto;
+  margin-bottom: 3rem auto;
+  text-shadow: 0 0 12px var(--primary-color), 0 0 20px var(--accent-color);
+}
+
+.strophe pre {
+  text-align: center;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 2.2rem; /* Futuristic readability */
+  color: var(--primary-color); /* Neon teal */
+  background: rgba(20, 20, 20, 0.9); /* Dark cyberpunk background */
+  padding: 2rem;
+  white-space: pre-wrap;
+  border: 3px solid var(--secondary-color); /* Hot pink border */
+  border-radius: 10px;
+  box-shadow: 0 0 15px var(--secondary-color), 0 0 25px var(--accent-color);
+  display: inline-block;
+  width: auto; /* Keeps content flexible */
+  transition: all 0.3s ease-in-out;
+}
+
+.prose pre {
+  text-align: justify;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 2rem;
+  color: var(--primary-color); /* Neon teal */
+  background: rgba(13, 13, 13, 0.85); /* Dark sci-fi panel */
+  padding: 1.8rem;
+  border: 3px solid var(--secondary-color); /* Hot pink cyberpunk border */
+  border-radius: 10px;
+  box-shadow: 0 0 15px var(--primary-color), 0 0 30px var(--accent-color);
+  line-height: 1.8;
+  max-width: 90%; /* Slightly wider for immersive feel */
+  margin: 2rem auto;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.prose .tag {
+  font-weight: bold;
+  color: var(--accent-color); /* Neon yellow */
+  text-decoration: underline;
+  text-shadow: 0 0 8px var(--accent-color);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.prose .tag:hover {
+  color: var(--secondary-color); /* Hot pink hover effect */
+  text-shadow: 0 0 12px var(--secondary-color), 0 0 25px var(--primary-color);
+  transform: scale(1.1);
 }
 
 
-/* Entity Table Styling */
+/* Buttons */
+
+button {
+  background-color: rgba(13, 13, 13, 0.9); 
+  border: 3px solid var(--accent-color); 
+  color: var(--primary-color); 
+  padding: 0.8rem 1.5rem;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 12px var(--accent-color), 0 0 20px var(--secondary-color); 
+  text-shadow: 0 0 10px var(--primary-color); 
+  transition: all 0.3s ease-in-out;
+  outline: none;
+}
+
+button:hover {
+  background-color: var(--secondary-color); 
+  color: black;
+  border-color: var(--primary-color); 
+  box-shadow: 0 0 20px var(--primary-color), 0 0 30px var(--secondary-color); 
+  text-shadow: 0 0 12px var(--primary-color);
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.98);
+  box-shadow: 0 0 25px var(--accent-color), 0 0 35px var(--secondary-color);
+}
+
+
+/* Underlining */
+
+.underline-highlight {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: var(--accent-color); 
+  text-shadow: 0 0 10px var(--accent-color); 
+  transition: text-shadow 0.3s ease-in-out;
+}
+
+.underline-highlight:hover {
+  text-decoration-color: var(--secondary-color); /* Hot pink */
+  text-shadow: 0 0 15px var(--secondary-color); /* Intensified glow */
+}
+
+.temporary-highlight {
+  background-color: rgba(255, 255, 0, 0.3); /* Semi-transparent neon yellow */
+  box-shadow: 0 0 12px var(--accent-color); /* Neon glow */
+  transition: background-color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+.temporary-highlight:hover {
+  background-color: rgba(255, 255, 0, 0.7); /* Stronger neon yellow */
+  box-shadow: 0 0 20px var(--accent-color), 0 0 30px var(--secondary-color); /* Multi-neon glow */
+}
+
+
+/* Pop-up window */
+
+.popup-window {
+  max-width: 700px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px var(--secondary-color); 
+  padding: 25px;
+  background: rgba(0, 0, 0, 0.95) !important; 
+  border: 3px solid var(--secondary-color); 
+  font-family: var(--font-accent);
+  line-height: 1.8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--primary-color);
+}
+
+.popup-content {
+  display: block;
+  text-align: justify;
+  max-width: 100%;
+}
+
+.popup-image {
+  width: 220px;
+  height: auto;
+  float: left;
+  margin: 5px 20px 10px 0;
+  border-radius: 8px;
+  border: 3px solid var(--accent-color); /* Vibrant neon yellow */
+  box-shadow: 0 0 15px var(--accent-color);
+}
+
+.popup-text {
+  font-size: 17px;
+  text-align: justify;
+  color: var(--primary-color);
+  overflow-wrap: break-word;
+  text-shadow: 0 0 10px var(--primary-color); 
+}
+
+
+/* Buttons */
+
+.close-btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background: var(--secondary-color); /* Hot pink */
+  color: black;
+  border: none;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 15px;
+  border-radius: 6px;
+  clear: both;
+  box-shadow: 0 0 15px var(--secondary-color);
+  font-size: 1.8rem;
+}
+
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100; /* Ensure it's always above other elements */
+  background-color: var(--accent-color); /* Vibrant yellow */
+  color: black;
+  border: 2px solid var(--primary-color);
+  padding: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 15px var(--accent-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.close-btn:hover {
+  background: var(--accent-color); /* Yellow */
+  color: black;
+  text-shadow: 0 0 10px var(--primary-color);
+}
+
+#scrollToTopBtn:hover {
+  background-color: var(--secondary-color); /* Hot pink */
+  color: white;
+  box-shadow: 0 0 20px var(--secondary-color);
+}
+
+/* Entity-table */
+
 #entity-table-container {
   margin: 30px 0;
   padding: 30px;
@@ -238,74 +710,98 @@ pre {
   color: var(--primary-color);
 }
 
-/* Cyberpunk Popup Window with Black Background */
-.popup-window {
-  max-width: 700px;
-  border-radius: 12px;
-  box-shadow: 0 0 20px var(--secondary-color); /* Neon glow */
-  padding: 25px;
-  background: rgba(0, 0, 0, 0.95) !important; /* Fully black background */
-  border: 3px solid var(--secondary-color); /* Hot pink neon */
-  font-family: var(--font-accent);
-  line-height: 1.8;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: var(--primary-color);
+
+/* Tag */
+
+.tag {
+  text-decoration: underline; 
+  cursor: pointer; 
+  transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
 }
 
-/* Adjust text wrapping for popup */
-.popup-content {
-  display: block;
-  text-align: justify;
-  max-width: 100%;
+.tag.character {
+  color: #ff007f; 
 }
 
-/* Cyberpunk-styled Image */
-.popup-image {
-  width: 220px;
-  height: auto;
-  float: left;
-  margin: 5px 20px 10px 0;
-  border-radius: 8px;
-  border: 3px solid var(--accent-color); /* Vibrant neon yellow */
-  box-shadow: 0 0 15px var(--accent-color);
+.tag.place {
+  color: #09ff00; 
 }
 
-/* Cyberpunk Text with Neon Glow */
-.popup-text {
-  font-size: 17px;
-  text-align: justify;
-  color: var(--primary-color);
-  overflow-wrap: break-word;
-  text-shadow: 0 0 10px var(--primary-color); /* Cyberpunk glow effect */
+.tag.dish {
+  color: #ff6600; 
+  font-weight: bold;
+  text-shadow: 0 0 5px rgba(255, 102, 0, 0.8); 
 }
 
-/* Cyberpunk Close Button */
-.close-btn {
+.tag:hover {
+  color: white; 
+  text-shadow: 0 0 15px var(--primary-color), 0 0 30px var(--secondary-color); 
+}
+
+
+/* Read-more */
+
+.read-more-btn {
   display: block;
   width: 100%;
   padding: 12px;
-  background: var(--secondary-color); /* Hot pink */
+  background: var(--accent-color); 
   color: black;
-  border: none;
+  border: 2px solid var(--primary-color); 
   font-weight: bold;
   text-align: center;
   cursor: pointer;
   margin-top: 15px;
   border-radius: 6px;
-  clear: both;
-  box-shadow: 0 0 15px var(--secondary-color);
-  font-size: 1.8rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Orbitron', sans-serif;
+  box-shadow: 0 0 10px var(--accent-color);
+  transition: background 0.3s, box-shadow 0.3s;
 }
 
-.close-btn:hover {
-  background: var(--accent-color); /* Yellow */
-  color: black;
-  text-shadow: 0 0 10px var(--primary-color);
+.read-more-btn:hover {
+  background: var(--secondary-color); 
+  color: white;
+  box-shadow: 0 0 15px var(--secondary-color);
+}
+
+
+/* Footer */
+
+.footer {
+  width: 100%;
+  margin: 0;
+  padding: 2rem;
+  position: relative;
+  z-index: 2;
+  font-size: 2rem;
+  color: var(--primary-color); 
+  background: linear-gradient(90deg, rgba(13, 13, 13, 0.95), rgba(0, 255, 204, 0.2)); 
+  background-size: cover;
+  font-family: var(--font-main); 
+  text-transform: uppercase;
+  text-align: center;
+  border-top: 4px solid var(--accent-color); 
+  box-shadow: 0px -6px 20px var(--secondary-color), 0px -10px 30px rgba(0, 255, 204, 0.8);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.footer p {
+  text-align: center;
+  font-weight: bold;
+  font-size: 2.2rem;
+  text-shadow: 0 0 15px var(--primary-color), 0 0 25px var(--secondary-color); 
+}
+
+.footer:hover {
+  box-shadow: 0px -10px 25px var(--primary-color), 0px -15px 35px var(--accent-color);
+  transition: box-shadow 0.4s ease-in-out;
 }
 
 /* Mobile Adjustments */
+
 @media (max-width: 600px) {
   .popup-window {
       max-width: 95%;
@@ -322,262 +818,13 @@ pre {
   }
 }
 
-
-/* Dropdown Styling */
-.dropdown-menu {
-  background-color: rgba(20, 20, 20, 1);
-  color: var(--primary-color);
-  border: 2px solid var(--secondary-color);
-  font-size: 2rem;
-  text-align: left;
-}
-
-.dropdown-menu li a {
-  color: var(--primary-color) !important;
-  font-size: 2rem;
-  padding: 10px 15px;
-  display: block;
-  text-decoration: none;
-  background: transparent;
-}
-
-.dropdown-menu li a:hover {
-  background-color: var(--secondary-color);
-  color: black !important;
-}
-
-/* Dropdown Hover Fix */
-.dropdown-submenu {
-  position: relative;
-}
-
-.dropdown-submenu > .dropdown-menu {
-  display: none;
-  position: absolute;
-  left: 100%;
-  top: 0;
-  margin-top: -1px;
-  background-color: rgba(20, 20, 20, 1);
-  border: 2px solid var(--accent-color);
-  box-shadow: 0 0 10px var(--accent-color);
-  z-index: 1100;
-}
-
-.dropdown-submenu:hover > .dropdown-menu {
-  display: block;
-}
-
-.dropdown-submenu > a {
-  position: relative;
-  z-index: 1101;
-}
-
-/* Ensure smooth transition */
-.dropdown-menu, .dropdown-submenu {
-  transition: all 0.3s ease-in-out;
-}
-
-/* Theme Selector Alignment Fix */
-#theme-selector-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px; /* Adjust spacing between title and dropdown */
-  margin-bottom: 20px;
-  text-align: center;
-  flex-wrap: wrap; /* Ensures responsiveness */
-}
-
-#theme-selector-container h3 {
-  font-size: 3rem;
-  color: var(--secondary-color);
-  text-shadow: 0 0 10px var(--secondary-color);
-  margin: 0;
-  white-space: nowrap; /* Prevents text from wrapping */
-}
-
-#theme-selector {
-  font-size: 2rem;
-  padding: 10px;
-  border: 2px solid var(--accent-color);
-  background-color: rgba(20, 20, 20, 0.9);
-  color: var(--primary-color);
-  font-family: var(--font-accent);
-  border-radius: 8px;
-  box-shadow: 0 0 10px var(--accent-color);
-  min-width: 200px; /* Ensures consistent width */
-}
-
-/* Base styling for all tagged entities */
-.tag {
-  text-decoration: underline; /* Ensures underline for readability */
-  cursor: pointer; /* Hand pointer on hover */
-  font-weight: bold;
-  transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
-}
-
-/* Default entity colors */
-.tag.character {
-  color: #ff007f; /* Bright Neon Pink */
-}
-
-.tag.place {
-  color: #09ff00; /* Neon Cyan */
-}
-
-.tag.dish {
-  color: #ff6600; /* Bright Neon Orange */
-  font-weight: bold;
-  text-shadow: 0 0 5px rgba(255, 102, 0, 0.8); /* Adds a glowing effect */
-}
-
-
-
-/* Hover effect for Cyberpunk entities */
-.tag:hover {
-  color: white; /* High contrast hover effect */
-  text-shadow: 0 0 15px var(--primary-color), 0 0 30px var(--secondary-color); /* Neon glow */
-}
-
-.tag {
-  cursor: pointer; /* Changes the cursor to a hand for all elements with the "tag" class */
-}
-
-
-.temporary-highlight {
-  background-color: rgba(255, 255, 0, 0.5); /* Semi-transparent neon yellow */
-  transition: background-color 0.5s ease-in-out;
-}
-
-
-.read-more-btn {
-  display: block;
-  width: 100%;
-  padding: 12px;
-  background: var(--accent-color); /* Vibrant yellow */
-  color: black;
-  border: 2px solid var(--primary-color); /* Neon teal border */
-  font-weight: bold;
-  text-align: center;
-  cursor: pointer;
-  margin-top: 15px;
-  border-radius: 6px;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-family: 'Orbitron', sans-serif;
-  box-shadow: 0 0 10px var(--accent-color);
-  transition: background 0.3s, box-shadow 0.3s;
-}
-
-.read-more-btn:hover {
-  background: var(--secondary-color); /* Hot pink on hover */
-  color: white;
-  box-shadow: 0 0 15px var(--secondary-color);
-}
-
-
-
-
-
-/* Center the container itself */
-#author-content, #global-map-container {
-  display: flex;
-  justify-content: center; /* Centers horizontally */
-  align-items: center; /* Centers vertically if needed */
-  flex-direction: column; /* Ensures proper stacking */
-  width: 100%;
-}
-
-/* Map Styling - Cyberpunk Theme */
-#author-content #map, #global-map-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 90%;
-  max-width: 900px;
-  height: 400px; /* Fixed height for consistency */
-  margin: 20px auto;
-  border-radius: 10px;
-  overflow: hidden;
-  border: 3px solid #ff00ff; /* Neon pink cyberpunk border */
-  background-color: #111; /* Dark cyberpunk background */
-  box-shadow: 0 0 15px rgba(255, 0, 255, 0.8); /* Neon glow effect */
-  z-index: 10;
-}
-
-/* Leaflet Map inside */
-#author-content #map, #global-map-container {
-  width: 100%;
-  height: 100%;
-}
-
-
-
-
-/* Center the filter dropdown and map */
-#map-filter-container {
-  text-align: center; /* Center the dropdown */
-  margin-bottom: 10px; /* Add space below */
-}
-
-/* Cyberpunk-styled dropdown label */
-#map-filter-container label {
-  font-weight: bold;
-  margin-right: 8px;
-  font-size: 16px;
-  color: #0ff;
-  text-shadow: 0 0 5px #0ff;
-}
-
-/* Cyberpunk-styled dropdown */
-#map-filter-container select {
-  padding: 5px;
-  font-size: 14px;
-  border-radius: 5px;
-  border: 2px solid #ff00ff;
-  background-color: #222;
-  color: #0ff;
-  text-shadow: 0 0 5px #0ff;
-  box-shadow: 0 0 8px rgba(0, 255, 255, 0.7);
-}
-
-
-
-.proj-container {
-  max-width: 65%; 
-  margin: 2rem auto;
-  padding: 2rem;
-  background-color: rgba(20, 20, 40, 0.95); /* Dark neon theme */
-  border: 3px solid #ff00ff; /* Neon pink border */
-  border-radius: 15px;
-  box-shadow: 0 0 15px rgba(255, 0, 255, 0.8), 0 0 30px rgba(0, 255, 255, 0.6); /* Neon glow */
-  overflow-x: hidden; 
-  word-wrap: break-word; 
-  overflow-wrap: break-word;
-  text-shadow: 0 0 5px rgba(0, 255, 255, 0.8);
-  color: #0ff; /* Neon Cyan Text */
-}
-
-/* Cyberpunk Info Section */
-.info {
-  max-width: 65%; 
-  margin: 2rem auto;
-  padding: 2rem;
-  align-items: center;
-  background-color: rgba(20, 20, 40, 0.95); /* Dark background */
-  border: 3px solid #ff00ff; /* Neon Pink */
-  border-radius: 15px;
-  box-shadow: 0 0 15px rgba(255, 0, 255, 0.8), 0 0 30px rgba(0, 255, 255, 0.6);
-  overflow-x: hidden; 
-  word-wrap: break-word; 
-  overflow-wrap: break-word;
-  text-shadow: 0 0 5px rgba(0, 255, 255, 0.8);
-  color: #0ff;
-}
-
-/* Add glowing animation for hover effect */
-.proj-container:hover, .info:hover {
-  box-shadow: 0 0 20px rgba(255, 0, 255, 1), 0 0 35px rgba(0, 255, 255, 1);
-  transition: box-shadow 0.3s ease-in-out;
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  .navbar-nav {
+    flex-direction: column;
+    gap: 2rem;
+  }
 }

@@ -4,13 +4,14 @@
 */
 
 
-/* Import Medieval Fonts */
+/*Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Metamorphous&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Cinzel+Decorative&display=swap');
 
 
 
-/* Global Reset */
+/* Global Setting */
+
 * {
     margin: 0;
     padding: 0;
@@ -30,7 +31,8 @@ body {
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-/* Navbar Container */
+/* Navbar*/
+
 nav {
     background: url('../images/textured-paper.png'); /* Use parchment texture */
     background-size: cover;
@@ -48,7 +50,6 @@ nav {
 }
 
 
-/* GastroLit Logo Brand */
 .navbar-brand {
     font-size: 5rem;
     font-family: 'Uncial Antiqua', serif;
@@ -66,6 +67,7 @@ nav {
 
 
 /* Navbar Links */
+
 .navbar-nav {
     display: flex;
     gap: 1.8rem; /* Spacing between menu items */
@@ -91,7 +93,9 @@ nav {
 }
 
 
+
 /* Dropdown Menu Styling */
+
 .dropdown-menu {
     background: rgba(255, 245, 230, 0.95); /* Aged paper */
     border: 2px solid #7a4c29;
@@ -110,25 +114,6 @@ nav {
     background: rgba(200, 160, 120, 0.8);
     color: #ffffff;
 }
-
-/* Mobile Responsive Adjustments */
-@media (max-width: 768px) {
-    .navbar-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .navbar-nav {
-        flex-direction: column;
-        gap: 1.2rem;
-    }
-
-    .navbar-brand {
-        margin-bottom: 1rem;
-    }
-}
-
-/* Dropdown Menu */
 
 .dropdown-menu {
     display: none; /* Default hidden */
@@ -166,7 +151,6 @@ nav {
     border-radius: 5px; /* Smooth edges */
 }
 
-/* Multi-Level Dropdown */
 
 .dropdown-submenu {
     position: relative;
@@ -211,11 +195,6 @@ nav {
     width: auto; 
   }
 
-
-
-
-
-/* Style the dropdown */
 .theme-dropdown {
     font-family: 'Metamorphous', serif;
     font-size: 2rem; /* Adjust font size for the dropdown */
@@ -227,7 +206,6 @@ nav {
     font-family: 'Essays-1743', serif; /* Match theme font */
 }
 
-/* Style the options within the dropdown */
 .theme-dropdown option {
     font-size: 20px; /* Increase font size for options */
     padding: 0.5rem; /* Optional: Add padding for better readability */
@@ -236,6 +214,8 @@ nav {
     font-family: 'Metamorphous', serif; /* Match theme font */
 }
 
+
+/* Logo */
 
 #logo-image {
     width: 100%;  /* Adjust width (e.g., 80% of its container) */
@@ -246,6 +226,7 @@ nav {
 }
 
 
+/* Title */
 
 .title {
     font-family: 'Metamorphous', serif;
@@ -260,6 +241,9 @@ nav {
     word-wrap: break-word; 
     overflow-wrap: break-word; 
 }
+
+/* Proj-container */
+
 .proj-container {
     max-width: 65%; 
     margin: 2rem auto;
@@ -292,7 +276,6 @@ nav {
     color: #5A3825; /* Deep brown for parchment contrast */
 }
 
-/* Middle Age-styled dropdown */
 #map-filter-container select {
     font-family: 'Metamorphous', serif !important;
     padding: 5px;
@@ -305,38 +288,9 @@ nav {
 }
 
 
-/* Center the container itself */
-#author-content, #global-map-container {
-    display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: center; /* Centers vertically if needed */
-    flex-direction: column; /* Ensures proper stacking */
-    width: 100%;
-}
+/* Author-content */
 
-/* Map Styling - Middle Age Theme */
-#author-content #map, #global-map-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 90%;
-    max-width: 900px;
-    height: 400px; /* Fixed height for consistency */
-    margin: 20px auto;
-    border-radius: 10px;
-    overflow: hidden;
-    border: 4px solid #8B5A2B; /* Dark brown medieval frame */
-    background-color: #F5E1C3; /* Light parchment color */
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
-    z-index: 10;
-}
 
-/* Leaflet Map inside */
-#author-content #map, #global-map-container {
-    width: 100%;
-    height: 100%;
-}
 
 /* Info */
 
@@ -402,7 +356,7 @@ nav {
     box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Hover effect for more immersion */
+
 .author-caption:hover {
     background: rgba(255, 251, 235, 0.95); /* Slight parchment glow */
     color: #5a3a1e;
@@ -421,6 +375,39 @@ nav {
     font-family: 'Essays-1743', serif; /* Match theme typography */
 }
 
+
+#author-content, #global-map-container {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically if needed */
+    flex-direction: column; /* Ensures proper stacking */
+    width: 100%;
+}
+
+#author-content #map, #global-map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    max-width: 900px;
+    height: 400px; /* Fixed height for consistency */
+    margin: 20px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 4px solid #8B5A2B; /* Dark brown medieval frame */
+    background-color: #F5E1C3; /* Light parchment color */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+    z-index: 10;
+}
+
+#author-content #map, #global-map-container {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Map */
 
 #map {
     display: flex;
@@ -444,9 +431,6 @@ nav {
     width: 100%;
     height: 100%;
 }
-
-
-
 
 /* Typography */
 
@@ -529,7 +513,6 @@ p {
 }
 
 
-
 .prose pre {
     text-align: justify; /* Justified text for manuscript-like alignment */
     font-family: 'Metamorphous', serif; 
@@ -549,10 +532,6 @@ p {
     margin-bottom: 4rem;
 }
 
-
-
-
-
 .prose .tag {
     font-weight: bold;
     color: #763626; /* A deep brown to highlight entities */
@@ -563,8 +542,6 @@ p {
     color: #a45c2d; /* A richer brown on hover */
     text-shadow: 0 0 5px rgba(255, 215, 153, 0.6); /* Subtle glow effect */
 }
-
-
 
 
 /* Buttons */
@@ -588,84 +565,6 @@ button:hover {
     color: #fff;
 }
 
-
-
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .container {
-        padding: 1rem;
-    }
-
-    h1 {
-        font-size: 2.5rem;
-    }
-
-    h2 {
-        font-size: 1.8rem;
-    }
-}
-
-
-
-
-/* Underline effect for default state */
-.underline-highlight {
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
-    text-decoration-color: #8b5e3c; /* Matches your theme color */
-}
-
-/* Highlight effect when an element is clicked */
-.temporary-highlight {
-    background-color: yellow;
-    transition: background-color 0.5s ease;
-}
-
-
-/* Pop-up window */
-
-
-.popup-window {
-    max-width: 700px; /* Increased width */
-    border-radius: 12px;
-    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
-    padding: 25px; /* More spacing inside */
-    background: white;
-    border: 2px solid #8b5e3c;
-    font-family: 'Essays-1743', serif;
-    line-height: 1.8;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* Adjust text wrapping for larger popup */
-.popup-content {
-    display: block;
-    text-align: justify;
-    max-width: 100%;
-}
-
-/* Larger image for better clarity */
-.popup-image {
-    width: 220px; /* Increased size */
-    height: auto;
-    float: left;
-    margin: 5px 20px 10px 0;
-    border-radius: 8px;
-    border: 2px solid #9e752e;
-}
-
-/* Text block takes more space */
-.popup-text {
-    font-size: 17px; /* Slightly larger for readability */
-    text-align: justify;
-    color: #3a302a;
-    overflow-wrap: break-word;
-}
-
-/* Wider button to match new width */
 .close-btn {
     display: block;
     width: 100%;
@@ -685,28 +584,61 @@ button:hover {
     background: #763626;
 }
 
-/* Mobile adjustments */
 
-@media (max-width: 600px) {
-    .popup-window {
-        max-width: 95%;
-    }
+/* Underlining */
 
-    .popup-image {
-        float: none;
-        display: block;
-        margin: 0 auto 12px auto;
-    }
+.underline-highlight {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: #8b5e3c; 
+}
 
-    .popup-text {
-        text-align: left;
-    }
+.temporary-highlight {
+    background-color: yellow;
+    transition: background-color 0.5s ease;
 }
 
 
+/* Pop-up window */
+
+.popup-window {
+    max-width: 700px; /* Increased width */
+    border-radius: 12px;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
+    padding: 25px; /* More spacing inside */
+    background: white;
+    border: 2px solid #8b5e3c;
+    font-family: 'Essays-1743', serif;
+    line-height: 1.8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.popup-content {
+    display: block;
+    text-align: justify;
+    max-width: 100%;
+}
+
+.popup-image {
+    width: 220px; /* Increased size */
+    height: auto;
+    float: left;
+    margin: 5px 20px 10px 0;
+    border-radius: 8px;
+    border: 2px solid #9e752e;
+}
+
+.popup-text {
+    font-size: 17px; /* Slightly larger for readability */
+    text-align: justify;
+    color: #3a302a;
+    overflow-wrap: break-word;
+}
+
 
 /* Entity Table */
-
 
 #entity-table-container {
     margin: 20px 0;
@@ -756,8 +688,10 @@ button:hover {
 }
 
 
+/* Tag */
+
 .tag {
-    cursor: pointer; /* Changes the cursor to a hand for all elements with the "tag" class */
+    cursor: pointer; 
 }
 
 
@@ -777,6 +711,8 @@ button:hover {
     text-transform: uppercase;
     font-family: 'Essays-1743', serif;
 }
+
+/* Read-more */
 
 .read-more-btn:hover {
     background: #763626; /* Darker brown on hover */
@@ -810,3 +746,51 @@ button:hover {
 }
 
 
+/* Mobile Adjustments */
+
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+
+    .navbar-brand {
+        margin-bottom: 1rem;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .popup-window {
+        max-width: 95%;
+    }
+
+    .popup-image {
+        float: none;
+        display: block;
+        margin: 0 auto 12px auto;
+    }
+
+    .popup-text {
+        text-align: left;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+}
