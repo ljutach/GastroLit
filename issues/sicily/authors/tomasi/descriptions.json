@@ -1,0 +1,141 @@
+{
+    "tancredi": {
+        "description": "Tancredi is a charismatic and ambitious character from The Leopard by Giuseppe Tomasi di Lampedusa, embodying the transformation of Sicilian aristocracy during Italy’s unification. As the dashing and pragmatic nephew of Prince Fabrizio Salina, Tancredi understands that survival in a changing world requires adaptation. His famous words, “If we want things to stay as they are, things will have to change,” capture his political insight and opportunism. Balancing charm with calculation, he navigates the shifting tides of power, marrying Angelica, a beautiful yet socially ambitious woman, to secure his future. Tancredi symbolizes the resilience and contradictions of Sicilian nobility, blending tradition with modernity in a time of profound social upheaval.",
+        "image": "issues/sicily/authors/tomasi/images/tancredi.png"
+    },
+
+    "potage": {
+        "description": "'Potage' is a French term referring to a thick soup, often made with vegetables, legumes, and sometimes meat, slowly cooked until it reaches a creamy or rustic consistency. There are various types, such as potage parmentier (a leek and potato soup) or potage Saint-Germain (a pea soup). Traditionally served as a starter, potage is a staple of classic French cuisine, offering warmth, nourishment, and rich flavors.",
+        "image": "issues/sicily/authors/tomasi/images/potage.avif"
+    },
+
+    "donnafugata":{
+        "description": "Donnafugata is a fictional Sicilian estate in The Leopard by Giuseppe Tomasi di Lampedusa, symbolizing the fading grandeur of the island’s aristocracy. Serving as the summer residence of Prince Fabrizio Salina and his family, Donnafugata represents both opulence and decline, mirroring the broader transformation of Sicily during Italy’s unification. The estate, with its grand yet decaying palace, sun-scorched landscapes, and timeless traditions, becomes the backdrop for political and social change. Inspired by real Sicilian locations, Donnafugata captures the tension between nostalgia and progress, where the old world reluctantly gives way to the new.",
+        "image": "issues/sicily/authors/tomasi/images/donnafugata.webp"
+    },
+
+    "timballo":{
+        "description": "'Timballo di Maccheroni' is a rich and elaborate baked pasta dish, deeply rooted in Italian culinary tradition, particularly in Sicily and southern Italy. This dish consists of macaroni or another type of pasta, mixed with a luxurious filling that may include ragù, béchamel sauce, cheese, eggs, and sometimes meatballs or cured meats. The mixture is then encased in a golden crust of pastry, breadcrumbs, or even eggplant slices before being baked to perfection.",
+        "image": "issues/sicily/authors/tomasi/images/timballo.jpg"
+    },
+
+    "principessa":{
+        "description": "Princess Maria Stella di Salina is a character in The Leopard by Giuseppe Tomasi di Lampedusa, the devoted wife of Prince Fabrizio Salina. A deeply pious and traditional woman, Maria Stella embodies the unwavering values of Sicilian aristocracy, clinging to religious faith and social customs even as the world around her changes. Unlike her husband, who contemplates the decline of their class with philosophical detachment, Maria Stella remains steadfast in her beliefs, often seeking solace in prayer. Her role in the novel highlights the contrast between nostalgia for the past and the inevitable march of progress, making her a poignant figure in the story’s meditation on change and loss.",
+        "image": "issues/sicily/authors/tomasi/images/principessa.jpg"
+    },
+
+    "angelica":{
+        "description": "Angelica, a pivotal character in The Leopard, symbolizes Sicily’s shifting social order. Stunningly beautiful and ambitious, she is the daughter of Don Calogero Sedara, a wealthy but uncultured bourgeois. Her marriage to Tancredi unites old aristocracy with rising bourgeois power, marking the decline of noble privilege. Though admired for her charm and elegance, Angelica is also pragmatic and opportunistic, embodying the new Italy’s social mobility. Her presence captivates both Tancredi and Prince Salina, yet she remains an outsider to true nobility. Angelica’s character reflects the inevitability of change, where beauty and ambition triumph over tradition and fading grandeur.",
+        "image": "issues/sicily/authors/tomasi/images/angelica.jpg"
+    },
+
+    "concetta": {
+        "description": "Concetta, the daughter of Prince Fabrizio Salina in The Leopard, embodies the unfulfilled hopes and fading traditions of the Sicilian aristocracy. Deeply in love with her cousin Tancredi, she watches as he chooses Angelica, symbolizing the triumph of ambition over lineage. Over time, Concetta grows into a bitter and lonely woman, clinging to memories of a past that has slipped away. She represents the aristocracy’s inability to adapt, trapped in nostalgia and regret. In her old age, she finally realizes Tancredi never truly loved her, marking the final acceptance of loss—both personal and societal—as Sicily undergoes irreversible change.",
+        "image": "issues/sicily/authors/tomasi/images/concetta.png"
+    },
+
+    "fabrizio": {
+        "description": "Prince Fabrizio Salina, the protagonist of The Leopard, is a towering yet melancholic figure, embodying the decline of Sicily’s aristocracy. A man of intellect, refinement, and deep existential awareness, he observes with resignation as his world crumbles during Italy’s unification. Though physically imposing and deeply attached to tradition, Fabrizio understands that survival requires adaptation, captured in his nephew Tancredi’s famous words: “If we want things to stay as they are, things will have to change.” His love for astronomy reflects his detachment from earthly affairs, and as he nears death, he accepts the inevitability of his class’s decline.",
+        "image": "issues/sicily/authors/tomasi/images/fabrizio.jpg"
+    },
+
+    "paolo": {
+        "description": "Francesco Paolo is the youngest son of Prince Fabrizio Salina in The Leopard. Though he plays a minor role in the novel, he represents the younger generation of Sicilian aristocracy, largely overshadowed by more dominant figures like Tancredi. Unlike his ambitious cousin, Francesco Paolo remains in the background, embodying the quiet, traditional values of his lineage. His character highlights the contrast between those who embrace change and those who passively witness the decline of their class. As the aristocracy fades, Francesco Paolo, like his sisters, is destined for a life of diminishing influence, bound by nostalgia and lost grandeur.",
+        "image": ""
+    },
+
+    "tartufi": {
+        "description": "Truffles are a highly prized and aromatic fungus found underground, primarily in regions of Italy and France. It is renowned for its intense, earthy flavor and is often used to enhance gourmet dishes, including pasta, risotto, meats, and cheeses. There are two main types: white truffle (Tuber magnatum), mainly from Alba in Italy, known for its strong aroma, and black truffle (Tuber melanosporum), often found in Périgord, France, with a more subtle but deep flavor. Truffles are harvested using specially trained dogs or pigs and are considered a luxurious delicacy in fine dining.",
+        "image": "issues/sicily/authors/tomasi/images/tartufi.webp"
+    },
+
+    "pollo": {
+        "description": "Chicken meat is a popular and versatile food enjoyed worldwide. It can be cooked in various ways, including roasting, grilling, frying, and boiling. Its mild flavor makes it suitable for many dishes, from simple home-cooked meals to gourmet cuisine. Chicken is a rich source of protein and is used in soups, salads, stews, and main courses. It pairs well with a variety of spices, herbs, and sauces, making it a key ingredient in diverse culinary traditions. Whether served on its own or as part of a complex dish, chicken remains a staple in diets across different cultures.",
+        "image": "issues/sicily/authors/tomasi/images/pollo.jpg"
+    },
+
+    "prosciutto": {
+        "description": "Prosciutto is a traditional Italian dry-cured ham, known for its delicate flavor and silky texture. It is typically made from high-quality pork legs, which are salted and aged for months or even years to develop its rich, savory taste. There are two main types: prosciutto crudo, which is uncooked and air-dried, and prosciutto cotto, which is cooked and has a milder flavor. Famous varieties include Prosciutto di Parma and Prosciutto di San Daniele, both protected by strict regulations. Often served thinly sliced, prosciutto is enjoyed on its own, wrapped around fruit, in sandwiches, or as a topping for pasta and pizza.",
+        "image": "issues/sicily/authors/tomasi/images/prosciutto.jpg"
+    },
+
+    "uovo": {
+        "description": "Boiled eggs are eggs cooked in boiling water until the whites and yolks set. They can be soft-boiled, with a runny yolk, or hard-boiled, with a fully cooked yolk. Nutritious and high in protein, they are eaten on their own, with seasoning, or added to salads, sandwiches, and other dishes.",
+        "image": "issues/sicily/authors/tomasi/images/uovo.webp"
+    },
+
+    "fegatini": {
+        "description": "'Fegatini di pollo' (chicken livers) are small, flavorful organs rich in protein and iron. They have a soft texture and a slightly sweet taste. Commonly sautéed with onions and herbs, they are used in pasta, risotto, pâtés, and spreads like crostini di fegatini.",
+        "image": "issues/sicily/authors/tomasi/images/fegatini.avif"
+    },
+
+    "cannella": {
+        "description": "Cinnamon is a warm, aromatic spice made from the inner bark of cinnamon trees. It has a sweet, slightly spicy flavor and is used in both sweet and savory dishes. Common in baking, desserts, curries, and beverages, cinnamon adds depth to many cuisines worldwide. It is also valued for its potential health benefits, including antioxidant and anti-inflammatory properties.",
+        "image": "issues/sicily/authors/tomasi/images/cannella.webp"
+    },
+
+    "zucchero": {
+        "description": "Sugar is a sweet, crystalline substance used as a common sweetener in food and beverages. It comes from sugarcane or sugar beets and is available in various forms, including white sugar, brown sugar, and powdered sugar. Sugar enhances flavors, aids in baking, and is essential in desserts, sauces, and drinks. While it provides quick energy, excessive consumption can lead to health concerns like weight gain and diabetes.",
+        "image": "issues/sicily/authors/tomasi/images/zucchero.jpg"
+    },
+
+    "aragosta": {
+        "description": "Lobster is a prized seafood delicacy known for its tender, sweet meat. It is commonly prepared by boiling, grilling, or baking and is often served with butter, lemon, or rich sauces. Lobster is featured in gourmet dishes like lobster thermidor, lobster bisque, and lobster pasta. Popular in Mediterranean and international cuisine, it is enjoyed for its delicate flavor and luxurious texture.",
+        "image": "issues/sicily/authors/tomasi/images/aragosta.webp"
+    },
+    "riffreddo": {
+        "description": "'Chaud-froid' of veal is a classic French dish where cooked veal is coated with a creamy, glossy sauce and served cold. The name chaud-froid means 'hot-cold', referring to the process of cooking the meat hot and then serving it chilled. The sauce, often made from velouté or gelatin-enriched béchamel, gives the dish a smooth texture and elegant appearance. Typically garnished with truffles, herbs, or decorative patterns, chaud-froid de veau is a refined dish often served at banquets or special occasions. It is enjoyed for its delicate flavors and sophisticated presentation.",
+        "image": "issues/sicily/authors/tomasi/images/riffreddo.webp"
+    },
+
+    "spigole": {
+        "description": "European sea bass is a prized Mediterranean fish known for its delicate, white, and flavorful flesh. It can be prepared in various ways, including grilling, baking, steaming, or cooking in a salt crust (spigola al sale). Often paired with lemon, herbs, and olive oil, it is a staple in Italian and Mediterranean cuisine. Sea bass is appreciated for its mild taste, tender texture, and nutritional benefits, being rich in protein and omega-3 fatty acids.",
+        "image": "issues/sicily/authors/tomasi/images/spigole.jpg"
+    },
+
+    "tacchino": {
+        "description": "Turkey meat is a widely consumed poultry meat known for its mild flavor and versatility. It can be roasted, grilled, boiled, or used in various dishes. Turkey is rich in protein and commonly eaten in both everyday meals and festive occasions.",
+        "image": "issues/sicily/authors/tomasi/images/tacchino.avif"
+    },
+
+    "gelatina": {
+        "description": "Gelatin is a colorless, flavorless substance used to thicken and set foods. It is derived from animal collagen and is commonly used in desserts like jelly, panna cotta, and gummy candies. Gelatin is also found in savory dishes, such as aspic and certain soups. It provides a smooth, firm texture and is valued for its protein content and gelling properties.",
+        "image": "issues/sicily/authors/tomasi/images/gelatina.jpg"
+    },
+
+    "galantina": {
+        "description": "Galantina is a classic cold dish made from deboned poultry, typically chicken or turkey, stuffed with a mixture of meat, herbs, eggs, and sometimes vegetables or pistachios. The stuffed meat is then rolled, poached, and served chilled in slices, often coated with a glossy gelatin layer for an elegant presentation. Originating from French cuisine, galantina is popular in festive and banquet settings, valued for its refined appearance and delicate flavor.",
+        "image": "issues/sicily/authors/tomasi/images/galantina.webp"
+    },
+
+    "consomme": {
+        "description": "'Consommé' is a clear, richly flavored broth made by simmering meat, bones, and vegetables, then clarifying it with egg whites to remove impurities. The result is a transparent, refined soup with a deep taste. Traditionally served as a starter in fine dining, consommé can be enjoyed on its own or enhanced with garnishes like vegetables, pasta, or dumplings. It is a staple of classic French cuisine, valued for its purity and elegant presentation.",
+        "image": "issues/sicily/authors/tomasi/images/consomme.jpg"
+    },
+
+    "baba": {
+        "description": "Babà is a traditional Neapolitan dessert, known for its soft, spongy texture and rich rum syrup. Made from a yeast-based dough, it is baked into small, cylindrical or ring-shaped forms, then soaked in a mixture of rum, sugar, and sometimes citrus flavors. Originally inspired by Polish and French pastries, the Babà Napoletano has become a symbol of Naples’ pastry tradition. Often served plain or with whipped cream and fruit, its light yet moist consistency makes it a beloved treat in Italian cuisine.",
+        "image": "issues/sicily/authors/tomasi/images/baba.avif"
+    },
+
+    "montebianco": {
+        "description": "Mont Blanc is a classic dessert made with sweetened chestnut purée, whipped cream, and sometimes meringue. Inspired by the snow-capped Mont Blanc mountain, it is popular in Italian and French pastry traditions. The dessert is prepared by pressing chestnut purée into thin strands, forming a mound, then topping it with whipped cream to resemble a snowy peak. Some variations include cocoa, rum, or candied chestnuts for added richness. Montebianco is especially enjoyed in autumn and winter, offering a creamy, nutty flavor and an elegant presentation.",
+        "image": "issues/sicily/authors/tomasi/images/montebianco.jpg"
+    },
+
+    "bigne": {
+        "description": "Beignets Dauphine are light, airy French pastries made by mixing pâte à choux (choux pastry) with mashed potatoes, then deep-frying until golden and crisp. Originating from the Dauphiné region, these delicate fritters have a crispy exterior and a soft, fluffy interior. Often served as a savory side dish or appetizer, they pair well with meats, sauces, or cheese. The combination of choux pastry and potatoes creates a unique texture, making Beignets Dauphine a refined yet comforting delicacy in French cuisine.",
+        "image": "issues/sicily/authors/tomasi/images/bigne.jpg"
+    },
+
+    "mandorla": {
+        "description": "Almonds are edible nuts from the almond tree, widely used in both sweet and savory cuisine. Rich in healthy fats, protein, and vitamins, they are enjoyed raw, roasted, or ground into flour, paste, or milk. Almonds are a key ingredient in many traditional dishes, such as marzipan, frangipane, amaretti cookies, and Sicilian cassata. They are also used in sauces, pastries, and confections, adding a delicate, slightly sweet flavor. Beyond culinary uses, almonds are valued for their health benefits, including heart health and antioxidant properties.",
+        "image": "issues/sicily/authors/tomasi/images/mandorla.jpg"
+    },
+
+    "pistacchio": {
+        "description": "Pistachios are small, green nuts known for their rich flavor and crunchy texture. They are widely used in both sweet and savory dishes, especially in Mediterranean and Middle Eastern cuisine. Pistachios are a key ingredient in gelato, pesto, pastries, and baklava, as well as in sauces and roasted snack mixes. They are rich in healthy fats, protein, and antioxidants, making them a nutritious and flavorful addition to many recipes.",
+        "image": "issues/sicily/authors/tomasi/images/pistacchio.jpg"
+    }
+
+}
