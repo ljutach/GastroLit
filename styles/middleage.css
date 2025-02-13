@@ -367,13 +367,7 @@ nav {
 }
 
 
-#author-content .leaflet-popup-content {
-    font-size: 1.8rem; /* Larger font size */
-    font-weight: bold; /* Optional */
-    line-height: 1.6; /* Adjust spacing */
-    color: #3a302a; /* Match theme */
-    font-family: 'Essays-1743', serif; /* Match theme typography */
-}
+
 
 
 #author-content, #global-map-container {
@@ -383,6 +377,7 @@ nav {
     flex-direction: column; /* Ensures proper stacking */
     width: 100%;
 }
+
 
 #author-content #map, #global-map-container {
     display: flex;
@@ -405,6 +400,20 @@ nav {
     width: 100%;
     height: 100%;
 }
+
+#author-content .leaflet-popup-content,
+#global-map-container .leaflet-popup-content {
+    font-size: 1.4rem !important; /* Increase text size */
+    font-family: 'Metamorphous', serif !important; /* Medieval manuscript font */
+    font-weight: bold !important; /* Emphasize text */
+    line-height: 1.8 !important; /* Adjust spacing */
+    color: #3a302a !important; /* Dark brown ink-like color */
+    text-align: center; /* Center text for readability */
+}
+
+
+
+
 
 
 /* Map */
@@ -472,46 +481,65 @@ p {
     max-width: 70%; /* Ensures content does not stretch too wide */
 }
 
-.strophe, .prose {
+
+
+.strophe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 570px;  /* Fixed width for uniformity */
+    min-height: 100px; /* Reduce minimum height to fit content */
+    max-height: auto; /* Allow dynamic height */
+    margin: 10px auto; /* Center elements */
+    padding: 1rem; /* Reduce padding */
+    background: rgba(255, 251, 235, 0.5); /* Parchment-like background */
+    border: 2px solid #8b5e3c;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.strophe-number {
+    font-family: 'Uncial Antiqua', serif; /* Medieval-style script */
+    font-size: 1.5rem; /* Large for readability */
+    color: #5a3a1e; /* Deep brown ink color */
+    background: rgba(255, 251, 235, 0.9); /* Aged parchment background */
+    border: 3px solid #8b5e3c; /* Rustic brown border */
+    padding: 0.5rem 1.2rem; /* Slightly wider for manuscript look */
+    border-radius: 6px; /* Smooth edges */
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.15); /* Subtle embossed effect */
+    text-transform: uppercase;
+    text-align: center;
+    width: auto;
+    margin-bottom: 10px; /* Add space below */
+    letter-spacing: 1.2px; /* More spaced out for elegance */
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.2); /* Light ink effect */
+    transition: all 0.3s ease-in-out; /* Smooth hover effect */
+  }
+
+.strophe pre {
+    text-align: left;
+    font-family: 'Metamorphous', serif;
+    font-size: 2rem; /* Reduce font size slightly */
+    color: #3a302a;
+    background: transparent; /* No background for pre */
+    padding: 0.5rem; /* Reduce padding further */
+    white-space: pre-wrap; /* Ensures proper text wrapping */
+    border: none;
+    box-shadow: none;
+    display: block;
+    width: 100%;
+    height: auto; /* Adjust height dynamically */
+    overflow: hidden; /* Prevent extra empty space */
+    margin: 0; /* Remove margin inside pre */
+}
+
+.prose {
     display: flex;
     justify-content: center; /* Centers horizontally */
     align-items: center;
     flex-direction: column;
     width: 100%;
 }
-
-.strophe-number, .work-title {
-    font-family: 'Uncial Antiqua', serif; 
-    font-size: 3rem; /* Slightly larger for hierarchy */
-    color: #5a3a1e; /* Dark earthy brown */
-    text-align: center;
-    text-transform: uppercase; /* Styled for historical manuscript feel */
-    letter-spacing: 2px; /* Slightly spaced for an elegant look */
-    padding: 0.5rem 1rem;
-    background: rgba(255, 251, 235, 0.7); /* Parchment-like effect */
-    border: 2px solid #8b5e3c;
-    border-radius: 8px;
-    display: inline-block;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-    margin-top: 5rem auto; 
-    margin-bottom: 3rem auto; 
-}
-
-.strophe pre {
-    text-align: center;
-    font-family: 'Metamorphous', serif;
-    font-size: 2rem; /* Adjust for readability */
-    color: #3a302a;
-    background: rgba(255, 251, 235, 0.5); /* Parchment-like background */
-    padding: 2.2rem;
-    white-space: pre-wrap; /* Ensures text wraps properly */
-    border: 2px solid #8b5e3c;
-    border-radius: 5px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-    display: inline-block;
-    width: auto; /* Allows content to adjust width naturally */
-}
-
 
 .prose pre {
     text-align: justify; /* Justified text for manuscript-like alignment */
@@ -528,9 +556,39 @@ p {
     margin: 2rem auto; /* Centers the content */
     word-wrap: break-word; /* Breaks long words */
     overflow-wrap: break-word; /* Ensures text does not overflow */
+    word-wrap: normal; /* Prevents unnatural breaks */
+    overflow-wrap: anywhere; /* Allows wrapping without awkward splits */
+    word-break: normal; /* Avoids breaking words at line ends */
+    hyphens: auto; /* Adds hyphenation where necessary */
+
+    white-space: normal; /* Fixes unwanted scrolling issue */
+    margin-bottom: 4rem;
     white-space: normal; /* Fixes unwanted scrolling issue */
     margin-bottom: 4rem;
 }
+
+
+
+.work-title {
+    font-family: 'Uncial Antiqua', serif; 
+    font-size: 3rem; /* Slightly larger for hierarchy */
+    color: #5a3a1e; /* Dark earthy brown */
+    text-align: center;
+    text-transform: uppercase; /* Styled for historical manuscript feel */
+    letter-spacing: 2px; /* Slightly spaced for an elegant look */
+    padding: 0.5rem 1rem;
+    background: rgba(255, 251, 235, 0.7); /* Parchment-like effect */
+    border: 2px solid #8b5e3c;
+    border-radius: 8px;
+    display: inline-block;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 5rem auto; 
+    margin-bottom: 3rem auto; 
+}
+
+
+
+
 
 .prose .tag {
     font-weight: bold;
@@ -745,6 +803,52 @@ button:hover {
     font-size: 2em;
 }
 
+/* Disclaimer */
+
+#disclaimer-section {
+    background: transparent; /* Parchment-like background */
+    border: 3px solid #8b5e3c; /* Antique border */
+    border-radius: 10px;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+    padding: 20px;
+    text-align: center;
+    font-family: 'Metamorphous', serif;
+    color: #3a302a; /* Dark brown ink */
+    line-height: 1.8;
+    width: 80%;
+    margin: 30px auto;
+}
+
+#disclaimer-section h3 {
+    font-family: 'Uncial Antiqua', cursive; /* Medieval script */
+    font-size: 2.5rem;
+    color: #6d3f2b; /* Deep ink brown */
+    text-transform: uppercase;
+    text-shadow: 1px 1px 5px rgba(139, 94, 60, 0.5);
+}
+
+#disclaimer-section p {
+    font-size: 1.8rem;
+    padding: 10px;
+}
+
+#disclaimer-section .close-disclaimer-btn {
+    background: #8b5e3c;
+    color: #fff;
+    font-size: 1.5rem;
+    font-family: 'Metamorphous', serif;
+    padding: 10px 20px;
+    border: 2px solid #3a302a;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+#disclaimer-section .close-disclaimer-btn:hover {
+    background: #6d3f2b;
+}
+
+
 
 /* Mobile Adjustments */
 
@@ -794,3 +898,6 @@ button:hover {
         font-size: 1.8rem;
     }
 }
+
+
+

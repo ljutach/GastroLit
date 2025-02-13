@@ -57,10 +57,12 @@ document.addEventListener("DOMContentLoaded", () => {
         } else if (currentTheme.includes("cyberpunk")) {
             logoImage.src = "images/logo_cyberpunk.png";
         } else if (currentTheme.includes("futuristic")) {
-            logoImage.src = "images/logo_futuristic.png";
+            logoImage.src = "images/logo_f  uturistic.png";
         }
     }
 });
+
+
 
 
 function reloadWithTheme() {
@@ -143,15 +145,14 @@ function initializeMap() {
 
         document.querySelectorAll(".tag.place").forEach(el => {
             const coord = el.dataset.coord;
-            const name = el.dataset.name || el.innerText.trim();
-            if (coord) {
+            const name = el.dataset.name; // Get only the data-name
+            if (coord && name) {
                 const [lat, lng] = coord.split(',').map(Number);
-                L.marker([lat, lng]).addTo(map).bindPopup(`<strong>${name}</strong><br>${el.innerText}`);
+                L.marker([lat, lng]).addTo(map).bindPopup(`<strong>${name}</strong>`); // Display only data-name
             }
         });
     }
 }
-
 
 
 function populateEntityTable() {

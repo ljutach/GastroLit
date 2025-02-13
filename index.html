@@ -28,7 +28,7 @@
         <a class="navbar-brand" href="index.html" onclick="event.preventDefault(); reloadWithTheme();">GastroLit</a>
 
         <div class="collapse navbar-collapse" id="myNavbar">
-          <ul class="nav navbar-nav navbar-right">
+          <ul class="nav navbar-nav navbar-left">
             <!-- Issues Dropdown -->
             <li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" href="#">Issues <span class="caret"></span></a>
@@ -54,7 +54,8 @@
               </ul>
             </li>
             <!-- Documentation -->
-            <li><a href="#">Documentation</a></li>
+            <li><a href="documentation.html">Documentation</a></li>
+            <li><a href="#" onclick="showDisclaimer(); return false;">Disclaimer</a></li>
           </ul>
         </div>
       </div>
@@ -113,9 +114,16 @@
   <!-- Scroll to Top Button -->
   <button id="scrollToTopBtn" style="position: fixed; bottom: 20px; right: 20px; display: none;">⬆ Back to the top</button>
   
-  <footer class="footer">
-    <p>&copy; 2024 GastroLit. All rights reserved.</p>
-  </footer>
+  <footer class="footer" id="disclaimer-section">
+    <p>&copy; 2025 Copyright: Mirna Regolo, Luca Scotti.</p>
+    <div id="disclaimer-content" style="display: none; margin-top: 10px;">
+        <h3>Disclaimer</h3>
+        <p>GastroLit is an educational and informational project designed to explore the intersection of gastronomy and Italian literature. The content provided on this website is for academic and cultural purposes only and should not be interpreted as professional or historical advice.</p>
+        <button onclick="closeDisclaimer()" class="close-disclaimer-btn">Close</button>
+    </div>
+</footer>
+
+  
 
   <script>
     document.getElementById('scrollToTopBtn').addEventListener("click", function () {
@@ -133,7 +141,22 @@
           document.getElementById("global-map-container").style.display = "none";
       }
     });
+
+    function showDisclaimer() {
+    // Show the disclaimer content before scrolling
+    document.getElementById("disclaimer-content").style.display = "block";
+
+    // Scroll to the very bottom of the page
+    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+}
+
+function closeDisclaimer() {
+    // Hide the disclaimer content
+    document.getElementById("disclaimer-content").style.display = "none";
+}
+
   </script>
+
 
   <!-- Link to External JavaScript -->
   <script src="js/script.js"></script>
