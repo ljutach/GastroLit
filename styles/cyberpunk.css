@@ -36,6 +36,7 @@ body {
   line-height: 2;
   overflow-x: hidden;
   font-size: 2rem;
+  padding-top: 100px;
 }
 
 
@@ -59,7 +60,6 @@ nav {
   z-index: 1000;
 }
 
-/* Ensure the brand and menu align left */
 .container-fluid {
   display: flex;
   align-items: center;
@@ -98,7 +98,13 @@ nav {
   margin-right: 30px; /* Adds spacing between logo and menu */
 }
 
-
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Ensures it's above other content */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
 
 /* Dropdown Styling */
 
@@ -164,6 +170,7 @@ nav {
   position: relative; 
   padding: 20px 40px; 
   z-index: 1; 
+  border-radius: 15px;
   background-color: rgba(0, 0, 0, 0.8);
 }
 
@@ -178,7 +185,9 @@ nav {
 }
 
 #theme-selector-container h3 {
-  font-size: 4rem;
+  font-size: 2.7rem;
+  position: relative;
+  top:-100px;
   color: var(--secondary-color);
   text-shadow: 0 0 10px var(--secondary-color);
   margin: 0;
@@ -219,7 +228,12 @@ nav {
 }
 
 #theme-selector {
-  display: block;
+  top: 185px;
+  left: 150px;
+  position: fixed;
+  z-index: 9999;
+  border-radius: 10px;
+  
 }
 
 
@@ -250,8 +264,10 @@ nav {
 .proj-container {
   position: relative;
   max-width: 1800px;
+  width: 1300px;
   z-index: 1; /* Ensures they appear above the background image */
   margin: 0 auto;
+  margin-bottom: 3em;
   text-align: justify;
   background-color: rgba(0, 0, 0, 0.8); /* Adds some background to ensure readability */
   word-wrap: break-word;
@@ -270,8 +286,11 @@ nav {
 
 #map-filter-container {
   position: relative;
+  width: 900px;
   z-index: 2; /* Make sure it's above the background */
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
   padding: 10px;
   background-color: rgba(13, 13, 13, 0.85); /* Dark cyberpunk background */
   border-radius: 10px;
@@ -356,7 +375,8 @@ nav {
 /*  Info */
 
 .info {
-  max-width: 65%; 
+  max-width: 60.5%; 
+  width: 500px;
   margin: 2rem auto;
   padding: 2rem;
   align-items: center;

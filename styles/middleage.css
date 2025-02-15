@@ -194,13 +194,12 @@ nav {
     margin-top: 130px;
     position: relative;
     padding: 20px 40px;
-    background: transparent; /* Parchment-style background */
-    border: 3px solid #8b5e3c; /* Antique brown border */
+    background: transparent; 
+    border: 3px solid #8b5e3c;
     box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
     border-radius: 15px;
 }
 
-/* Medieval-stylized header */
 .theme-container h3 {
     font-family: 'Metamorphous', serif; /* Elegant medieval font */
     font-weight: bold;
@@ -214,7 +213,6 @@ nav {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-/* Dropdown menu styled in medieval typography */
 #theme-selector {
     font-family: 'Metamorphous', serif;
     rotate: 0deg;
