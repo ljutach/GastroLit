@@ -54,7 +54,7 @@
               </ul>
             </li>
             <!-- Documentation -->
-            <li><a href="documentation.html">Documentation</a></li>
+            <li><a href="#" onclick="loadDocumentation(); return false;">Documentation</a></li>
             <li><a href="#" onclick="showDisclaimer(); return false;">Disclaimer</a></li>
           </ul>
         </div>
@@ -70,6 +70,8 @@
     <option value="styles/cyberpunk.css">Cyber Punk</option>
     <option value="styles/futuristic.css">Futuristic</option>
   </select>
+
+
   <!-- HomePage image -->
   <div class="container">
     <img id="logo-image" src="images/logo_middleage.svg" alt="Descriptive Alt Text" class="img-responsive">
@@ -82,9 +84,13 @@
     <h2>Gastronomic Culture In Italian Literature</h2>
   </div>
 
+  <!-- Placeholder for dynamically loaded content -->
+  <div id="dynamic-content"></div>
+
+
   <div class="proj-container">
     <h2>The Project</h2>
-    <p>GastroLit is a magazine that explores the relationship between food and culture in Italian literature by focusing on two regions: Tuscany and Sicily. For each region, we delve into the works of three authors, presenting curated collections of texts which include some iconic gastronomic references. Explore Tuscany through the writings of Dante, Boccaccio, and Sacchetti, and journey to Sicily with selections from Camilleri, Tomasi di Lampedusa, and Torregrossa. Customize your experience with our four typographic and layout themes, inspired by different stylistic traditions. Navigate the literary and cultural landscapes through our interactive Map, which geolocates each significant place mentioned in the texts, offering a rich exploration of the geographical roots of these narratives. This project is realized for the exam of <i>Web Technology and Information Modeling</i> of the master course in <a href='https://corsi.unibo.it/2cycle/DigitalHumanitiesKnowledge'><i>Digital Humanities and Digital Knowledge</i></a> at <b><i>Alma Mater Studiorum</i> - Università di Bologna</b>.</p>
+    <p class="drop-cap">GastroLit is a magazine that explores the relationship between food and culture in Italian literature by focusing on two regions: Tuscany and Sicily. For each region, we delve into the works of three authors, presenting curated collections of texts which include some iconic gastronomic references. Explore Tuscany through the writings of Dante, Boccaccio, and Sacchetti, and journey to Sicily with selections from Camilleri, Tomasi di Lampedusa, and Torregrossa. Customize your experience with our four typographic and layout themes, inspired by different stylistic traditions. Navigate the literary and cultural landscapes through our interactive Map, which geolocates each significant place mentioned in the texts, offering a rich exploration of the geographical roots of these narratives. This project is realized for the exam of <i>Web Technology and Information Modeling</i> of the master course in <a href='https://corsi.unibo.it/2cycle/DigitalHumanitiesKnowledge'><i>Digital Humanities and Digital Knowledge</i></a> at <b><i>Alma Mater Studiorum</i> - Università di Bologna</b>.</p>
   </div>
 
   <!-- Author Filter for Global Map -->

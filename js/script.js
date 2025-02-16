@@ -20,7 +20,7 @@ function switchTheme(themePath) {
     let logoImage = document.getElementById('logo-image');
     if (logoImage) {
         if (themePath.includes("middleage")) {
-            logoImage.src = "images/logo_middleage.svg";
+            logoImage.src = "images/logo_middleage1.svg";
         } else if (themePath.includes("futurism")) {
             logoImage.src = "images/logo_futurism.jpg";
         } else if (themePath.includes("cyberpunk")) {
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let logoImage = document.getElementById('logo-image');
     if (logoImage) {
         if (currentTheme.includes("middleage")) {
-            logoImage.src = "images/logo_middleage.svg";
+            logoImage.src = "images/logo_middleage1.svg";
         } else if (currentTheme.includes("futurism")) {
             logoImage.src = "images/logo_futurism.jpg";
         } else if (currentTheme.includes("cyberpunk")) {
@@ -66,29 +66,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 function reloadWithTheme() {
+    let contentContainer = document.getElementById("dynamic-content");
+
+    // ✅ Remove documentation content when reloading homepage
+    contentContainer.innerHTML = "";
+
     window.location.href = "index.html";
     setTimeout(() => {
         const savedTheme = localStorage.getItem("selectedTheme") || 'styles/middleage.css';
         document.getElementById('theme-stylesheet').setAttribute('href', savedTheme);
 
-        // Ensure logo is also updated correctly
-        let logoImage = document.getElementById('logo-image');
-        if (logoImage) {
-            if (savedTheme.includes("middleage")) {
-                logoImage.src = "images/logo_middleage.svg";
-            } else if (savedTheme.includes("futurism")) {
-                logoImage.src = "images/logo_futurism.jpg";
-            } else if (savedTheme.includes("cyberpunk")) {
-                logoImage.src = "images/logo_cyberpunk.png";
-            } else if (savedTheme.includes("futuristic")) {
-                logoImage.src = "images/logo_futuristic.png";
-            }
-        }
-
-        // Show the global map again when returning to homepage
+        // ✅ Ensure all main sections are visible
         document.getElementById("global-map-container").style.display = "block";
+        document.getElementById("map-filter-container").style.display = "block";
+        document.getElementById("author-content").style.display = "block";
+        document.querySelector(".proj-container").style.display = "block";
+
+        console.log("🏠 Reloaded homepage, documentation removed.");
     }, 200);
 }
+
 
 
 
@@ -117,22 +114,60 @@ function restoreDropdownListeners() {
 
 
 function loadAuthorContent(authorPath, author, region) {
+    let contentContainer = document.getElementById("dynamic-content");
+
+    // ✅ Remove any previous content in the dynamic container
+    contentContainer.innerHTML = "";
+
     $("#author-content").load(authorPath, function () {
         document.getElementById("theme-stylesheet").setAttribute("href", currentTheme);
         document.getElementById("author-content").setAttribute("data-author", author);
         document.getElementById("author-content").setAttribute("data-region", region);
 
-        // Hide the global map and filter when an author's page is loaded
-        document.getElementById("global-map-container").style.display = "none";
+        // ✅ Force-hide the unwanted elements
+        document.querySelector(".title").style.display = "none";
+        document.getElementById("dynamic-content").style.display = "none";
+        document.querySelector(".proj-container").style.display = "none";
         document.getElementById("map-filter-container").style.display = "none";
+        document.getElementById("global-map-container").style.display = "none";
+
+        // ✅ Debugging visibility check
+        debugHiddenElements();
 
         initializeMap();
         populateEntityTable();
         loadDescriptions().then(() => {
             initializePopups();
         });
+
+        console.log(`📚 Loaded author: ${author}, UI elements hidden.`);
     });
 }
+
+
+
+function debugHiddenElements() {
+    console.log("🔎 Checking visibility of elements...");
+
+    const elementsToCheck = [
+        { name: "Title", element: document.querySelector(".title") },
+        { name: "Dynamic Content", element: document.getElementById("dynamic-content") },
+        { name: "Project Container", element: document.querySelector(".proj-container") },
+        { name: "Map Filter", element: document.getElementById("map-filter-container") },
+        { name: "Global Map", element: document.getElementById("global-map-container") }
+    ];
+
+    elementsToCheck.forEach(({ name, element }) => {
+        if (element) {
+            console.log(`🔹 ${name}: ${window.getComputedStyle(element).display}`);
+        } else {
+            console.log(`❌ ${name} not found in DOM.`);
+        }
+    });
+}
+
+
+
 
 
 function initializeMap() {
@@ -366,21 +401,7 @@ function updateMapByAuthor() {
 // Load the map when the page loads
 document.addEventListener("DOMContentLoaded", loadGlobalMap);
 
-function applyMapTheme() {
-    let theme = localStorage.getItem("selectedTheme");
 
-    if (theme.includes("middleage")) {
-        document.querySelector(".global-map-container").classList.add("middleage-map");
-        document.querySelector(".author-map-container").classList.add("middleage-map");
-        document.querySelector(".global-map-container").classList.remove("cyberpunk-map");
-        document.querySelector(".author-map-container").classList.remove("cyberpunk-map");
-    } else if (theme.includes("cyberpunk")) {
-        document.querySelector(".global-map-container").classList.add("cyberpunk-map");
-        document.querySelector(".author-map-container").classList.add("cyberpunk-map");
-        document.querySelector(".global-map-container").classList.remove("middleage-map");
-        document.querySelector(".author-map-container").classList.remove("middleage-map");
-    }
-}
 
 
 
@@ -399,7 +420,6 @@ document.addEventListener("DOMContentLoaded", () => {
         globalMapContainer.style.display = "block"; // Show the map
         mapFilterContainer.style.display = "block"; // Show the filter dropdown
         projectContainer.style.display = "block"; // Show the project description
-        applyMapTheme(); // Apply theme only if the map is visible
     }
 
     // Ensure everything reappears when returning to the home page
@@ -413,23 +433,107 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 function loadAuthorContent(authorPath, author, region) {
+    let contentContainer = document.getElementById("dynamic-content");
+
+    // ✅ Clear previous documentation when switching to an author
+    contentContainer.innerHTML = "";
+    document.getElementById("author-content").style.display = "block"; // Show author content
+
     $("#author-content").load(authorPath, function () {
         document.getElementById("theme-stylesheet").setAttribute("href", currentTheme);
         document.getElementById("author-content").setAttribute("data-author", author);
         document.getElementById("author-content").setAttribute("data-region", region);
 
-        // Hide the global map and filter when an author's page is loaded
-        document.getElementById("global-map-container").style.display = "none";
-        document.getElementById("map-filter-container").style.display = "none";
-        
-        // Hide the project description when an author page is loaded
+        // ✅ Hide everything unrelated to authors
+        document.querySelector(".title").style.display = "none";
+        document.getElementById("dynamic-content").style.display = "none";
         document.querySelector(".proj-container").style.display = "none";
+        document.getElementById("map-filter-container").style.display = "none";
+        document.getElementById("global-map-container").style.display = "none";
+
+        window.scrollTo(0, 0);
 
         initializeMap();
         populateEntityTable();
         loadDescriptions().then(() => {
             initializePopups();
         });
+
+        console.log(`📚 Loaded author: ${author}, UI elements hidden.`);
     });
 }
 
+
+
+
+
+
+function loadDocumentation() {
+    fetch('doc.html')
+    .then(response => response.text())
+    .then(data => {
+        let contentContainer = document.getElementById("dynamic-content");
+        contentContainer.innerHTML = data;
+        contentContainer.style.display = "block"; // ✅ Show documentation
+
+        // ✅ Hide everything unrelated to documentation
+        document.getElementById("author-content").style.display = "none"; // Hide author content
+        document.getElementById("global-map-container").style.display = "none";
+        document.getElementById("map-filter-container").style.display = "none";
+        document.querySelector(".proj-container").style.display = "none";
+
+        // ✅ Ensure the theme remains correct
+        let currentTheme = localStorage.getItem("selectedTheme") || "styles/middleage.css";
+        document.getElementById("theme-stylesheet").setAttribute("href", currentTheme);
+
+        console.log("📄 Documentation loaded successfully, everything else hidden.");
+
+        window.scrollTo(0, 0);
+    })
+    .catch(error => console.error("❌ Error loading documentation:", error));
+}
+
+
+
+// ✅ Function to restore author selection after doc.html is loaded
+function restoreAuthorSelection() {
+    document.querySelectorAll(".dropdown-menu a").forEach(item => {
+        item.addEventListener("click", function (event) {
+            event.preventDefault();
+
+            let authorPath = this.getAttribute("onclick").match(/'([^']+)'/)[1]; // Extract path
+            let author = this.getAttribute("onclick").match(/'([^']+)'/g)[1].replace(/'/g, ""); // Extract author
+            let region = this.getAttribute("onclick").match(/'([^']+)'/g)[2].replace(/'/g, ""); // Extract region
+
+            loadAuthorContent(authorPath, author, region);
+            
+        });
+    });
+
+    console.log("✅ Author selection restored.");
+}
+
+
+
+// Apply the current theme when the page loads
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("theme-stylesheet").setAttribute(
+        "href",
+        localStorage.getItem("selectedTheme") || "styles/middleage.css"
+    );
+});
+
+
+function returnToHome() {
+    window.location.href = "index.html";
+    setTimeout(() => {
+        // ✅ Show all sections when returning home
+        document.getElementById("global-map-container").style.display = "block";
+        document.getElementById("map-filter-container").style.display = "block";
+        document.getElementById("author-content").style.display = "block";
+        document.getElementById("dynamic-content").style.display = "block";
+        document.querySelector(".proj-container").style.display = "block";
+
+        console.log("🏠 Returned to home, all sections restored.");
+    }, 200);
+}

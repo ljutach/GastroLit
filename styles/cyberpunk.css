@@ -102,7 +102,7 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000; /* Ensures it's above other content */
+  z-index: 9999; /* Ensures it's above other content */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -1014,3 +1014,92 @@ button:active {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Cyberpunk Documentation Layout */
+.doc-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 70%;
+  max-width: 90%;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: rgba(10, 10, 20, 0.95); /* Dark futuristic panel */
+  border: 3px solid #00ffff; /* Neon cyan border */
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 1); /* Stronger neon effect */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  position: relative;
+  z-index: 5000; /* Ensures it's above other elements */
+}
+
+/* Headings - Cyberpunk Glowing Titles */
+.doc-container h1, .doc-container h2, .doc-container h3 {
+  font-family: 'Orbitron', sans-serif;
+  color: #00ffff; /* Neon cyan */
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 0 15px rgba(0, 255, 255, 1), 0 0 5px rgba(0, 255, 255, 0.7);
+  position: relative;
+  z-index: 5100; /* Ensure text is above the container */
+}
+
+/* Ensures the entire documentation section is on top */
+.doc-container * {
+  position: relative;
+  z-index: 5100;
+}
+
+/* Fix buttons so they aren't hidden */
+.doc-container .button {
+  background-color: rgba(10, 10, 20, 0.95);
+  border: 3px solid #00ffff;
+  color: #ff00ff;
+  padding: 0.5rem 1rem;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 1);
+  transition: 0.3s ease-in-out;
+  position: relative;
+  z-index: 5200; /* Buttons should be on top */
+}
+
+.doc-container .button:hover {
+  background-color: #00ffff;
+  color: black;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 1);
+}
