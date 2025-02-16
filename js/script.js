@@ -488,7 +488,14 @@ function loadDocumentation() {
 
         console.log("📄 Documentation loaded successfully, everything else hidden.");
 
-        window.scrollTo(0, 0);
+        setTimeout(() => {
+            const contentContainer = document.getElementById("dynamic-content"); // Adjust to match your documentation container ID
+            const offset = 145; // Adjust this value if needed (increase if too high, decrease if too low)
+            
+            const yPosition = contentContainer.getBoundingClientRect().top + window.scrollY - offset;
+            window.scrollTo({ top: yPosition, behavior: "smooth" });
+        }, 300);
+        
     })
     .catch(error => console.error("❌ Error loading documentation:", error));
 }
