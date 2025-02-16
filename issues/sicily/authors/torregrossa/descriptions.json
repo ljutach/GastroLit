@@ -1,0 +1,80 @@
+{
+    "agatina": {
+        "description": "Agatina is a character in Giuseppina Torregrossa’s novels, often representing the strength and resilience of Sicilian women. In Il conto delle minne, she embodies tradition, passion, and the struggles of navigating a male-dominated society. Through her, Torregrossa explores themes of femininity, family, and the deep connection between food and emotions in Sicilian culture. Agatina’s story is intertwined with symbolic elements, such as 'le minne di Sant’Agata', a traditional pastry representing both sensuality and devotion. Her character reflects the richness of Sicilian heritage, blending personal identity with collective history in a deeply evocative narrative."
+    },
+
+    "santagata": {
+        "description": "Sant'Agata (Saint Agatha), the patron saint of Catania and one of the most venerated saints in Sicily. Born in the 3rd century, Agatha was a Christian martyr who suffered persecution under the Roman governor Quintianus for refusing to renounce her faith. According to tradition, she endured brutal torture, including the severing of her breasts, before dying in prison. She is celebrated annually on February 3rd–5th in Catania, where one of the largest religious festivals in Italy takes place. Devotees carry her relics through the city in grand processions, honoring her as a symbol of faith, strength, and protection against natural disasters, particularly Mount Etna’s eruptions. Her legacy is also linked to Sicilian culinary traditions, particularly the “Minne di Sant’Agata”, small breast-shaped pastries symbolizing her martyrdom.",
+        "image": "issues/sicily/authors/torregrossa/images/santagata.webp"
+    },
+
+    "sugna":{
+        "description": "Suet is a type of raw, hard fat found around the kidneys and loins of cows and sheep. It has a high melting point and is commonly used in traditional British and European cooking for making pastries, puddings, and dumplings. Suet is a key ingredient in dishes like steak and kidney pudding, suet crust pies, and Christmas pudding. When rendered, it becomes tallow, which is used for frying or making candles. Suet is prized for its ability to create a light, flaky texture in baked goods and is often used in both sweet and savory recipes.",
+        "image": "issues/sicily/authors/torregrossa/images/donnafugata.webp"
+    },
+
+    "farina":{
+        "description": "Flour is a finely ground powder made from grains, nuts, seeds, or roots, most commonly wheat. It is a staple ingredient in baking and cooking, used to make bread, pasta, cakes, and pastries. There are different types of flour, including all-purpose flour, whole wheat flour, self-rising flour, and gluten-free alternatives like almond or rice flour. Flour provides structure in baked goods due to its protein (gluten) content, which forms elasticity when mixed with water. It is also used as a thickening agent in sauces and soups.",
+        "image": "issues/sicily/authors/torregrossa/images/farina.jpg"
+    },
+
+    "nonna":{
+        "description": "Agatina's grandmother plays a crucial role in shaping Agatina’s identity and understanding of life. She represents the wisdom, traditions, and resilience of Sicilian women, passing down stories, emotions, and cultural knowledge through food—especially the preparation of 'le minne', symbolic pastries that carry deeper meanings of femininity, love, and suffering. As a matriarchal figure, she embodies the connection between past and present, guiding Agatina through the complexities of family, desire, and societal expectations. Her presence is a pillar of strength and continuity in the novel’s exploration of Sicilian heritage."
+    },
+
+    "ricotta":{
+        "description": "Ricotta is a soft, creamy Italian cheese made from the whey of cow, sheep, goat, or buffalo milk. It has a mild, slightly sweet flavor and a smooth, grainy texture. Used in both sweet and savory dishes, ricotta is a key ingredient in lasagna, cannoli, cassata siciliana, and ravioli fillings. It can be eaten fresh, spread on bread, or mixed into desserts and pastries. Light and rich in protein, ricotta is a staple of Italian cuisine, valued for its versatility and delicate taste.",
+        "image": "issues/sicily/authors/torregrossa/images/ricotta.jpg"
+    },
+
+    "crema":{
+        "description": "Crema is a smooth, sweet filling used in pastries and desserts, made from ingredients like milk, sugar, and eggs. It comes in various forms, including crema pasticcera (pastry cream), crema chantilly (whipped cream with sugar), and crema di ricotta, which is made from sweetened ricotta and often enriched with chocolate chips or candied fruit. This ricotta-based cream is a key component in Sicilian desserts like cannoli, cassata, and Minne di Sant’Agata, giving them a rich, creamy texture. Whether used for filling cakes, pastries, or layered desserts, crema enhances flavor and adds indulgence to traditional and modern sweets.",
+        "image": "issues/sicily/authors/torregrossa/images/crema.avif"
+    },
+
+    "quinziano": {
+        "description": "Quinziano (or Quintianus) is the Roman governor and antagonist in the legend of Saint Agatha, the patron saint of Catania. According to tradition, during the 3rd century, Quinziano persecuted Agatha for refusing his advances and rejecting paganism in favor of her Christian faith. In retaliation, he ordered her torture, which included the brutal severing of her breasts, before ultimately sentencing her to death. Quinziano symbolizes the oppression and cruelty of Roman authorities against early Christians. His character in Saint Agatha’s story highlights her steadfast faith and martyrdom, making her one of the most venerated saints in Sicily.",
+        "image": "issues/sicily/authors/torregrossa/images/quinziano.jpg"
+    },
+
+    "glassa": {
+        "description": "Sugar glaze is a smooth, sweet coating made from powdered sugar and a liquid, such as water, lemon juice, or milk. It is commonly used to cover cakes, pastries, and cookies, giving them a shiny and slightly hardened finish. Depending on the consistency, it can be a thin glaze for drizzling or a thicker icing for complete coverage. In Sicilian pastries like Minne di Sant’Agata, the glaze is often white and opaque, enhancing both the flavor and appearance of the dessert. Simple yet versatile, sugar glaze adds a decorative and delicious touch to baked goods.",
+        "image": "issues/sicily/authors/torregrossa/images/glassa.jpg"
+    },
+
+    "limone": {
+        "description": "Lemon is a citrus fruit known for its bright yellow color, tangy flavor, and refreshing aroma. Rich in vitamin C and antioxidants, it is widely used in cooking, baking, and beverages. Lemon juice adds acidity to dishes, enhances flavors, and is a key ingredient in dressings, marinades, and desserts like lemon tart and lemon cake. The zest (outer peel) is also used to add fragrance and depth to recipes. Beyond culinary uses, lemon is valued for its health benefits and is often used in teas, detox drinks, and natural remedies.",
+        "image": "issues/sicily/authors/torregrossa/images/limone.jpg"
+    },
+
+    "zucchero": {
+        "description": "Sugar is a sweet, crystalline substance used as a common sweetener in food and beverages. It comes from sugarcane or sugar beets and is available in various forms, including white sugar, brown sugar, and powdered sugar. Sugar enhances flavors, aids in baking, and is essential in desserts, sauces, and drinks. While it provides quick energy, excessive consumption can lead to health concerns like weight gain and diabetes.",
+        "image": "issues/sicily/authors/torregrossa/images/zucchero.jpg"
+    },
+
+    "cioccolato": {
+        "description": "Chocolate is a rich, sweet food made from cocoa beans, often combined with sugar and milk. It comes in various forms, including dark, milk, and white chocolate, each with different cocoa content and sweetness levels. Used in baking, desserts, and confections, chocolate is a key ingredient in cakes, cookies, mousses, and pralines. It can be melted, grated, or molded into bars and decorations. Known for its deep flavor and smooth texture, chocolate is also valued for its antioxidant properties and mood-enhancing effects, making it one of the most beloved ingredients worldwide.",
+        "image": "issues/sicily/authors/torregrossa/images/cioccolato.jpg"
+    },
+
+    "etna": {
+        "description": "Mount Etna is Europe’s highest and most active volcano, located near Catania, on the east coast of Sicily, Italy. Towering at approximately 3,329 meters (10,922 feet), it dominates the landscape with its vast lava fields, craters, and constant volcanic activity. Etna has played a crucial role in Catania’s history, both as a source of fertile soil for agriculture and as a destructive force due to its frequent eruptions. The city has been rebuilt multiple times after being affected by lava flows and earthquakes. Despite this, Catania thrives at the foot of the volcano, blending its Baroque architecture, vibrant markets, and rich culinary traditions with the presence of Etna. Today, the volcano is a major tourist attraction, offering hiking trails, ski resorts, and panoramic views of the Sicilian coastline. Recognized as a UNESCO World Heritage Site, Mount Etna remains a symbol of both the power and beauty of nature, deeply intertwined with Catania’s identity and Sicilian culture.",
+        "image": "issues/sicily/authors/torregrossa/images/etna.jpg"
+    },
+
+    "ciliegie": {
+        "description": "Maraschino cherries are preserved, sweetened cherries that have a glossy appearance and a distinctively sweet flavor. They are typically soaked in syrup or marasca cherry liqueur, giving them a vibrant red color and a soft texture. Used mainly in confectionery, they serve as decorations or ingredients in various desserts, adding both sweetness and visual appeal. Common in pastries and cakes, maraschino cherries enhance the presentation and flavor of traditional sweets.",
+        "image": "issues/sicily/authors/torregrossa/images/ciliegie.webp"
+    },
+
+    "cassatelle": {
+        "description": "Cassatelle are traditional Sicilian pastries made of fried or baked dough filled with sweet ricotta cream, often enriched with chocolate chips, cinnamon, or citrus zest. The dough, slightly sweet and tender, is shaped into small half-moons, sealed, and cooked until golden. The filling, typically made with sheep’s milk ricotta, gives them a creamy and delicate texture. These pastries are especially popular during holidays and celebrations, varying slightly by region. In some areas, they may include honey or powdered sugar as a finishing touch, enhancing their sweetness and aroma. Cassatelle are a beloved example of Sicily’s rich pastry tradition.",
+        "image": "issues/sicily/authors/torregrossa/images/cassatelle.jpg"
+    },
+
+    "sanpietro": {
+        "description": "Saint Peter was one of Jesus’ twelve apostles and is considered the first Pope of the Catholic Church. Originally a fisherman from Galilee, he was called by Jesus to be a “fisher of men” and became a central figure in spreading Christianity. Jesus gave him the name Peter (meaning 'rock') and entrusted him with the foundation of the Church. He traveled extensively, preaching and converting people, particularly in Rome, where he was martyred by crucifixion, traditionally upside down. His tomb lies beneath St. Peter’s Basilica in Vatican City, a major pilgrimage site. He is the patron saint of fishermen, the Papacy, and Rome, often depicted holding keys, symbolizing his spiritual authority. His feast day, celebrated with Saint Paul, is on June 29.",
+        "image": "issues/sicily/authors/torregrossa/images/sanpietro.jpg"
+    }
+
+}

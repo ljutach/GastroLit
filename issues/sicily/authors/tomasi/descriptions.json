@@ -136,6 +136,15 @@
     "pistacchio": {
         "description": "Pistachios are small, green nuts known for their rich flavor and crunchy texture. They are widely used in both sweet and savory dishes, especially in Mediterranean and Middle Eastern cuisine. Pistachios are a key ingredient in gelato, pesto, pastries, and baklava, as well as in sauces and roasted snack mixes. They are rich in healthy fats, protein, and antioxidants, making them a nutritious and flavorful addition to many recipes.",
         "image": "issues/sicily/authors/tomasi/images/pistacchio.jpg"
-    }
+    },
 
+    "profiteroles": {
+        "description": "Profiteroles are small, round choux pastry puffs filled with cream, custard, or ice cream and often topped with chocolate sauce. Light and airy, they originate from French cuisine and are commonly served as a dessert. The pastry is made by baking pâte à choux, which forms a crisp outer shell, creating a hollow center perfect for filling. Profiteroles are often stacked into elaborate presentations, such as croquembouche, or simply enjoyed with powdered sugar or caramel. Their delicate texture and rich flavors make them a classic and beloved treat in many countries.",
+        "image": "issues/sicily/authors/tomasi/images/profiteroles.webp"
+    },
+
+    "marroni": {
+        "description": "Marrons are large, high-quality chestnuts often used in French and Italian cuisine. They are known for their sweet, nutty flavor and smooth texture. Marrons can be eaten roasted, boiled, or candied, with marrons glacés being a famous delicacy made by slowly candying the chestnuts in sugar syrup. They are also used in desserts like Mont Blanc, pastries, and chestnut purées. Rich in fiber and natural sweetness, marrons are a popular ingredient in both sweet and savory dishes, especially during autumn and winter.",
+        "image": "issues/sicily/authors/tomasi/images/marroni.jpg"
+    }
 }
