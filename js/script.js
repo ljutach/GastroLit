@@ -131,9 +131,6 @@ function loadAuthorContent(authorPath, author, region) {
         document.getElementById("map-filter-container").style.display = "none";
         document.getElementById("global-map-container").style.display = "none";
 
-        // ✅ Debugging visibility check
-        debugHiddenElements();
-
         initializeMap();
         populateEntityTable();
         loadDescriptions().then(() => {
@@ -143,29 +140,6 @@ function loadAuthorContent(authorPath, author, region) {
         console.log(`📚 Loaded author: ${author}, UI elements hidden.`);
     });
 }
-
-
-
-function debugHiddenElements() {
-    console.log("🔎 Checking visibility of elements...");
-
-    const elementsToCheck = [
-        { name: "Title", element: document.querySelector(".title") },
-        { name: "Dynamic Content", element: document.getElementById("dynamic-content") },
-        { name: "Project Container", element: document.querySelector(".proj-container") },
-        { name: "Map Filter", element: document.getElementById("map-filter-container") },
-        { name: "Global Map", element: document.getElementById("global-map-container") }
-    ];
-
-    elementsToCheck.forEach(({ name, element }) => {
-        if (element) {
-            console.log(`🔹 ${name}: ${window.getComputedStyle(element).display}`);
-        } else {
-            console.log(`❌ ${name} not found in DOM.`);
-        }
-    });
-}
-
 
 
 
