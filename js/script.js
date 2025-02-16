@@ -451,7 +451,12 @@ function loadAuthorContent(authorPath, author, region) {
         document.getElementById("map-filter-container").style.display = "none";
         document.getElementById("global-map-container").style.display = "none";
 
-        window.scrollTo(0, 0);
+        setTimeout(() => {
+            const contentContainer = document.getElementById("author-content"); 
+            const offset = 145; 
+            const yPosition = contentContainer.getBoundingClientRect().top + window.scrollY - offset;
+            window.scrollTo({ top: yPosition, behavior: "smooth" });
+        }, 300);
 
         initializeMap();
         populateEntityTable();
