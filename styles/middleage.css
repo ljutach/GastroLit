@@ -1064,6 +1064,16 @@ button:hover {
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
+.doc-container code {
+    background-color: transparent; 
+    color: #3a302a; 
+    padding: 1px 2px;
+    font-weight: bold;
+    border-radius: 4px;
+    font-family: 'Metamorphous', serif; /* Matches manuscript style */
+    border: 1px solid #7a4c29; /* Darker sepia border */
+}
+
 /* git logo */
 
 #github-logo {
