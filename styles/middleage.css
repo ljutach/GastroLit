@@ -442,13 +442,20 @@ nav {
 
 #author-content .leaflet-popup-content,
 #global-map-container .leaflet-popup-content {
-    font-size: 1.4rem !important; /* Increase text size */
-    font-family: 'Metamorphous', serif !important; /* Medieval manuscript font */
-    font-weight: bold !important; /* Emphasize text */
-    line-height: 1.8 !important; /* Adjust spacing */
-    color: #3a302a !important; /* Dark brown ink-like color */
-    text-align: center; /* Center text for readability */
+    font-size: 1.4rem !important;
+    background-color: #f7e6c4 !important; /* Ensure it is applied */
+    font-family: 'Metamorphous', serif !important;
+    font-weight: bold !important;
+    line-height: 1.8 !important;
+    color: #3a302a !important;
+    text-align: center;
+    padding: 10px !important;
+    margin: 0 !important;  /* Ensure no margin */
+    width: 100% !important; /* Force full width */
+    height: 100% !important; /* Extend full height */
+    box-sizing: border-box; /* Ensure padding does not shrink the size */
 }
+
 
 
 
