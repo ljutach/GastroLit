@@ -7,13 +7,16 @@ if (!currentTheme) {
     currentTheme = 'styles/middleage.css'; // Force default theme
     localStorage.setItem("selectedTheme", currentTheme); // Save default to localStorage
 }
-    
+
 
 // Switch themes and store in localStorage
 function switchTheme(themePath) {
     currentTheme = themePath;
     document.getElementById('theme-stylesheet').setAttribute('href', themePath);
     localStorage.setItem("selectedTheme", themePath);
+
+    // Scroll to the top when switching themes
+    window.scrollTo({ top: 0, behavior: "smooth" });
 
     // Update the dropdown
     const themeSelector = document.getElementById("theme-selector");
@@ -85,6 +88,8 @@ function reloadWithTheme() {
         document.getElementById("map-filter-container").style.display = "block";
         document.getElementById("author-content").style.display = "block";
         document.querySelector(".proj-container").style.display = "block";
+
+        window.scrollTo({ top: 0, behavior: "smooth" });
 
         console.log("🏠 Reloaded homepage, documentation removed.");
     }, 200);
