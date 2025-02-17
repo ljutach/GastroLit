@@ -711,4 +711,22 @@ pre {
     border: 4px double #000;
 }
 
+#github-logo {
+    width: 60px; /* Adjust for appropriate size */
+    height: auto;
+    filter: drop-shadow(0 0 8px var(--primary-color)) contrast(1.5); /* Neon glow */
+    border: 3px solid var(--accent-color); /* Neon yellow border */
+    border-radius: 12px;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark cyberpunk contrast */
+    box-shadow: 0 0 12px var(--primary-color), 0 0 20px var(--secondary-color); /* Neon glow effect */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
+  }
+  
+  #github-logo:hover {
+    filter: drop-shadow(0 0 12px var(--secondary-color)) contrast(2) brightness(1.2); /* Intensified neon effect */
+    box-shadow: 0 0 20px var(--accent-color), 0 0 30px var(--secondary-color); /* Stronger glow */
+    transform: scale(1.1) rotate(2deg); /* Slight cyber-tilt */
+  }
+
 
