@@ -1072,7 +1072,7 @@ button:active {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 70%;
+  width: 63%;
   max-width: 90%;
   margin: 2rem auto;
   padding: 2rem;
@@ -1108,9 +1108,9 @@ button:active {
   background-color: rgba(10, 10, 20, 0.95);
   border: 3px solid #00ffff;
   color: #ff00ff;
-  padding: 0.5rem 1rem;
+  padding: 1.5rem 1rem;
   font-family: 'Orbitron', sans-serif;
-  font-size: 1.5em;
+  font-size: 1em;
   font-weight: bold;
   text-transform: uppercase;
   border-radius: 5px;
@@ -1125,4 +1125,19 @@ button:active {
   background-color: #00ffff;
   color: black;
   box-shadow: 0 0 25px rgba(0, 255, 255, 1);
+}
+
+
+.theme-preview {
+  display: block;
+  width: 80%; /* Responsive scaling */
+  max-width: 600px; /* Ensures it doesn't get too large */
+  margin: 20px auto; /* Center the image */
+  border: 3px solid #ff0080; /* Neon pink border */
+  border-radius: 12px; /* Soft edges for a sleek UI */
+  box-shadow: 
+      0 0 20px rgba(0, 255, 204, 0.8), /* Neon cyan glow */
+      0 0 30px rgba(255, 0, 128, 0.6), /* Neon pink glow */
+      0 0 10px rgba(255, 255, 255, 0.3); /* Subtle white glow for contrast */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }

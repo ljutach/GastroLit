@@ -987,7 +987,7 @@ button:hover {
 .doc-container {
     display: flex;
     justify-content: center; /* Centers content horizontally */
-    align-items: center; /* Aligns vertically */
+    align-items: left; /* Aligns vertically */
     flex-direction: column;
     width: 65%;
     max-width: 85%;
@@ -1142,3 +1142,18 @@ button:hover {
 }
 
 
+.theme-preview {
+    display: block;
+    width: 75%; /* Responsive scaling */
+    max-width: 550px; /* Ensures it fits well */
+    margin: 20px auto; /* Center the image */
+    border: 5px solid #9e752e; /* Aged golden-brown border */
+    border-radius: 8px; /* Subtle rounding for elegance */
+    box-shadow: 
+        inset 0 0 10px rgba(0, 0, 0, 0.2), /* Inner shadow for depth */
+        4px 4px 10px rgba(0, 0, 0, 0.3); /* Outer shadow for antique effect */
+    background: url("../images/textured-paper.png"); /* Parchment texture */
+    background-size: cover;
+    padding: 0px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
