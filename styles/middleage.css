@@ -1070,8 +1070,8 @@ button:hover {
     padding: 1px 2px;
     font-weight: bold;
     border-radius: 4px;
-    font-family: 'Metamorphous', serif; /* Matches manuscript style */
-    border: 1px solid #7a4c29; /* Darker sepia border */
+    font-family: 'Metamorphous', serif; 
+    border: 1px solid #7a4c29; 
 }
 
 /* git logo */
