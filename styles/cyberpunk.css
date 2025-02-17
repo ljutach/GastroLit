@@ -1,6 +1,5 @@
 /*
 * Cyberpunk Theme 
-* Neon-inspired design inspired by cyberpunk aesthetics.
 */
 
 /*Fonts */
@@ -42,12 +41,11 @@ body {
 
 /* Navbar */
 
-
 .navbar-nav > li > a {
-  color: var(--accent-color) !important;  /* Vibrant neon yellow */
+  color: var(--accent-color) !important;  
   font-size: 2.5rem;
   font-weight: bold;
-  text-shadow: 0 0 15px var(--primary-color), 0 0 25px var(--secondary-color); /* Strong neon glow */
+  text-shadow: 0 0 15px var(--primary-color), 0 0 25px var(--secondary-color); 
   transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
 }
 
@@ -95,14 +93,14 @@ nav {
   text-decoration: none;
   font-family: var(--font-main);
   text-shadow: 0 0 25px var(--navbar-text-color);
-  margin-right: 30px; /* Adds spacing between logo and menu */
+  margin-right: 30px; 
 }
 
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 9999; /* Ensures it's above other content */
+  z-index: 9999; 
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -178,16 +176,17 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 15px; /* Adjust spacing between title and dropdown */
+  gap: 15px; 
   margin-bottom: 20px;
   text-align: center;
-  flex-wrap: wrap; /* Ensures responsiveness */
+  flex-wrap: wrap; 
 }
 
 #theme-selector-container h3 {
-  font-size: 2.7rem;
+  font-size: 2rem;
   position: relative;
   top:-100px;
+  left: -70px;
   color: var(--secondary-color);
   text-shadow: 0 0 10px var(--secondary-color);
   margin: 0;
@@ -204,10 +203,10 @@ nav {
   font-weight: bold;
   font-size: 1.5rem;
   padding: 0.5rem 1rem;
-  background-color: rgba(13, 13, 13, 0.9); /* Dark cyberpunk background */
-  color: var(--primary-color); /* Neon teal */
-  border: 3px solid var(--accent-color); /* Vibrant neon yellow */
-  text-shadow: 0 0 10px var(--primary-color); /* Neon glow */
+  background-color: rgba(13, 13, 13, 0.9); 
+  color: var(--primary-color); 
+  border: 3px solid var(--accent-color); 
+  text-shadow: 0 0 10px var(--primary-color); 
   box-shadow: 0 0 15px var(--accent-color), 0 0 25px var(--secondary-color);
   transition: all 0.3s ease-in-out;
   cursor: pointer;
@@ -215,10 +214,10 @@ nav {
 
 .theme-dropdown option {
   font-size: 1.6rem;
-  background-color: #000; /* Dark background */
+  background-color: #000; 
   color: var(--primary-color);
   font-family: 'Orbitron', sans-serif;
-  text-shadow: 0 0 5px var(--secondary-color); /* Soft neon glow */
+  text-shadow: 0 0 5px var(--secondary-color); 
 }
 
 .theme-dropdown:hover {
@@ -229,7 +228,7 @@ nav {
 
 #theme-selector {
   top: 185px;
-  left: 150px;
+  left: 15px;
   position: fixed;
   z-index: 9999;
   border-radius: 10px;
@@ -241,21 +240,21 @@ nav {
 /* Logo */
 
 #logo-image {
-  width: 100vw; /* Full width of the viewport */
-  height: 100vh; /* Cover the entire viewport height */
-  position: fixed; /* Keep it fixed in the background */
+  width: 100vw; 
+  height: 100vh; 
+  position: fixed; 
   top: 0;
   left: 0;
-  z-index: -10; /* Lower the z-index to keep it behind everything */
-  object-fit: cover; /* Ensure it covers the full background properly */
-  filter: brightness(1.2) contrast(1.3) drop-shadow(0 0 15px #0ff); /* Cyberpunk neon glow */
+  z-index: -10; 
+  object-fit: cover; 
+  filter: brightness(1.2) contrast(1.3) drop-shadow(0 0 15px #0ff); 
   transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
-  pointer-events: none; /* Make sure the image does not interfere with user interaction */
+  pointer-events: none; 
 }
 
 #logo-image:hover {
-  transform: scale(1.02); /* Slight zoom effect */
-  filter: brightness(1.4) contrast(1.5) drop-shadow(0 0 25px #ff00ff); /* Intensified glow */
+  transform: scale(1.02); 
+  filter: brightness(1.4) contrast(1.5) drop-shadow(0 0 25px #ff00ff);
 }
 
 /* Proj-container and title */
@@ -265,15 +264,15 @@ nav {
   position: relative;
   max-width: 1800px;
   width: 1300px;
-  z-index: 1; /* Ensures they appear above the background image */
+  z-index: 1; 
   margin: 0 auto;
   margin-bottom: 3em;
   text-align: justify;
-  background-color: rgba(0, 0, 0, 0.8); /* Adds some background to ensure readability */
+  background-color: rgba(0, 0, 0, 0.8); 
   word-wrap: break-word;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 0 20px rgba(255, 0, 255, 0.7); /* Adds a glowing effect */
+  box-shadow: 0 0 20px rgba(255, 0, 255, 0.7); 
   overflow-wrap: break-word;
 }
 
@@ -287,12 +286,12 @@ nav {
 #map-filter-container {
   position: relative;
   width: 900px;
-  z-index: 2; /* Make sure it's above the background */
+  z-index: 2; 
   text-align: center;
   margin-left: auto;
   margin-right: auto;
   padding: 10px;
-  background-color: rgba(13, 13, 13, 0.85); /* Dark cyberpunk background */
+  background-color: rgba(13, 13, 13, 0.85); 
   border-radius: 10px;
   border: 2px solid var(--accent-color);
   box-shadow: 0 0 10px var(--secondary-color);
@@ -324,12 +323,11 @@ nav {
 
 #author-content, #global-map-container {
   display: flex;
-  justify-content: center; /* Centers horizontally */
-  align-items: center; /* Centers vertically if needed */
-  flex-direction: column; /* Ensures proper stacking */
+  justify-content: center; 
+  align-items: center; 
+  flex-direction: column; 
   width: 100%;
 }
-
 
 
 #author-content #map, #global-map-container {
@@ -350,8 +348,6 @@ nav {
 }
 
 
-
-
 #author-content #map, #global-map-container {
   width: 100%;
   height: 100%;
@@ -360,31 +356,30 @@ nav {
 
 #author-content .leaflet-popup-content,
 #global-map-container .leaflet-popup-content {
-  font-size: 1.5rem !important; /* Adjust font size */
-  font-family: 'Orbitron', sans-serif !important; /* Cyberpunk font */
+  font-size: 1.5rem !important; 
+  font-family: 'Orbitron', sans-serif !important; 
   font-weight: bold !important;
-  line-height: 1.3 !important; /* Reduce spacing */
-  color: #00ffcc !important; /* Neon teal text */
-  background: none !important; /* Remove extra white backgrounds */
-  padding: 5px !important; /* Reduce padding */
-  text-align: center !important; /* Center text */
+  line-height: 1.3 !important; 
+  color: #00ffcc !important; 
+  background: none !important; 
+  padding: 5px !important; 
+  text-align: center !important; 
   text-shadow: 0 0 6px rgba(0, 255, 204, 0.7), 0 0 10px rgba(255, 0, 128, 0.5);
-  max-width: 120px !important; /* Reduce width */
-  min-width: 100px !important; /* Prevent excessive shrinking */
+  max-width: 120px !important; 
+  min-width: 100px !important; 
   display: flex !important;
-  justify-content: center !important; /* Center horizontally */
-  align-items: center !important; /* Center vertically */
-  flex-direction: column !important; /* Ensure proper stacking */
+  justify-content: center !important; 
+  align-items: center !important; 
+  flex-direction: column !important; 
 }
 
-/* Reduce the overall popup wrapper size */
 .leaflet-popup-content-wrapper {
-  background: linear-gradient(135deg, rgba(10, 10, 10, 0.95), rgba(20, 20, 20, 1)) !important; /* Dark cyberpunk background */
-  border-radius: 6px !important; /* Reduce corner radius */
-  padding: 8px !important; /* Reduce padding */
-  border: 1px solid #ff0080 !important; /* Thinner neon pink border */
+  background: linear-gradient(135deg, rgba(10, 10, 10, 0.95), rgba(20, 20, 20, 1)) !important; 
+  border-radius: 6px !important; 
+  padding: 8px !important; 
+  border: 1px solid #ff0080 !important; 
   box-shadow: 0 0 10px rgba(0, 255, 204, 0.6), 0 0 15px rgba(255, 0, 128, 0.5);
-  max-width: 140px !important; /* Reduce popup width */
+  max-width: 140px !important; 
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
@@ -395,7 +390,7 @@ nav {
 
 
 
-/*  Info */
+/* Info */
 
 .info {
   max-width: 60.5%; 
@@ -403,8 +398,8 @@ nav {
   margin: 2rem auto;
   padding: 2rem;
   align-items: center;
-  background-color: rgba(20, 20, 40, 0.95); /* Dark background */
-  border: 3px solid #ff00ff; /* Neon Pink */
+  background-color: rgba(20, 20, 40, 0.95); 
+  border: 3px solid #ff00ff; 
   border-radius: 15px;
   box-shadow: 0 0 15px rgba(255, 0, 255, 0.8), 0 0 30px rgba(0, 255, 255, 0.6);
   overflow-x: hidden; 
@@ -421,7 +416,7 @@ nav {
   z-index: 10;
 }
 
-/* authors */
+/* Authors */
 
 #author-content {
   display: block;
@@ -441,45 +436,44 @@ nav {
 }
 
 
-
 .author-image {
   display: block;
-  margin: 1rem auto; /* Center the image with some spacing */
-  max-width: 50%; /* Reduce the size to 50% of its container */
-  height: auto; /* Maintain the aspect ratio */
-  border-radius: 10px; /* Add subtle rounded corners */
-  border: 3px solid var(--primary-color); /* Neon teal border */
-  box-shadow: 0 0 15px var(--secondary-color), /* Neon hot pink outer glow */
-              0 0 30px rgba(0, 255, 204, 0.6); /* Subtle teal outer glow */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+  margin: 1rem auto; 
+  max-width: 50%; 
+  height: auto; 
+  border-radius: 10px; 
+  border: 3px solid var(--primary-color); 
+  box-shadow: 0 0 15px var(--secondary-color), 
+              0 0 30px rgba(0, 255, 204, 0.6); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
 .author-caption {
   display: block;
-  text-align: center; /* Center-align the caption text */
-  margin: 0.5rem auto; /* Add spacing between the image and the caption */
-  max-width: 100%; /* Ensure it spans the full width of its container */
-  font-family: var(--font-accent); /* Use a font consistent with the cyberpunk theme */
-  font-size: 2rem; /* Slightly larger for readability */
-  color: var(--primary-color); /* Neon teal text */
-  line-height: 1.6; /* Ensure proper readability */
-  background-color: rgba(13, 13, 13, 0.9); /* Dark background for contrast */
-  padding: 0.5rem; /* Add padding around the caption */
-  border-radius: 8px; /* Add smooth rounded corners */
-  border: 2px solid var(--secondary-color); /* Neon pink border */
-  box-shadow: 0 0 15px var(--primary-color), /* Neon teal outer glow */
-              0 0 30px rgba(255, 0, 128, 0.7); /* Neon pink outer glow */
-  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth hover effects */
-  width: fit-content; /* Center it around the content size */
-  margin-left: auto; /* Align center horizontally */
-  margin-right: auto; /* Align center horizontally */
+  text-align: center; 
+  margin: 0.5rem auto; 
+  max-width: 100%; 
+  font-family: var(--font-accent); 
+  font-size: 2rem; 
+  color: var(--primary-color);
+  line-height: 1.6; 
+  background-color: rgba(13, 13, 13, 0.9); 
+  padding: 0.5rem; 
+  border-radius: 8px; 
+  border: 2px solid var(--secondary-color); 
+  box-shadow: 0 0 15px var(--primary-color), 
+              0 0 30px rgba(255, 0, 128, 0.7); 
+  transition: box-shadow 0.3s ease, transform 0.3s ease; 
+  width: fit-content; 
+  margin-left: auto; 
+  margin-right: auto; 
 }
 
 
 .author-caption:hover {
-  box-shadow: 0 0 25px var(--primary-color), /* Intensified teal glow */
-              0 0 50px var(--secondary-color); /* Intensified pink glow */
-  transform: scale(1.02); /* Subtle zoom effect on hover */
+  box-shadow: 0 0 25px var(--primary-color), 
+              0 0 50px var(--secondary-color); 
+  transform: scale(1.02); 
 }
 
 
@@ -519,7 +513,7 @@ p {
 .poetry {
   text-align: center;
   margin: 0 auto;
-  max-width: 80%; /* Slightly wider for a futuristic feel */
+  max-width: 80%; 
 }
 
 .prose {
@@ -534,37 +528,37 @@ p {
   text-align: justify;
   font-family: 'Share Tech Mono', monospace;
   font-size: 2.3rem;
-  color: var(--primary-color); /* Neon teal */
-  background: rgba(13, 13, 13, 0.85); /* Dark sci-fi panel */
+  color: var(--primary-color); 
+  background: rgba(13, 13, 13, 0.85); 
   padding: 1.8rem;
-  border: 3px solid var(--secondary-color); /* Hot pink cyberpunk border */
+  border: 3px solid var(--secondary-color); 
   border-radius: 10px;
   box-shadow: 0 0 15px var(--primary-color), 0 0 30px var(--accent-color);
   line-height: 1.8;
-  max-width: 90%; /* Slightly wider for immersive feel */
+  max-width: 90%; 
   margin: 2rem auto;
   word-wrap: normal;
-  overflow-wrap: anywhere; /* Ensures wrapping instead of breaking */
+  overflow-wrap: anywhere; 
   white-space: normal;
-  word-break: normal; /* Avoids breaking words at the end of a line */
-  hyphens: auto; /* Adds hyphenation where necessary */
+  word-break: normal; 
+  hyphens: auto; 
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 
 .work-title {
   font-family: 'Orbitron', sans-serif; 
-  font-size: 3rem; /* Slightly larger for emphasis */
-  color: var(--primary-color); /* Neon teal */
+  font-size: 3rem; 
+  color: var(--primary-color); 
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 2px;
   padding: 0.8rem 1.5rem;
-  background: rgba(13, 13, 13, 0.9); /* Dark futuristic background */
-  border: 3px solid var(--accent-color); /* Vibrant neon yellow */
+  background: rgba(13, 13, 13, 0.9); 
+  border: 3px solid var(--accent-color); 
   border-radius: 8px;
   display: inline-block;
-  box-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--secondary-color); /* Cyberpunk glow */
+  box-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--secondary-color); 
   margin-top: 5rem auto;
   margin-bottom: 3rem auto;
   text-shadow: 0 0 12px var(--primary-color), 0 0 20px var(--accent-color);
@@ -582,7 +576,7 @@ p {
   text-transform: uppercase;
   text-align: center;
   width: auto; 
-  margin-bottom: 10px; /* Add space below the number */
+  margin-bottom: 10px; 
 }
 
 
@@ -590,13 +584,13 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 700px;  /* Fixed width for uniformity */
-  min-height: 120px; /* Ensures consistent height */
-  max-height: auto; /* Allow dynamic height */
-  margin: 12px auto; /* Center elements with some spacing */
-  padding: 1rem; /* Maintain balanced padding */
-  background: rgba(20, 20, 20, 0.95); /* Dark cyberpunk background */
-  border: 3px solid var(--secondary-color); /* Neon pink border */
+  width: 700px;  
+  min-height: 120px; 
+  max-height: auto; 
+  margin: 12px auto; 
+  padding: 1rem; 
+  background: rgba(20, 20, 20, 0.95); 
+  border: 3px solid var(--secondary-color); 
   border-radius: 10px;
   box-shadow: 0 0 15px var(--secondary-color), 0 0 25px var(--accent-color);
   transition: all 0.3s ease-in-out;
@@ -622,7 +616,7 @@ p {
 
 .prose .tag {
   font-weight: bold;
-  color: var(--accent-color); /* Neon yellow */
+  color: var(--accent-color); 
   text-decoration: underline;
   text-shadow: 0 0 8px var(--accent-color);
   cursor: pointer;
@@ -630,7 +624,7 @@ p {
 }
 
 .prose .tag:hover {
-  color: var(--secondary-color); /* Hot pink hover effect */
+  color: var(--secondary-color); 
   text-shadow: 0 0 12px var(--secondary-color), 0 0 25px var(--primary-color);
   transform: scale(1.1);
 }
@@ -682,13 +676,13 @@ button:active {
 }
 
 .underline-highlight:hover {
-  text-decoration-color: var(--secondary-color); /* Hot pink */
-  text-shadow: 0 0 15px var(--secondary-color); /* Intensified glow */
+  text-decoration-color: var(--secondary-color); 
+  text-shadow: 0 0 15px var(--secondary-color); 
 }
 
 .temporary-highlight {
-  background-color: rgba(255, 255, 0, 0.3); /* Semi-transparent neon yellow */
-  box-shadow: 0 0 12px var(--accent-color); /* Neon glow */
+  background-color: rgba(255, 255, 0, 0.3); 
+  box-shadow: 0 0 12px var(--accent-color); 
   transition: background-color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
 }
 
@@ -727,7 +721,7 @@ button:active {
   float: left;
   margin: 5px 20px 10px 0;
   border-radius: 8px;
-  border: 3px solid var(--accent-color); /* Vibrant neon yellow */
+  border: 3px solid var(--accent-color); 
   box-shadow: 0 0 15px var(--accent-color);
 }
 
@@ -746,7 +740,7 @@ button:active {
   display: block;
   width: 100%;
   padding: 12px;
-  background: var(--secondary-color); /* Hot pink */
+  background: var(--secondary-color); 
   color: black;
   border: none;
   font-weight: bold;
@@ -763,8 +757,8 @@ button:active {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  z-index: 100; /* Ensure it's always above other elements */
-  background-color: var(--accent-color); /* Vibrant yellow */
+  z-index: 100; 
+  background-color: var(--accent-color); 
   color: black;
   border: 2px solid var(--primary-color);
   padding: 12px;
@@ -778,18 +772,17 @@ button:active {
 }
 
 .close-btn:hover {
-  background: var(--accent-color); /* Yellow */
+  background: var(--accent-color);
   color: black;
   text-shadow: 0 0 10px var(--primary-color);
 }
 
 #scrollToTopBtn:hover {
-  background-color: var(--secondary-color); /* Hot pink */
+  background-color: var(--secondary-color); 
   color: white;
   box-shadow: 0 0 20px var(--secondary-color);
 }
 
-/* Entity-table */
 
 /* Entity-table */
 
@@ -801,59 +794,51 @@ button:active {
   box-shadow: 0 0 15px rgba(255, 0, 128, 0.8);
 }
 
-/* Table base styling */
 #entity-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 2rem; /* Adjusted for better readability */
-  font-family: 'Share Tech Mono', monospace; /* Cyberpunk futuristic font */
+  font-size: 2rem; 
+  font-family: 'Share Tech Mono', monospace; /
 }
 
-/* Table headers */
 #entity-table thead {
   background: var(--secondary-color);
   color: white;
-  font-size: 3.2rem; /* Bigger font for headers */
+  font-size: 3.2rem; 
   text-align: center;
-  font-family: 'Orbitron', sans-serif; /* High-tech font for headers */
+  font-family: 'Orbitron', sans-serif; 
   font-weight: bold;
 }
 
-/* Table data */
 #entity-table th, #entity-table td {
   padding: 20px;
   border: 3px solid var(--primary-color);
   text-align: center;
-  font-family: 'Share Tech Mono', monospace; /* Ensures content consistency */
+  font-family: 'Share Tech Mono', monospace; 
 }
 
-/* Table header cells */
 #entity-table th {
   font-size: 3rem; /* Even bigger than regular text */
 }
 
-/* Table body cells */
 #entity-table td {
   font-size: 2rem; /* Slightly smaller than headers */
 }
 
-/* Alternating row background */
 #entity-table tbody tr:nth-child(even) {
   background: rgba(20, 20, 20, 0.8);
 }
 
-/* Hover effect */
 #entity-table tbody tr:hover {
   background: rgba(255, 0, 128, 0.3);
   transition: 0.3s ease-in-out;
 }
 
-/* Table links */
 #entity-table a {
   text-decoration: none;
   color: var(--accent-color);
   font-weight: bold;
-  font-family: 'Orbitron', sans-serif; /* Distinct cyber font for links */
+  font-family: 'Orbitron', sans-serif; 
 }
 
 #entity-table a:hover {
@@ -954,26 +939,26 @@ button:active {
   transition: box-shadow 0.4s ease-in-out;
 }
 
-/* Disclaimer Section */
+/* Disclaimer */
+
 #disclaimer-section {
-  background: rgba(20, 20, 20, 0.8); /* Dark cyberpunk background */
-  border: 3px solid var(--accent-color); /* Vibrant neon yellow */
+  background: rgba(20, 20, 20, 0.8); 
+  border: 3px solid var(--accent-color); 
   border-radius: 10px;
-  box-shadow: 0 0 15px var(--primary-color), 0 0 30px var(--secondary-color); /* Glowing effect */
+  box-shadow: 0 0 15px var(--primary-color), 0 0 30px var(--secondary-color); 
   padding: 20px;
   text-align: center;
   font-family: 'Share Tech Mono', monospace;
-  color: var(--primary-color); /* Neon teal */
+  color: var(--primary-color); 
   line-height: 1.8;
   width: 85%;
   margin: 30px auto;
 }
 
-/* Disclaimer Title */
 #disclaimer-section h3 {
   font-family: 'Orbitron', sans-serif;
   font-size: 2.5rem;
-  color: var(--accent-color); /* Bright neon */
+  color: var(--accent-color); 
   text-transform: uppercase;
   letter-spacing: 2px;
   text-shadow: 0 0 15px var(--primary-color), 0 0 25px var(--secondary-color);
@@ -1037,36 +1022,8 @@ button:active {
 }
 
 
+/* Documentation */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Cyberpunk Documentation Layout */
 .doc-container {
   display: flex;
   justify-content: center;
@@ -1086,24 +1043,22 @@ button:active {
   z-index: 5000; /* Ensures it's above other elements */
 }
 
-/* Headings - Cyberpunk Glowing Titles */
 .doc-container h1, .doc-container h2, .doc-container h3 {
   font-family: 'Orbitron', sans-serif;
-  color: #00ffff; /* Neon cyan */
+  color: #00ffff; 
   text-align: center;
   text-transform: uppercase;
   text-shadow: 0 0 15px rgba(0, 255, 255, 1), 0 0 5px rgba(0, 255, 255, 0.7);
   position: relative;
-  z-index: 5100; /* Ensure text is above the container */
+  z-index: 5100;
 }
 
-/* Ensures the entire documentation section is on top */
+
 .doc-container * {
   position: relative;
   z-index: 5100;
 }
 
-/* Fix buttons so they aren't hidden */
 .doc-container .button {
   background-color: rgba(10, 10, 20, 0.95);
   border: 3px solid #00ffff;
@@ -1118,7 +1073,7 @@ button:active {
   box-shadow: 0 0 15px rgba(0, 255, 255, 1);
   transition: 0.3s ease-in-out;
   position: relative;
-  z-index: 5200; /* Buttons should be on top */
+  z-index: 5200; 
 }
 
 .doc-container .button:hover {
@@ -1130,14 +1085,14 @@ button:active {
 
 .theme-preview {
   display: block;
-  width: 80%; /* Responsive scaling */
-  max-width: 600px; /* Ensures it doesn't get too large */
-  margin: 20px auto; /* Center the image */
-  border: 3px solid #ff0080; /* Neon pink border */
-  border-radius: 12px; /* Soft edges for a sleek UI */
+  width: 80%; 
+  max-width: 600px; 
+  margin: 20px auto; 
+  border: 3px solid #ff0080; 
+  border-radius: 12px; 
   box-shadow: 
-      0 0 20px rgba(0, 255, 204, 0.8), /* Neon cyan glow */
-      0 0 30px rgba(255, 0, 128, 0.6), /* Neon pink glow */
-      0 0 10px rgba(255, 255, 255, 0.3); /* Subtle white glow for contrast */
+      0 0 20px rgba(0, 255, 204, 0.8), 
+      0 0 30px rgba(255, 0, 128, 0.6), 
+      0 0 10px rgba(255, 255, 255, 0.3); 
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }

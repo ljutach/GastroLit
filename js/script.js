@@ -1,12 +1,15 @@
+// JS set of functions for dynamic content loading
+
+
 let currentTheme = localStorage.getItem("selectedTheme");
 
 if (!currentTheme) {
     currentTheme = 'styles/middleage.css'; // Force default theme
     localStorage.setItem("selectedTheme", currentTheme); // Save default to localStorage
 }
+    
 
-
-// Function to switch themes and store in localStorage
+// Switch themes and store in localStorage
 function switchTheme(themePath) {
     currentTheme = themePath;
     document.getElementById('theme-stylesheet').setAttribute('href', themePath);
@@ -37,7 +40,8 @@ function switchTheme(themePath) {
     }, 500);
 }
 
-// Function to update the dropdown based on the current theme
+// Update the dropdown based on the current theme
+
 function updateThemeDropdown() {
     const themeSelector = document.getElementById("theme-selector");
     themeSelector.value = localStorage.getItem("selectedTheme") || 'styles/middleage.css';
@@ -68,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
 function reloadWithTheme() {
     let contentContainer = document.getElementById("dynamic-content");
 
-    // ✅ Remove documentation content when reloading homepage
+    // Remove documentation content when reloading homepage
     contentContainer.innerHTML = "";
 
     window.location.href = "index.html";
@@ -116,7 +120,7 @@ function restoreDropdownListeners() {
 function loadAuthorContent(authorPath, author, region) {
     let contentContainer = document.getElementById("dynamic-content");
 
-    // ✅ Remove any previous content in the dynamic container
+    // Remove any previous content in the dynamic container
     contentContainer.innerHTML = "";
 
     $("#author-content").load(authorPath, function () {
@@ -124,7 +128,7 @@ function loadAuthorContent(authorPath, author, region) {
         document.getElementById("author-content").setAttribute("data-author", author);
         document.getElementById("author-content").setAttribute("data-region", region);
 
-        // ✅ Force-hide the unwanted elements
+        // Force-hide the unwanted elements
         document.querySelector(".title").style.display = "none";
         document.getElementById("dynamic-content").style.display = "none";
         document.querySelector(".proj-container").style.display = "none";
@@ -140,7 +144,6 @@ function loadAuthorContent(authorPath, author, region) {
         console.log(`📚 Loaded author: ${author}, UI elements hidden.`);
     });
 }
-
 
 
 
@@ -283,8 +286,8 @@ function createPopup(element) {
         left = window.innerWidth + window.scrollX - popupRect.width - 10;
     }
 
-    // Style the popup
-    popup.style.zIndex = "5000"; // Ensure it's above everything
+    
+    popup.style.zIndex = "5000"; 
     popup.style.position = "absolute";
     popup.style.top = `${top}px`;
     popup.style.left = `${left}px`;
@@ -305,8 +308,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 let globalMap;
-let allPlaces = []; // Store all places with author info
-let markers = []; // Store markers for filtering
+let allPlaces = []; 
+let markers = []; 
 
 async function loadGlobalMap() {
     const mapElement = document.getElementById("global-map");
@@ -351,7 +354,8 @@ async function loadGlobalMap() {
     console.log("✅ Global map loaded with places:", allPlaces);
 }
 
-// Function to update the map based on the selected author
+// Update the map based on the selected author
+
 function updateMapByAuthor() {
     const selectedAuthor = document.getElementById("map-author-filter").value;
 
@@ -377,9 +381,6 @@ document.addEventListener("DOMContentLoaded", loadGlobalMap);
 
 
 
-
-
-
 document.addEventListener("DOMContentLoaded", () => {
     let authorContent = document.getElementById("author-content");
     let globalMapContainer = document.getElementById("global-map-container");
@@ -400,11 +401,12 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".navbar-brand").addEventListener("click", function () {
         globalMapContainer.style.display = "block"; 
         mapFilterContainer.style.display = "block";
-        projectContainer.style.display = "block"; // Show the project description
+        projectContainer.style.display = "block"; 
         applyMapTheme();
     });
 });
 
+// Dinamically load author-content
 
 function loadAuthorContent(authorPath, author, region) {
     let contentContainer = document.getElementById("dynamic-content");
@@ -418,7 +420,7 @@ function loadAuthorContent(authorPath, author, region) {
         document.getElementById("author-content").setAttribute("data-author", author);
         document.getElementById("author-content").setAttribute("data-region", region);
 
-        // ✅ Hide everything unrelated to authors
+        // Hide everything unrelated to authors
         document.querySelector(".title").style.display = "none";
         document.getElementById("dynamic-content").style.display = "none";
         document.querySelector(".proj-container").style.display = "none";
@@ -443,9 +445,7 @@ function loadAuthorContent(authorPath, author, region) {
 }
 
 
-
-
-
+// Dinamically load documentation
 
 function loadDocumentation() {
     fetch('doc.html')
@@ -453,24 +453,23 @@ function loadDocumentation() {
     .then(data => {
         let contentContainer = document.getElementById("dynamic-content");
         contentContainer.innerHTML = data;
-        contentContainer.style.display = "block"; // ✅ Show documentation
+        contentContainer.style.display = "block"; 
 
-        // ✅ Hide everything unrelated to documentation
-        document.getElementById("author-content").style.display = "none"; // Hide author content
+        // Hide everything unrelated to documentation
+        document.getElementById("author-content").style.display = "none"; 
         document.getElementById("global-map-container").style.display = "none";
         document.getElementById("map-filter-container").style.display = "none";
         document.querySelector(".proj-container").style.display = "none";
 
-        // ✅ Ensure the theme remains correct
+        
         let currentTheme = localStorage.getItem("selectedTheme") || "styles/middleage.css";
         document.getElementById("theme-stylesheet").setAttribute("href", currentTheme);
 
         console.log("📄 Documentation loaded successfully, everything else hidden.");
 
         setTimeout(() => {
-            const contentContainer = document.getElementById("dynamic-content"); // Adjust to match your documentation container ID
-            const offset = 145; // Adjust this value if needed (increase if too high, decrease if too low)
-            
+            const contentContainer = document.getElementById("dynamic-content");
+            const offset = 145; 
             const yPosition = contentContainer.getBoundingClientRect().top + window.scrollY - offset;
             window.scrollTo({ top: yPosition, behavior: "smooth" });
         }, 300);
@@ -481,7 +480,7 @@ function loadDocumentation() {
 
 
 
-// ✅ Function to restore author selection after doc.html is loaded
+// Restore author selection after doc.html is loaded
 function restoreAuthorSelection() {
     document.querySelectorAll(".dropdown-menu a").forEach(item => {
         item.addEventListener("click", function (event) {
@@ -513,7 +512,6 @@ document.addEventListener("DOMContentLoaded", function () {
 function returnToHome() {
     window.location.href = "index.html";
     setTimeout(() => {
-        // ✅ Show all sections when returning home
         document.getElementById("global-map-container").style.display = "block";
         document.getElementById("map-filter-container").style.display = "block";
         document.getElementById("author-content").style.display = "block";

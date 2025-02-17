@@ -1,6 +1,5 @@
 /*
-* Middle Age Theme
-* Historical, parchment-like design inspired by medieval manuscripts.
+* Manuscripta Theme
 */
 
 
@@ -28,22 +27,22 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.8;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-x: hidden; 
     padding-top: 100px;
 }
 
 /* Navbar*/
 
 nav {
-    background: url('../images/textured-paper.png'); /* Use parchment texture */
+    background: url('../images/textured-paper.png'); 
     background-size: cover;
-    border-bottom: 6px double #5a3a1e; /* Deep brown double border */
+    border-bottom: 6px double #5a3a1e; 
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
     padding: 1.8rem 2.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: 'Uncial Antiqua', serif; /* Medieval manuscript font */
+    font-family: 'Uncial Antiqua', serif; 
     text-transform: uppercase;
     position: sticky;
     top: 0;
@@ -63,15 +62,13 @@ nav {
     display: inline-block;
     border-radius: 12px;
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    transform: rotate(-2deg); /* Slight tilt for a handwritten look */
+    transform: rotate(-2deg); 
 }
 
 
-/* Navbar Links */
-
 .navbar-nav {
     display: flex;
-    gap: 1.8rem; /* Spacing between menu items */
+    gap: 1.8rem; 
     align-items: center;
 }
 
@@ -98,16 +95,16 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000; /* Ensures it's above other content */
+    z-index: 1000; 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    border-bottom: 3px solid #3a302a; /* Dark brown for contrast */
+    border-bottom: 3px solid #3a302a; 
 }
 
 
 /* Dropdown Menu Styling */
 
 .dropdown-menu {
-    background-color: #f7e6c4; /* Aged paper */
+    background-color: #f7e6c4; 
     border: 2px solid #7a4c29;
     font-family: 'Uncial Antiqua', serif;
     padding: 10px;
@@ -126,12 +123,12 @@ nav {
 }
 
 .dropdown-menu {
-    display: none; /* Default hidden */
+    display: none; 
     position: absolute;
-    background-color: #f7e6c4; /* Parchment-like background */
-    border: 1px solid #763626; /* Rustic border */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle depth effect */
-    z-index: 1100; /* Ensure dropdown is above other elements */
+    background-color: #f7e6c4; 
+    border: 1px solid #763626;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+    z-index: 1100; 
     list-style: none;
     padding: 0;
     margin: 0;
@@ -140,26 +137,26 @@ nav {
 .dropdown:hover > .dropdown-menu,
 .dropdown:focus > .dropdown-menu,
 .dropdown:active > .dropdown-menu {
-    display: block; /* Show dropdown on hover, focus, or active */
+    display: block; 
     background-color: #f7e6c4;  
 }
 
 .dropdown-menu > li > a {
-    color: #3a302a; /* Earthy brown text color */
+    color: #3a302a; 
     padding: 0.5rem 1rem;
     display: block;
     text-decoration: none;
     font-family: 'Metamorphous', serif;
-    white-space: nowrap; /* Prevent breaking of single long words */
-    background-color: #f7e6c4;   /* Subtle parchment effect */
+    white-space: nowrap; 
+    background-color: #f7e6c4;   
 }
 
 
 .dropdown-menu > li > a:hover {
-    background-color: #9e752e; /* Golden-brown hover effect */
+    background-color: #9e752e; 
     color: #fff;
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Subtle glowing text */
-    border-radius: 5px; /* Smooth edges */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); 
+    border-radius: 5px; 
 }
 
 
@@ -168,21 +165,21 @@ nav {
 }
 
 .dropdown-submenu > .dropdown-menu {
-    display: none; /* Default hidden */
+    display: none; 
     position: absolute;
     top: 0;
-    left: 100%; /* Align submenu to the right */
+    left: 100%;
     margin-top: -6px;
     margin-left: -1px;
     background-color: rgba(255, 251, 235, 0.9);
     border: 1px solid #763626;
-    z-index: 1100; /* Ensure submenus are above */
+    z-index: 1100; 
 }
 
 .dropdown-submenu:hover > .dropdown-menu,
 .dropdown-submenu:focus > .dropdown-menu,
 .dropdown-submenu:active > .dropdown-menu {
-    display: block; /* Show submenu on hover */
+    display: block; 
 }
 
 /* Theme selector */
@@ -201,15 +198,15 @@ nav {
 }
 
 .theme-container h3 {
-    font-family: 'Metamorphous', serif; /* Elegant medieval font */
+    font-family: 'Metamorphous', serif; 
     font-weight: bold;
     letter-spacing: 3px;
-    font-size: 3rem;
-    color: #3a302a; /* Dark ink color */
+    font-size: 2rem;
+    color: #3a302a; 
     rotate: 0deg;
     position: absolute;
-    top: 250px;
-    left: -45px;
+    top: 275px;
+    left: -25px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
@@ -222,13 +219,13 @@ nav {
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 2.8rem; 
+    font-size: 1.8rem; 
     padding: 0.5rem 1rem; 
-    background-color: #8b5e3c; /* Rich brown, medieval ink effect */
-    color: #3a302a; /* Parchment-like text */
+    background-color: #8b5e3c; 
+    color: #3a302a; 
     position: fixed;
     z-index: 9999;
-    border: 2px solid #3a302a; /* Dark ink border */
+    border: 2px solid #3a302a; 
     border-radius: 10px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
 }
@@ -236,32 +233,32 @@ nav {
 
 .theme-dropdown {
     font-family: 'Metamorphous', serif;
-    font-size: 2rem; /* Adjust font size for the dropdown */
+    font-size: 2rem; 
     font-weight: bold;
-    padding: 0.5rem 1rem; /* Add padding for better spacing */
-    border-radius: 7px; /* Optional: Add rounded corners */
-    border: 3px solid #9e752e !important; /* Optional: Styled border */
-    background-color: transparent !important; /* Optional: Match theme background */
-    color: #3a302a; /* Font color */
+    padding: 0.5rem 1rem;
+    border-radius: 7px;
+    border: 3px solid #9e752e !important;
+    background-color: transparent !important; 
+    color: #3a302a;
 }
 
 .theme-dropdown option {
-    font-size: 20px; /* Increase font size for options */
-    padding: 0.5rem; /* Optional: Add padding for better readability */
-    background-color: #f7e6c4 !important; /* Optional: Parchment-like background */
-    color: #3a302a; /* Font color for options */
-    font-family: 'Metamorphous', serif; /* Match theme font */
+    font-size: 15px; 
+    padding: 0.5rem; 
+    background-color: #f7e6c4 !important; 
+    color: #3a302a; 
+    font-family: 'Metamorphous', serif; 
 }
 
 
 /* Logo */
 
 #logo-image {
-    width: 100%;  /* Adjust width (e.g., 80% of its container) */
-    max-width: 2000px; /* Set a maximum width */
-    height: auto;  /* Maintain aspect ratio */
-    display: block;  /* Ensure proper alignment */
-    margin: 20px auto; /* Center the image with spacing */
+    width: 100%;  
+    max-width: 2000px; 
+    height: auto;  
+    display: block;  
+    margin: 20px auto; 
 }
 
 
@@ -312,7 +309,7 @@ nav {
     font-weight: bold;
     margin-right: 8px;
     font-size: 20px;
-    color: #5A3825; /* Deep brown for parchment contrast */
+    color: #5A3825; 
 }
 
 #map-filter-container select {
@@ -321,17 +318,14 @@ nav {
     font-size: 20px;
     border-radius: 5px;
     border: 2px solid #8B5A2B;
-    background-color: #f7e6c4;  /* Parchment color */
-    color: #5A3825; /* Dark brown */
-    font-family: "Garamond", serif; /* Historical font */
+    background-color: #f7e6c4;  
+    color: #5A3825; 
+    font-family: "Garamond", serif; 
 }
 
 
 /* Author-content */
 
-
-
-/* Info */
 
 .info {
     max-width: 65%; 
@@ -357,24 +351,24 @@ nav {
     align-items: center;
     justify-content: center;
     width: 100%;
-    margin: 0 auto; /* Ensures it's fully centered */
+    margin: 0 auto; 
     visibility: visible;
     z-index: 1;
     padding: 1rem;
     background-color: transparent;
     color: #3a302a;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    word-wrap: break-word; /* Wrap long words */
-    overflow-wrap: break-word; /* Additional support for word wrapping */
+    overflow-x: hidden; 
+    word-wrap: break-word; 
+    overflow-wrap: break-word; 
 }
 
 .author-image {
     display: block;
-    margin: 1rem auto; /* Center the image with some spacing */
-    max-width: 50%; /* Reduce the size to 50% of its container */
-    height: auto; /* Maintain the aspect ratio */
-    border-radius: 10px; /* Optional: Add rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for a modern look */
+    margin: 1rem auto; 
+    max-width: 50%; 
+    height: auto; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
 }
 
 
@@ -382,38 +376,35 @@ nav {
     display: block;
     text-align: center;
     margin: 0.5rem auto;
-    max-width: 60%; /* Slightly wider for a parchment-like effect */
-    font-family: 'Uncial Antiqua', serif; /* More medieval-style font */
-    font-size: 2rem; /* Increase readability */
-    color: #4a2c17; /* Dark brown ink tone */
+    max-width: 60%; 
+    font-family: 'Uncial Antiqua', serif; 
+    font-size: 2rem; 
+    color: #4a2c17; 
     line-height: 1.5;
     background: rgba(255, 251, 235, 0.5);
     background-size: cover;
-    padding: 1rem 1.5rem; /* More padding for an aged manuscript effect */
+    padding: 1rem 1.5rem; 
     border-radius: 8px;
-    border: 2px solid #5a3a1e; /* Darker brown medieval ink border */
+    border: 2px solid #5a3a1e; 
     box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 
 .author-caption:hover {
-    background: rgba(255, 251, 235, 0.95); /* Slight parchment glow */
+    background: rgba(255, 251, 235, 0.95); 
     color: #5a3a1e;
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.3), 0 6px 12px rgba(0, 0, 0, 0.25);
-    transform: rotate(0deg) scale(1.05); /* Straighten out and enlarge slightly */
+    transform: rotate(0deg) scale(1.05); 
     transition: all 0.3s ease-in-out;
 }
 
 
-
-
-
 #author-content, #global-map-container {
     display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: center; /* Centers vertically if needed */
-    flex-direction: column; /* Ensures proper stacking */
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
     width: 100%;
 }
 
@@ -425,12 +416,12 @@ nav {
     flex-direction: column;
     width: 90%;
     max-width: 900px;
-    height: 400px; /* Fixed height for consistency */
+    height: 400px; 
     margin: 20px auto;
     border-radius: 10px;
     overflow: hidden;
-    border: 4px solid #8B5A2B; /* Dark brown medieval frame */
-    background-color: #F5E1C3; /* Light parchment color */
+    border: 4px solid #8B5A2B; 
+    background-color: #F5E1C3; 
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
     z-index: 10;
 }
@@ -443,45 +434,39 @@ nav {
 #author-content .leaflet-popup-content,
 #global-map-container .leaflet-popup-content {
     font-size: 1.4rem !important;
-    background-color: #f7e6c4 !important; /* Ensure it is applied */
+    background-color: #f7e6c4 !important; 
     font-family: 'Metamorphous', serif !important;
     font-weight: bold !important;
     line-height: 1.8 !important;
     color: #3a302a !important;
     text-align: center;
     padding: 10px !important;
-    margin: 0 !important;  /* Ensure no margin */
-    width: 100% !important; /* Force full width */
-    height: 100% !important; /* Extend full height */
-    box-sizing: border-box; /* Ensure padding does not shrink the size */
+    margin: 0 !important;  
+    width: 100% !important; 
+    height: 100% !important; 
+    box-sizing: border-box; 
 }
-
-
-
-
-
 
 
 /* Map */
 
 #map {
     display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: center; /* Centers vertically if needed */
-    flex-direction: column; /* Ensures proper stacking */
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
     width: 90%;
-    max-width: 900px; /* Keep it consistent */
-    height: 400px; /* Fixed height for consistency */
-    margin: 20px auto; /* Ensures centering */
+    max-width: 900px; 
+    height: 400px; 
+    margin: 20px auto; 
     border-radius: 10px;
     overflow: hidden;
-    border: 4px solid #8B5A2B; /* Dark brown medieval frame */
-    background-color: #F5E1C3; /* Light parchment color */
+    border: 4px solid #8B5A2B; 
+    background-color: #F5E1C3; 
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
     z-index: 10;
 }
 
-/* Leaflet Map inside */
 #map .leaflet-container {
     width: 100%;
     height: 100%;
@@ -516,15 +501,35 @@ p {
     font-size: 2.5rem;
     text-align: justify;
     margin-bottom: 1.5rem;
-    overflow-wrap: break-word; /* Wrap long lines inside paragraphs */
+    overflow-wrap: break-word; 
 }
+
+.drop-cap::first-letter {
+    font-family: 'Uncial Antiqua', serif; 
+    font-size: 17rem; 
+    font-weight: normal; 
+    color: #331b05; 
+    float: left;
+    line-height: 0.85; 
+    margin-right: 10px;
+    margin-top: 0px; 
+    margin-bottom: -10px; 
+    padding: 8px 5px; 
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+    border: 3px solid #9e752e; 
+    background: url("../images/miniatura.png") no-repeat center center;
+    background-size: contain; 
+    border-radius: 6px; 
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.3), 2px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
 
 /* Poetry and Prose */
 
 .poetry {
-    text-align: center; /* Center align the content */
+    text-align: center; 
     margin: 0 auto;
-    max-width: 70%; /* Ensures content does not stretch too wide */
+    max-width: 70%; 
 }
 
 
@@ -533,83 +538,82 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 570px;  /* Fixed width for uniformity */
-    min-height: 100px; /* Reduce minimum height to fit content */
-    max-height: auto; /* Allow dynamic height */
-    margin: 10px auto; /* Center elements */
-    padding: 1rem; /* Reduce padding */
-    background: rgba(255, 251, 235, 0.5); /* Parchment-like background */
+    width: 570px;  
+    min-height: 100px; 
+    max-height: auto; 
+    margin: 10px auto; 
+    padding: 1rem; 
+    background: rgba(255, 251, 235, 0.5); 
     border: 2px solid #8b5e3c;
     border-radius: 10px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .strophe-number {
-    font-family: 'Uncial Antiqua', serif; /* Medieval-style script */
-    font-size: 1.5rem; /* Large for readability */
-    color: #5a3a1e; /* Deep brown ink color */
-    background: rgba(255, 251, 235, 0.9); /* Aged parchment background */
-    border: 3px solid #8b5e3c; /* Rustic brown border */
-    padding: 0.5rem 1.2rem; /* Slightly wider for manuscript look */
-    border-radius: 6px; /* Smooth edges */
-    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.15); /* Subtle embossed effect */
+    font-family: 'Uncial Antiqua', serif; 
+    font-size: 1.5rem; 
+    color: #5a3a1e; 
+    background: rgba(255, 251, 235, 0.9); 
+    border: 3px solid #8b5e3c; 
+    padding: 0.5rem 1.2rem;
+    border-radius: 6px; 
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.15); 
     text-transform: uppercase;
     text-align: center;
     width: auto;
-    margin-bottom: 10px; /* Add space below */
-    letter-spacing: 1.2px; /* More spaced out for elegance */
-    text-shadow: 0 0 3px rgba(0, 0, 0, 0.2); /* Light ink effect */
-    transition: all 0.3s ease-in-out; /* Smooth hover effect */
+    margin-bottom: 10px; 
+    letter-spacing: 1.2px; 
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.2); 
+    transition: all 0.3s ease-in-out; 
   }
 
 .strophe pre {
     text-align: left;
     font-family: 'Metamorphous', serif;
-    font-size: 2rem; /* Reduce font size slightly */
+    font-size: 2rem; 
     color: #3a302a;
-    background: transparent; /* No background for pre */
-    padding: 0.5rem; /* Reduce padding further */
-    white-space: pre-wrap; /* Ensures proper text wrapping */
+    background: transparent; 
+    padding: 0.5rem; 
+    white-space: pre-wrap; 
     border: none;
     box-shadow: none;
     display: block;
     width: 100%;
-    height: auto; /* Adjust height dynamically */
-    overflow: hidden; /* Prevent extra empty space */
-    margin: 0; /* Remove margin inside pre */
+    height: auto; 
+    overflow: hidden; 
+    margin: 0; 
 }
 
 .prose {
     display: flex;
-    justify-content: center; /* Centers horizontally */
+    justify-content: center; 
     align-items: center;
     flex-direction: column;
     width: 100%;
 }
 
 .prose pre {
-    text-align: justify; /* Justified text for manuscript-like alignment */
+    text-align: justify; 
     font-family: 'Metamorphous', serif; 
-    font-size: 2rem; /* Balanced readability */
-    color: #3a302a; /* Dark brown, manuscript-style text */
-    background: rgba(255, 251, 235, 0.5); /* Slightly stronger parchment effect */
+    font-size: 2rem; 
+    color: #3a302a; 
+    background: rgba(255, 251, 235, 0.5); 
     padding: 1.5rem;
-    border: 3px solid #8b5e3c; /* Medieval-style border */
+    border: 3px solid #8b5e3c; 
     border-radius: 10px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); 
     line-height: 1.8;
-    max-width: 85%; /* Ensures readable width */
-    margin: 2rem auto; /* Centers the content */
-    word-wrap: break-word; /* Breaks long words */
-    overflow-wrap: break-word; /* Ensures text does not overflow */
-    word-wrap: normal; /* Prevents unnatural breaks */
-    overflow-wrap: anywhere; /* Allows wrapping without awkward splits */
-    word-break: normal; /* Avoids breaking words at line ends */
-    hyphens: auto; /* Adds hyphenation where necessary */
-
-    white-space: normal; /* Fixes unwanted scrolling issue */
+    max-width: 85%; 
+    margin: 2rem auto; 
+    word-wrap: break-word; 
+    overflow-wrap: break-word; 
+    word-wrap: normal; 
+    overflow-wrap: anywhere; 
+    word-break: normal; 
+    hyphens: auto; 
+    white-space: normal; 
     margin-bottom: 4rem;
-    white-space: normal; /* Fixes unwanted scrolling issue */
+    white-space: normal; 
     margin-bottom: 4rem;
 }
 
@@ -617,13 +621,13 @@ p {
 
 .work-title {
     font-family: 'Uncial Antiqua', serif; 
-    font-size: 3rem; /* Slightly larger for hierarchy */
-    color: #5a3a1e; /* Dark earthy brown */
+    font-size: 3rem; 
+    color: #5a3a1e; 
     text-align: center;
-    text-transform: uppercase; /* Styled for historical manuscript feel */
-    letter-spacing: 2px; /* Slightly spaced for an elegant look */
+    text-transform: uppercase; 
+    letter-spacing: 2px;
     padding: 0.5rem 1rem;
-    background: rgba(255, 251, 235, 0.7); /* Parchment-like effect */
+    background: rgba(255, 251, 235, 0.7);
     border: 2px solid #8b5e3c;
     border-radius: 8px;
     display: inline-block;
@@ -633,18 +637,15 @@ p {
 }
 
 
-
-
-
 .prose .tag {
     font-weight: bold;
-    color: #763626; /* A deep brown to highlight entities */
-    text-decoration: underline; /* Distinct styling for entity links */
+    color: #763626; 
+    text-decoration: underline; 
 }
 
 .prose .tag:hover {
-    color: #a45c2d; /* A richer brown on hover */
-    text-shadow: 0 0 5px rgba(255, 215, 153, 0.6); /* Subtle glow effect */
+    color: #a45c2d;
+    text-shadow: 0 0 5px rgba(255, 215, 153, 0.6);
 }
 
 
@@ -706,10 +707,10 @@ button:hover {
 /* Pop-up window */
 
 .popup-window {
-    max-width: 700px; /* Increased width */
+    max-width: 700px;
     border-radius: 12px;
     box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
-    padding: 25px; /* More spacing inside */
+    padding: 25px; 
     background: white;
     border: 2px solid #8b5e3c;
     font-family: 'Essays-1743', serif;
@@ -726,7 +727,7 @@ button:hover {
 }
 
 .popup-image {
-    width: 220px; /* Increased size */
+    width: 220px; 
     height: auto;
     float: left;
     margin: 5px 20px 10px 0;
@@ -735,7 +736,7 @@ button:hover {
 }
 
 .popup-text {
-    font-size: 17px; /* Slightly larger for readability */
+    font-size: 17px; 
     text-align: justify;
     color: #3a302a;
     overflow-wrap: break-word;
@@ -747,7 +748,7 @@ button:hover {
 #entity-table-container {
     margin: 20px 0;
     padding: 20px;
-    background: rgba(255, 251, 235, 0.5); /* Slight parchment effect */
+    background: rgba(255, 251, 235, 0.5); 
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
@@ -755,11 +756,11 @@ button:hover {
 #entity-table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 2rem; /* Increase text size */
+    font-size: 2rem; 
 }
 
 #entity-table thead {
-    background: #8b5e3c; /* Dark brown header */
+    background: #8b5e3c; 
     color: white;
     font-size: 2.4rem;
     text-align: center;
@@ -767,28 +768,28 @@ button:hover {
 
 #entity-table th, #entity-table td {
     padding: 15px;
-    border: 2px solid #8b5e3c; /* Match theme color */
+    border: 2px solid #8b5e3c; 
     text-align: center;
 }
 
 #entity-table tbody tr:nth-child(even) {
-    background: rgba(255, 251, 235, 0.8); /* Alternating row color */
+    background: rgba(255, 251, 235, 0.8); 
 }
 
 #entity-table tbody tr:hover {
-    background: rgba(206, 172, 119, 0.3); /* Subtle hover effect */
+    background: rgba(206, 172, 119, 0.3); 
     transition: 0.3s ease-in-out;
 }
 
 #entity-table a {
     text-decoration: none;
-    color: #763626; /* Dark brown text */
+    color: #763626; 
     font-weight: bold;
 }
 
 #entity-table a:hover {
     text-decoration: underline;
-    color: #5c3d06; /* Slightly darker hover */
+    color: #5c3d06; 
 }
 
 
@@ -798,12 +799,13 @@ button:hover {
     cursor: pointer; 
 }
 
+/* Read-more */
 
 .read-more-btn {
     display: block;
     width: 100%;
     padding: 12px;
-    background: #8b5e3c; /* Medieval brown */
+    background: #8b5e3c; 
     color: white;
     border: 2px solid #9e752e;
     font-weight: bold;
@@ -816,10 +818,9 @@ button:hover {
     font-family: 'Essays-1743', serif;
 }
 
-/* Read-more */
 
 .read-more-btn:hover {
-    background: #763626; /* Darker brown on hover */
+    background: #763626; 
     color: #fff;
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
@@ -831,14 +832,14 @@ button:hover {
     margin: 0;
     padding: 2rem;
     font-size: 1.4rem;
-    color: #5a3a1e; /* Dark brown text for authenticity */
-    background: url('../images/textured-paper.png'); /* Use parchment texture */
+    color: #5a3a1e; 
+    background: url('../images/textured-paper.png'); 
     background-size: cover;
-    font-family: 'Uncial Antiqua', serif; /* Medieval manuscript font */
+    font-family: 'Uncial Antiqua', serif; 
     text-transform: uppercase;
     text-align: center;
-    border-top: 6px double #5a3a1e; /* Deep brown double border */
-    box-shadow: 0px -6px 12px rgba(0, 0, 0, 0.4); /* Shadow at the top for depth */
+    border-top: 6px double #5a3a1e; 
+    box-shadow: 0px -6px 12px rgba(0, 0, 0, 0.4); 
     word-wrap: break-word;
     overflow-wrap: break-word;
 }
@@ -852,23 +853,23 @@ button:hover {
 /* Disclaimer */
 
 #disclaimer-section {
-    background: transparent; /* Parchment-like background */
-    border: 3px solid #8b5e3c; /* Antique border */
+    background: transparent; 
+    border: 3px solid #8b5e3c; 
     border-radius: 10px;
-    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3); 
     padding: 20px;
     text-align: center;
     font-family: 'Metamorphous', serif;
-    color: #3a302a; /* Dark brown ink */
+    color: #3a302a; 
     line-height: 1.8;
     width: 80%;
     margin: 30px auto;
 }
 
 #disclaimer-section h3 {
-    font-family: 'Uncial Antiqua', cursive; /* Medieval script */
+    font-family: 'Uncial Antiqua', cursive; 
     font-size: 2.5rem;
-    color: #6d3f2b; /* Deep ink brown */
+    color: #6d3f2b; 
     text-transform: uppercase;
     text-shadow: 1px 1px 5px rgba(139, 94, 60, 0.5);
 }
@@ -895,6 +896,173 @@ button:hover {
 }
 
 
+/* Documentation */
+
+.doc-container {
+    display: flex;
+    justify-content: center; 
+    align-items: left; 
+    flex-direction: column;
+    width: 65%;
+    max-width: 85%;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: rgba(255, 251, 235, 0.5); 
+    border: 3px solid #8b5e3c; 
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); 
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.doc-container h1, .doc-container h2, .doc-container h3 {
+    font-family: 'Uncial Antiqua', serif; 
+    color: #5a3a1e; 
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.doc-container h1 {
+    font-size: 7rem;
+    border-bottom: 4px solid #9e752e; 
+}
+
+.doc-container h2 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-top: 2rem;
+}
+
+.doc-container h3 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-top: 1.5rem;
+}
+
+.doc-container p {
+    font-family: 'Metamorphous', serif;
+    color: #3a302a;
+    font-size: 2rem;
+    text-align: justify;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.doc-container .drop-cap::first-letter {
+    font-family: 'Uncial Antiqua', serif; 
+    font-size: 14rem; 
+    font-weight: normal;
+    color: #331b05; 
+    float: left;
+    line-height: 0.85;
+    margin-right: 12px;
+    margin-top: 0px;
+    margin-bottom: -10px;
+    padding: 8px 5px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+    border: 3px solid #9e752e; 
+    background: url("../images/miniatura.png") no-repeat center center;
+    background-size: contain;
+    border-radius: 6px;
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.3), 2px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.doc-container ul {
+    list-style-type: none; 
+    padding-left: 20px;
+}
+
+.doc-container ul li {
+    font-family: 'Metamorphous', serif;
+    font-size: 2rem;
+    color: #3a302a;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 10px;
+}
+
+.doc-container ul li::before {
+    content: "✦"; 
+    color: #8b5e3c; 
+    font-size: 2.5rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.doc-container hr {
+    border: none;
+    height: 3px;
+    background: linear-gradient(to right, transparent, #8b5e3c, transparent); 
+    margin: 3rem 0;
+}
+
+
+.doc-container table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 2rem;
+    margin: 2rem auto;
+}
+
+.doc-container thead {
+    background: #8b5e3c; 
+    color: white;
+    font-size: 2.4rem;
+    text-align: center;
+}
+
+.doc-container th, .doc-container td {
+    padding: 15px;
+    border: 2px solid #8b5e3c;
+    text-align: center;
+}
+
+.doc-container tbody tr:nth-child(even) {
+    background: rgba(255, 251, 235, 0.8);
+}
+
+.doc-container tbody tr:hover {
+    background: rgba(206, 172, 119, 0.3);
+    transition: 0.3s ease-in-out;
+}
+
+.doc-container .button {
+    background-color: rgba(255, 251, 235, 0.5);
+    border: 3px solid #8b5e3c;
+    color: #48250a;;
+    padding: 0.5rem 1rem;
+    font-family: 'Metamorphous', serif;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.doc-container .button:hover {
+    background-color: #763626;
+    color: #fff;
+}
+
+
+.theme-preview {
+    display: block;
+    width: 75%; 
+    max-width: 550px; 
+    margin: 20px auto; 
+    border: 5px solid #9e752e; 
+    border-radius: 8px; 
+    box-shadow: 
+        inset 0 0 10px rgba(0, 0, 0, 0.2), 
+        4px 4px 10px rgba(0, 0, 0, 0.3); 
+    padding: 0px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
 
 /* Mobile Adjustments */
 
@@ -943,217 +1111,4 @@ button:hover {
     h2 {
         font-size: 1.8rem;
     }
-}
-
-
-
-/* Illuminated Drop Cap for Manuscripta Antiqua Theme */
-.drop-cap::first-letter {
-    font-family: 'Uncial Antiqua', serif; /* Historical medieval script */
-    font-size: 17rem; /* Adjusted size to prevent overflow */
-    font-weight: normal; /* No need for extra weight */
-    color: #331b05; /* Dark brown ink */
-    float: left;
-    line-height: 0.85; /* Reduce height space */
-    margin-right: 10px;
-    margin-top: 0px; /* Reduce extra space above */
-    margin-bottom: -10px; /* Pull it slightly down to align text */
-    padding: 8px 5px; /* Reduce extra padding */
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
-    border: 3px solid #9e752e; /* Aged golden-brown border */
-    background: url("../images/miniatura.png") no-repeat center center;
-    background-size: contain; /* Ensures full visibility without distortion */
-    border-radius: 6px; /* Slight curvature */
-    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.3), 2px 2px 6px rgba(0, 0, 0, 0.3);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Documentation Layout - Matches `.prose` */
-.doc-container {
-    display: flex;
-    justify-content: center; /* Centers content horizontally */
-    align-items: left; /* Aligns vertically */
-    flex-direction: column;
-    width: 65%;
-    max-width: 85%;
-    margin: 2rem auto;
-    padding: 2rem;
-    background: rgba(255, 251, 235, 0.5); /* Aged parchment effect */
-    border: 3px solid #8b5e3c; /* Manuscript-style border */
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); /* Subtle depth */
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-}
-
-/* Headings - Styled Like Medieval Titles */
-.doc-container h1, .doc-container h2, .doc-container h3 {
-    font-family: 'Uncial Antiqua', serif; /* Medieval script font */
-    color: #5a3a1e; /* Dark brown ink */
-    text-align: center;
-    text-transform: uppercase;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-.doc-container h1 {
-    font-size: 7rem;
-    border-bottom: 4px solid #9e752e; /* Aged golden separator */
-}
-
-.doc-container h2 {
-    font-size: 4rem;
-    font-weight: bold;
-    margin-top: 2rem;
-}
-
-.doc-container h3 {
-    font-size: 3.5rem;
-    font-weight: bold;
-    margin-top: 1.5rem;
-}
-
-/* Paragraphs - Matches `.prose` */
-.doc-container p {
-    font-family: 'Metamorphous', serif;
-    color: #3a302a;
-    font-size: 2rem;
-    text-align: justify;
-    line-height: 1.8;
-    margin-bottom: 1.5rem;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-}
-
-/* Drop Cap Styling for First Paragraph */
-.doc-container .drop-cap::first-letter {
-    font-family: 'Uncial Antiqua', serif; /* Historical medieval script */
-    font-size: 14rem; /* Ensures prominent first letter */
-    font-weight: normal;
-    color: #331b05; /* Dark ink color */
-    float: left;
-    line-height: 0.85;
-    margin-right: 12px;
-    margin-top: 0px;
-    margin-bottom: -10px;
-    padding: 8px 5px;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
-    border: 3px solid #9e752e; /* Aged golden-brown border */
-    background: url("../images/miniatura.png") no-repeat center center;
-    background-size: contain;
-    border-radius: 6px;
-    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.3), 2px 2px 6px rgba(0, 0, 0, 0.3);
-}
-
-/* Lists - Styled for Manuscript Look */
-.doc-container ul {
-    list-style-type: none; /* Removes default bullets */
-    padding-left: 20px;
-}
-
-.doc-container ul li {
-    font-family: 'Metamorphous', serif;
-    font-size: 2rem;
-    color: #3a302a;
-    position: relative;
-    padding-left: 30px;
-    margin-bottom: 10px;
-}
-
-.doc-container ul li::before {
-    content: "✦"; /* Decorative medieval-style bullet */
-    color: #8b5e3c; /* Golden-brown ink */
-    font-size: 2.5rem;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-
-/* Thematic Horizontal Rules */
-.doc-container hr {
-    border: none;
-    height: 3px;
-    background: linear-gradient(to right, transparent, #8b5e3c, transparent); /* Decorative effect */
-    margin: 3rem 0;
-}
-
-/* Table Styling for Documentation */
-.doc-container table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 2rem;
-    margin: 2rem auto;
-}
-
-.doc-container thead {
-    background: #8b5e3c; /* Aged manuscript color */
-    color: white;
-    font-size: 2.4rem;
-    text-align: center;
-}
-
-.doc-container th, .doc-container td {
-    padding: 15px;
-    border: 2px solid #8b5e3c;
-    text-align: center;
-}
-
-.doc-container tbody tr:nth-child(even) {
-    background: rgba(255, 251, 235, 0.8);
-}
-
-.doc-container tbody tr:hover {
-    background: rgba(206, 172, 119, 0.3);
-    transition: 0.3s ease-in-out;
-}
-
-/* Return Button */
-.doc-container .button {
-    background-color: rgba(255, 251, 235, 0.5);
-    border: 3px solid #8b5e3c;
-    color: #48250a;;
-    padding: 0.5rem 1rem;
-    font-family: 'Metamorphous', serif;
-    font-size: 1.3em;
-    font-weight: bold;
-    text-transform: uppercase;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-.doc-container .button:hover {
-    background-color: #763626;
-    color: #fff;
-}
-
-
-.theme-preview {
-    display: block;
-    width: 75%; /* Responsive scaling */
-    max-width: 550px; /* Ensures it fits well */
-    margin: 20px auto; /* Center the image */
-    border: 5px solid #9e752e; /* Aged golden-brown border */
-    border-radius: 8px; /* Subtle rounding for elegance */
-    box-shadow: 
-        inset 0 0 10px rgba(0, 0, 0, 0.2), /* Inner shadow for depth */
-        4px 4px 10px rgba(0, 0, 0, 0.3); /* Outer shadow for antique effect */
-    background: url("../images/textured-paper.png"); /* Parchment texture */
-    background-size: cover;
-    padding: 0px;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
