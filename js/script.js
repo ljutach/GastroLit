@@ -203,6 +203,8 @@ function populateEntityTable() {
         tbody.appendChild(row);
     }
 
+ 
+    // implements smooth scrolling and temporary highlighting for elements with the class "scroll-to"
     document.querySelectorAll(".scroll-to").forEach(link => {
         link.addEventListener("click", function (e) {
             e.preventDefault();
@@ -216,6 +218,8 @@ function populateEntityTable() {
     });
 }
 
+
+// loads author-specific descriptions from a JSON file
 
 let descriptions = {};
 
@@ -239,6 +243,8 @@ async function loadDescriptions() {
     }
 }
 
+// sets up event listeners for elements with the class "tag" to create popup elements when clicked
+
 function initializePopups() {
     document.querySelectorAll(".tag").forEach(el => {
         el.addEventListener("click", event => {
@@ -248,6 +254,8 @@ function initializePopups() {
     });
 }
 
+
+// generate and position a popup window with information about a clicked element
 
 function createPopup(element) {
     const entityId = element.id;
@@ -313,6 +321,8 @@ document.addEventListener("DOMContentLoaded", () => {
 let globalMap;
 let allPlaces = []; 
 let markers = []; 
+
+// initializes a global map using Leaflet.js and populates it with place markers from authors' HTML files
 
 async function loadGlobalMap() {
     const mapElement = document.getElementById("global-map");
@@ -442,8 +452,6 @@ function loadAuthorContent(authorPath, author, region) {
         loadDescriptions().then(() => {
             initializePopups();
         });
-
-        console.log(`📚 Loaded author: ${author}, UI elements hidden.`);
     });
 }
 
@@ -475,15 +483,14 @@ function loadDocumentation() {
             const offset = 145; 
             const yPosition = contentContainer.getBoundingClientRect().top + window.scrollY - offset;
             window.scrollTo({ top: yPosition, behavior: "smooth" });
-        }, 300);
-        
+        }, 300);       
     })
-    .catch(error => console.error("❌ Error loading documentation:", error));
 }
 
 
 
 // Restore author selection after doc.html is loaded
+
 function restoreAuthorSelection() {
     document.querySelectorAll(".dropdown-menu a").forEach(item => {
         item.addEventListener("click", function (event) {
@@ -520,7 +527,5 @@ function returnToHome() {
         document.getElementById("author-content").style.display = "block";
         document.getElementById("doc-content").style.display = "block";
         document.querySelector(".proj-container").style.display = "block";
-
-        console.log("🏠 Returned to home, all sections restored.");
     }, 200);
 }
