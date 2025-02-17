@@ -70,10 +70,10 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-
+// Resets the homepage while maintaining the selected theme.
 
 function reloadWithTheme() {
-    let contentContainer = document.getElementById("dynamic-content");
+    let contentContainer = document.getElementById("doc-content");
 
     // Remove documentation content when reloading homepage
     contentContainer.innerHTML = "";
@@ -83,22 +83,18 @@ function reloadWithTheme() {
         const savedTheme = localStorage.getItem("selectedTheme") || 'styles/middleage.css';
         document.getElementById('theme-stylesheet').setAttribute('href', savedTheme);
 
-        // ✅ Ensure all main sections are visible
+        // Hide unrelevant sections
         document.getElementById("global-map-container").style.display = "block";
         document.getElementById("map-filter-container").style.display = "block";
         document.getElementById("author-content").style.display = "block";
         document.querySelector(".proj-container").style.display = "block";
 
         window.scrollTo({ top: 0, behavior: "smooth" });
-
-        console.log("🏠 Reloaded homepage, documentation removed.");
     }, 200);
 }
 
 
-
-
-// Restore dropdown listeners for hover
+// Adds hover and click behaviors to dropdown menus.
 function restoreDropdownListeners() {
     $(".dropdown").hover(function () {
         $(this).find(".dropdown-menu").first().stop(true, true).fadeIn(200);
@@ -122,8 +118,10 @@ function restoreDropdownListeners() {
 }
 
 
+// Handles dynamic content loading for authors.
+
 function loadAuthorContent(authorPath, author, region) {
-    let contentContainer = document.getElementById("dynamic-content");
+    let contentContainer = document.getElementById("doc-content");
 
     // Remove any previous content in the dynamic container
     contentContainer.innerHTML = "";
@@ -135,7 +133,7 @@ function loadAuthorContent(authorPath, author, region) {
 
         // Force-hide the unwanted elements
         document.querySelector(".title").style.display = "none";
-        document.getElementById("dynamic-content").style.display = "none";
+        document.getElementById("doc-content").style.display = "none";
         document.querySelector(".proj-container").style.display = "none";
         document.getElementById("map-filter-container").style.display = "none";
         document.getElementById("global-map-container").style.display = "none";
@@ -414,7 +412,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // Dinamically load author-content
 
 function loadAuthorContent(authorPath, author, region) {
-    let contentContainer = document.getElementById("dynamic-content");
+    let contentContainer = document.getElementById("doc-content");
 
     // ✅ Clear previous documentation when switching to an author
     contentContainer.innerHTML = "";
@@ -427,7 +425,7 @@ function loadAuthorContent(authorPath, author, region) {
 
         // Hide everything unrelated to authors
         document.querySelector(".title").style.display = "none";
-        document.getElementById("dynamic-content").style.display = "none";
+        document.getElementById("doc-content").style.display = "none";
         document.querySelector(".proj-container").style.display = "none";
         document.getElementById("map-filter-container").style.display = "none";
         document.getElementById("global-map-container").style.display = "none";
@@ -456,7 +454,7 @@ function loadDocumentation() {
     fetch('doc.html')
     .then(response => response.text())
     .then(data => {
-        let contentContainer = document.getElementById("dynamic-content");
+        let contentContainer = document.getElementById("doc-content");
         contentContainer.innerHTML = data;
         contentContainer.style.display = "block"; 
 
@@ -473,7 +471,7 @@ function loadDocumentation() {
         console.log("📄 Documentation loaded successfully, everything else hidden.");
 
         setTimeout(() => {
-            const contentContainer = document.getElementById("dynamic-content");
+            const contentContainer = document.getElementById("doc-content");
             const offset = 145; 
             const yPosition = contentContainer.getBoundingClientRect().top + window.scrollY - offset;
             window.scrollTo({ top: yPosition, behavior: "smooth" });
@@ -520,7 +518,7 @@ function returnToHome() {
         document.getElementById("global-map-container").style.display = "block";
         document.getElementById("map-filter-container").style.display = "block";
         document.getElementById("author-content").style.display = "block";
-        document.getElementById("dynamic-content").style.display = "block";
+        document.getElementById("doc-content").style.display = "block";
         document.querySelector(".proj-container").style.display = "block";
 
         console.log("🏠 Returned to home, all sections restored.");
