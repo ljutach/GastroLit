@@ -31,7 +31,7 @@ h1, h2, h3 {
     justify-content: center;
     align-items: center;
     height: 80px;
-    top: 10px;
+    top: 0px;
     left: 50px;
     z-index: 9998;
 }
@@ -441,7 +441,14 @@ h1, h2, h3 {
     width: 30%;
     margin: 0 auto;
 }
+.prose {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 pre {
+    align-items: center;
+    max-width: 80%;
     font-size: 2rem;
     text-transform: none;
     background: transparent;
@@ -652,15 +659,12 @@ pre {
     left: 0;
     top: 0;
 }
-/* Thematic Horizontal Rules */
 .doc-container hr {
     border: none;
     height: 3px;
     background: linear-gradient(to right, transparent, #8b5e3c, transparent); /* Decorative effect */
     margin: 3rem 0;
 }
-
-/* Table Styling for Documentation */
 .doc-container table {
     width: 100%;
     border-collapse: collapse;
